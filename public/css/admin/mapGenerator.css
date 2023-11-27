@@ -1,0 +1,351 @@
+.MenuMapGenerator--uploadPhoto input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.MenuMapGenerator--uploadPhoto {
+    position: relative;
+    /* cursor: pointer; */
+}
+
+.PositionSelectorMapGenerator--position {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 4px 10px;
+    text-align: center;
+    cursor: pointer;
+    outline: none !important;
+    position: relative;
+}
+
+.PositionSelectorMapGenerator--position img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 100%;
+}
+
+.PositionSelectorMapGenerator {
+    background-color: black;
+    margin-bottom: 6px;
+    border-radius: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.PositionSelectorMapGenerator--position--image {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    background-position: center;
+    height: 30px;
+    background-size: cover;
+    border-radius: 100%;
+    background-color: white;
+    border: 2px solid white;
+}
+
+.PositionSelectorMapGenerator--position:hover .PositionSelectorMapGenerator--position--image, .PositionSelectorMapGenerator--position__selected .PositionSelectorMapGenerator--position--image {
+    border-color: #2196F3;
+}
+
+.GridMapGenerator--canvas {
+    position: relative;
+    /* min-height: 300px; */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    max-width: 80vh;
+}
+
+.CellGrid {
+    border: 1px dashed silver;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2px;
+    flex: 1 0 auto;
+    /* max-width: 30px; */
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s background ease;
+    /* z-index: 0; */
+}
+
+.CellRow {
+    display: flex;
+    justify-content: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    line-height: 30px;
+}
+
+.GridMapGenerator--buttonsTop {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+.GridMapGenerator {
+    position: relative;
+    padding: 30px;
+    min-height: 300px;
+}
+
+.GridButtons > div {
+    display: inline-block;
+    vertical-align: middle;
+    background: black;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 0 3px;
+    transition: 0.5s all ease;
+    border-radius: 100%;
+}
+
+.GridMapGenerator--buttonsBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.GridMapGenerator--buttonsRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+}
+
+.GridMapGenerator--buttonsLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 24px;
+}
+
+.GridMapGenerator--buttonsRight .GridButtons > div, .GridMapGenerator--buttonsLeft .GridButtons > div {
+    display: block;
+    margin: 3px 0;
+}
+
+.GridMapGenerator--buttonsRight .GridButtons, .GridMapGenerator--buttonsLeft .GridButtons {
+    position: absolute;
+    top: 26px;
+    /* transform: translateY(-50%); */
+    right: 0;
+}
+
+.GridButtons > div:hover {
+    background: silver;
+}
+
+.CellGrid:before {
+    content: '';
+    float: left;
+    padding-top: 100%;
+}
+
+.MenuMapGenerator--Sup .input-field {
+    margin-top: 0;
+}
+
+.CellGrid:hover {
+    background-color: #c0c0c091;
+}
+
+.CellGrid--position {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.CellGrid--tooltip, .MenuMapGenerator--uploadPhoto--tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1d1d1d;
+    border: 1px solid #333333;
+    border-radius: 3px;
+    z-index: 3;
+    width: 150px;
+    display: none;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 3px 1px;
+    box-shadow: 1px 1px black;
+    color: white;
+}
+
+.CellGrid--position:hover ~ .CellGrid--tooltip, .CellGrid--tooltip:hover, .MenuMapGenerator--uploadPhoto:hover .MenuMapGenerator--uploadPhoto--tooltip {
+    display: block;
+}
+
+.CellGrid--tooltip--images--image {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 7px;
+    width: 32%;
+}
+
+.CellGrid--tooltip--images--image img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+.CellGrid--name {
+    font-weight: 800;
+    vertical-align: middle;
+    /* line-height: 13px; */
+}
+
+.CellGrid--name > span {
+    vertical-align: middle;
+    margin: 0 2px;
+    font-size: 10px;
+    font-weight: 100;
+    /*text-transform: lowercase;*/
+}
+
+.MenuMapGenerator--Sup input {
+    margin-bottom: 6px;
+}
+
+.PositionSelectorMapGenerator--position:hover .CellGrid--tooltip {
+    display: block;
+}
+
+.PositionSelectorMapGenerator .slick-list {
+    overflow: visible;
+}
+
+.CellGrid--position--remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    background: red;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    border: 1px solid red;
+    cursor: pointer;
+    display: none;
+}
+
+.CellGrid--position--remove .material-icons {
+    font-size: 10px;
+    color: white;
+    line-height: 10px;
+    display: block;
+    font-weight: 800;
+    text-align: center;
+}
+
+.CellGrid--position--remove:hover {
+    background-color: black;
+}
+
+.CellGrid--position:hover .CellGrid--position--remove {
+    display: block;
+}
+
+.MenuMapGenerator--uploadPhoto--tooltip > .btn {
+    position: relative;
+    width: 80%;
+    display: block;
+    margin: 3px auto;
+    font-size: 8px;
+    padding: 0;
+}
+
+.MenuMapGenerator--reset, .MenuMapGenerator--save {
+    cursor: pointer;
+    transition: 0.5s color ease;
+}
+
+.MenuMapGenerator--reset:hover, .MenuMapGenerator--save:hover {
+    color: silver;
+}
+
+.MenuMapGenerator--spinner {
+    -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+    animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+}
+
+.alert-danger ul {
+    margin: 0 !important;
+}
+
+.CellGrid--position--text--button {
+    position: absolute;
+}
+
+.CellGrid--position--text--input {
+    width: 140px !important;
+}
+
+.CellGrid--position--text:not(.first-cell) {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    width: 200px;
+    z-index: 4;
+    background: var(--light-color);
+    border: solid 1px var(--black-color);
+}
+
+.CellGrid--position--text.first-cell {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    width: 200px;
+    z-index: 4;
+    background: var(--light-color);
+    border: solid 1px var(--black-color);
+}
+
+.CellGrid--position--edit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+}
+
+.CellGrid--position--edit .material-icons {
+    font-size: 12px;
+    line-height: 12px;
+    display: block;
+    font-weight: 800;
+    text-align: center;
+}
+
+.CellGrid--position--edit:hover {
+    background: var(--secondary3-color);
+}

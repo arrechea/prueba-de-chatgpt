@@ -1,0 +1,25 @@
+.vertical-navigations {
+    .side-nav{
+        top:0px;
+        padding-top:20px;
+        box-shadow: 0px 0px 20px 0px rgba(#dcdcdc,1);
+        li{
+            padding:5px 5px 5px 0 !important;
+            line-height: normal!important;
+            height:initial;
+            font-weight:400;
+            a{
+                height:28px!important;
+                min-height: initial;
+                line-height: 28px!important;
+                span, i{
+                    line-height: 28px!important;
+                    height:28px;
+                }
+                i{
+                    margin-left:0px!important;
+                }
+            }
+        }
+    }
+}

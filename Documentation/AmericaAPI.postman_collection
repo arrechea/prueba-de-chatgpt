@@ -1,0 +1,3153 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AmericaAPI",
+		"_postman_id": "77ac6233-c33d-8782-57be-bbc3db071eed",
+		"description": "PLAYER PRO API:\n\nhttp://swagger.api.dev.getplayerpro.com/?url=http://swagger.api.dev.getplayerpro.com/schema\n\nCAMERICA API:\n\nLa base del Api siempre responde con estos parametros:\n\n{\n  \"ok\": \"boolean\",//Identifica Error o no\n  \"message\": \"string\",//Si hay error este identifica el mismo\n  \"data\": \"object/array/null\",//Respuesta\n  \"code\": \"integer\"//Codigo de request, Ej: 200,404,403,500...\n}\n\nREQUESTS ESPECIFICOS DE LA APLICACION:\n\n - DESDE UN PUSH DE ONE SIGNAL:\n1) Si se envía propiedad \"path\" en un push la aplicación hará un request GET al path determinado enviando el id de One Signal y lo abrirá en un webview.\nEJEMPLO:\n\"path\":\"/marketing/corona2017\"\nLa App abrirá en webview:\nGET /marketing/corona2017/:idDispositivoDeOneSignal\n\n2) Si se envía en un banner como link el prefijo \"webview:\" el banner abrirá el link internamente desde la web.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Actions",
+			"description": "",
+			"item": [
+				{
+					"name": "GetAcciones",
+					"request": {
+						"url": {
+							"raw": "{{url}}/action/?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"action",
+								""
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /action\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n    \"nombre\": \"string\",\n    \"type\": \"string\",\n    \"parameter\": \"string\",\n    \"callback\": \"string\",\n    \"createdAt\": \"date\",\n    \"updatedAt\": \"date\",\n    \"id\": \"string\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "PostAccion",
+					"request": {
+						"url": {
+							"raw": "{{url}}/action/idDispositivo/57abb062acbd9d741fac1d74/57ab90607444b1b80ec84109?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"action",
+								"idDispositivo",
+								"57abb062acbd9d741fac1d74",
+								"57ab90607444b1b80ec84109"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "POST /action/:idDispositivo/:idAccion/:parametro/:status\n\nPOST /action/:idDispositivo/:idAccion/:parametro\n\nPOST /action/:idDispositivo/:idAccion\n\n\n\ntoken:\"string\"\n\nRESPUESTA:\n"
+					},
+					"response": []
+				},
+				{
+					"name": "GetGamificationByUser",
+					"request": {
+						"url": {
+							"raw": "{{url}}/roster/57b239be11c6e4f019a15e09/gamification/57abb062acbd9d741fac1d74?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"roster",
+								"57b239be11c6e4f019a15e09",
+								"gamification",
+								"57abb062acbd9d741fac1d74"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /roster/:idRoster/gamification/:idAccion\n\ntoken:\"string\"\n\nRESPUESTA :\n\ndata : \"array\""
+					},
+					"response": []
+				},
+				{
+					"name": "GetGamificationActionsByDispositive",
+					"request": {
+						"url": {
+							"raw": "{{url}}/dispositive/idDispositivo/gamification/57abb062acbd9d741fac1d74?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"dispositive",
+								"idDispositivo",
+								"gamification",
+								"57abb062acbd9d741fac1d74"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /dispositive/:idDispositivo/gamification/:idAccion\n\ntoken:\"string\"\n\nRESPUESTA :\n\ndata : \"array\""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"description": "",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"url": "{{url}}/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "playerpro-client-id",
+								"value": "5_y4ienadi9mow0wk4sc8oc0o8scgws04ogcos0wsws44owgksc",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "playerpro-client-secret",
+								"value": "4cydzcwswt2cgkgww8gco4044s08k8s04swgccg0gscokcgwgs",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ivan@gafa.mx",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "therion",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "text"
+								},
+								{
+									"key": "idDispositivo",
+									"value": "idDispositivo",
+									"type": "text"
+								}
+							]
+						},
+						"description": "POST /login\n\nemail:\"string\"\n\npassword:\"string\"\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n    \"user\": \"string\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"url": {
+							"raw": "{{url}}/logout?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /logout\n\ntoken:\"string\"\n\nRESPUESTA:\n\n\"boolean\""
+					},
+					"response": []
+				},
+				{
+					"name": "DocsSwagger",
+					"request": {
+						"url": "http://localhost:1337/swagger/doc",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mario@gafa.mx",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Wisquimas86",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetToken",
+					"request": {
+						"url": "{{url}}/getToken",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "yMWYxZmM1MiIsImlhdCI6MTQ3MDM0MjQ2OCw",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "EWHwTW_IUotiTS940cZ7X8x1hOlntiiW6iBMjzQ3Ak8",
+									"type": "text"
+								}
+							]
+						},
+						"description": "POST /logout\r\n\r\nclient_id:\"string\"\r\n\r\nclient_secret:\"string\"\r\n\r\nRESPUESTA:\r\n\r\n{\r\n    \"token\": \"string\"\r\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Registro",
+					"request": {
+						"url": "{{url}}/signup",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "mario10@gafa.mx",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Wisquimas86",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "text"
+								},
+								{
+									"key": "firstName",
+									"value": "Mario",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Sanzol",
+									"type": "text"
+								}
+							]
+						},
+						"description": "POST /signup\n\nemail :\"string\"\n\npassword:\"string\"\n\ntoken:\"string\"\n\nfirstName:\"string\"\n\nlastName:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "soyAdmin",
+					"request": {
+						"url": "{{url}}/me/soyAdmin",
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "LoginWithSocialNetwork",
+					"request": {
+						"url": "{{url}}/login/facebook",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "text"
+								},
+								{
+									"key": "idDispositivo",
+									"value": "Dispositivo2",
+									"type": "text"
+								},
+								{
+									"key": "tokenSocialNetwork",
+									"value": "EAAEdl5ivlzgBAFxSckr9f9sXluq7ULenGeyJWY8A5TE6VHqbIyFASMlmGvjmDrnKpcGUjaZBrfKJ4IZABNZArmynoTWPfyypEuq9jhpvmUrhTCmWfn9PoWPyYJZAOg9l5X0NtiTstFn8mhUu2K21ZBEfxtII1QfaEnNuVvgxg5T59GZBBfhOlyBPF5uNBskijp0AGrB4rl0lMLjus5FmHvHNq3KlWGqrfzMeRSjzHupDiQBU62stFN",
+									"type": "text"
+								}
+							]
+						},
+						"description": "POST /login/:redSocial\n\n\n:redSocial solo permite: facebook,google\n\n\nemail:\"string\"\n\npassword:\"string\"\n\ntoken:\"string\"\n\nidDispositivo:\"string\"\n\n\n\nRESPUESTA:\n\n{\n    \"user\": \"string\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "PasswordRecovery",
+					"request": {
+						"url": {
+							"raw": "{{url}}/me/password-recovery?email_address=mario@gafa.mx",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"me",
+								"password-recovery"
+							],
+							"query": [
+								{
+									"key": "email_address",
+									"value": "mario@gafa.mx"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshToken",
+					"request": {
+						"url": "{{url}}/refresh-token",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "client_id",
+									"value": "yMWYxZmM1MiIsImlhdCI6MTQ3MDM0MjQ2OCw",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "EWHwTW_IUotiTS940cZ7X8x1hOlntiiW6iBMjzQ3Ak8",
+									"type": "text"
+								}
+							]
+						},
+						"description": "GET /refresh-token"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Competitions",
+			"description": "",
+			"item": [
+				{
+					"name": "GetCompetition",
+					"request": {
+						"url": {
+							"raw": "{{url}}/competitions/{{idCompetition}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"competitions",
+								"{{idCompetition}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /competitions/:idCompetition\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"code\": 0,\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"id\": \"string\",\n      \"type\": \"league\",\n      \"name\": \"string\",\n      \"coverPhoto\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"abbreviation\": \"string\",\n      \"history\": \"string\",\n      \"about\": \"string\",\n      \"followers\": 0,\n      \"followerId\": 0,\n      \"favorited\": 0,\n      \"favoriteId\": 0,\n      \"views\": 0,\n      \"socialNetworks\": [\n        {\n          \"link\": \"string\",\n          \"username\": \"string\",\n          \"name\": \"Facebook\"\n        }\n      ],\n      \"isManager\": true,\n      \"isMember\": true,\n      \"seasons\": [\n        {\n          \"id\": 0,\n          \"name\": \"string\",\n          \"code\": \"string\",\n          \"startDate\": \"string\",\n          \"endDate\": \"string\"\n        }\n      ],\n      \"crestPicture\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"permaLink\": \"string\"\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompetitionStats",
+					"request": {
+						"url": {
+							"raw": "{{url}}/competitions/{{idCompetition}}/stats/{{idDivision}}/{{idSeason}}/goals?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"competitions",
+								"{{idCompetition}}",
+								"stats",
+								"{{idDivision}}",
+								"{{idSeason}}",
+								"goals"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /competitions/:idCompetition/stats/:division/:season/:tipo\n\nTipo puede ser:\n\"assists\",\"goals\",\"red_cards\" o \"yellow_cards\"\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"code\": 0,\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"season\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"code\": \"string\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"divisionStats\": [\n        {\n          \"division\": {\n            \"name\": \"string\",\n            \"id\": 0,\n            \"abbreviation\": \"string\",\n            \"displayOrder\": 0,\n            \"gender\": \"m\",\n            \"startDate\": \"string\",\n            \"endDate\": \"string\"\n          },\n          \"stats\": [\n            {\n              \"id\": 0,\n              \"team\": {\n                \"id\": 0,\n                \"name\": \"string\",\n                \"username\": \"string\",\n                \"crestPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"isManager\": true,\n                \"isPlayer\": true,\n                \"isFollower\": true,\n                \"isPendingMember\": true,\n                \"isCaptain\": true\n              },\n              \"player\": {\n                \"address\": \"string\",\n                \"androidLogins\": 0,\n                \"assists\": 0,\n                \"associationNumber\": \"string\",\n                \"bio\": \"string\",\n                \"city\": \"string\",\n                \"cohesionCoefficients\": {\n                  \"eventsParticipated\": 0,\n                  \"interactions\": 0,\n                  \"rsvps\": 0\n                },\n                \"cohesionRate\": 0,\n                \"country\": \"string\",\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"createdAt\": \"string\",\n                \"deviceType\": \"ios\",\n                \"dob\": \"string\",\n                \"draws\": 0,\n                \"enabled\": true,\n                \"email\": \"string\",\n                \"favorited\": 0,\n                \"favoriteId\": 0,\n                \"favorites\": 0,\n                \"firstName\": \"string\",\n                \"followers\": 0,\n                \"followerId\": 0,\n                \"following\": 0,\n                \"gender\": \"m\",\n                \"generalCohesionRate\": 0,\n                \"goals\": 0,\n                \"hasInstalledApp\": true,\n                \"height\": 0,\n                \"invitationDetails\": {\n                  \"code\": \"not_sent\",\n                  \"createdAt\": \"string\",\n                  \"openedAt\": \"string\",\n                  \"link\": \"string\"\n                },\n                \"invitationsLeft\": 0,\n                \"iosLogins\": 0,\n                \"isCaptain\": true,\n                \"isManager\": true,\n                \"isPlayer\": true,\n                \"isProfessional\": true,\n                \"isReserve\": true,\n                \"isTeamContact\": true,\n                \"jerseyNumber\": 0,\n                \"lastActiveDate\": \"string\",\n                \"lastAndroidLogin\": \"string\",\n                \"lastIosLogin\": \"string\",\n                \"lastName\": \"string\",\n                \"lastWebLogin\": \"string\",\n                \"logins\": 0,\n                \"losses\": 0,\n                \"managerRole\": \"string\",\n                \"matchName\": \"string\",\n                \"multiLanguagePost\": true,\n                \"nationality\": \"string\",\n                \"nationalityCode\": \"string\",\n                \"phone\": \"string\",\n                \"played\": 0,\n                \"playerCard\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"playerId\": 0,\n                \"position\": \"string\",\n                \"preferredPositions\": [\n                  {\n                    \"name\": \"string\"\n                  }\n                ],\n                \"profilePicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"qrcode\": {\n                  \"class\": \"string\",\n                  \"id\": 0,\n                  \"height\": 0,\n                  \"width\": 0,\n                  \"thumbnailUrl\": \"string\",\n                  \"url\": \"string\"\n                },\n                \"role\": \"string\",\n                \"rosterId\": 0,\n                \"rosterBio\": 0,\n                \"rosterPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"socialNetworks\": [\n                  {\n                    \"link\": \"string\",\n                    \"username\": \"string\",\n                    \"name\": \"Facebook\"\n                  }\n                ],\n                \"squadNumber\": 0,\n                \"status\": \"string\",\n                \"teamCount\": 0,\n                \"userId\": 0,\n                \"username\": \"string\",\n                \"views\": 0,\n                \"weight\": 0,\n                \"wins\": 0\n              },\n              \"count\": 0\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompetitionStandings",
+					"request": {
+						"url": {
+							"raw": "{{url}}/competitions/{{idCompetition}}/standings/{{idDivision}}/{{idSeason}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"competitions",
+								"{{idCompetition}}",
+								"standings",
+								"{{idDivision}}",
+								"{{idSeason}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /competitions/:idCompetition/standings/:division/:season\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"code\": 0,\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"season\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"code\": \"string\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"divisionStandings\": [\n        {\n          \"division\": {\n            \"name\": \"string\",\n            \"id\": 0,\n            \"abbreviation\": \"string\",\n            \"displayOrder\": 0,\n            \"gender\": \"m\",\n            \"startDate\": \"string\",\n            \"endDate\": \"string\"\n          },\n          \"standings\": [\n            {\n              \"id\": 0,\n              \"team\": {\n                \"id\": 0,\n                \"name\": \"string\",\n                \"username\": \"string\",\n                \"crestPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"isManager\": true,\n                \"isPlayer\": true,\n                \"isFollower\": true,\n                \"isPendingMember\": true,\n                \"isCaptain\": true\n              },\n              \"place\": 0,\n              \"played\": 0,\n              \"won\": 0,\n              \"drawn\": 0,\n              \"lost\": 0,\n              \"forfeited\": 0,\n              \"penalties\": 0,\n              \"goalsFor\": 0,\n              \"goalsAgainst\": 0,\n              \"points\": 0\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompetitionGames",
+					"request": {
+						"url": {
+							"raw": "{{url}}/competitions/{{idCompetition}}/games/{{idDivision}}/{{idSeason}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"competitions",
+								"{{idCompetition}}",
+								"games",
+								"{{idDivision}}",
+								"{{idSeason}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /competitions/:idCompetition/games/:division/:season\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"code\": 0,\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"id\": 0,\n      \"eventType\": \"string\",\n      \"date\": \"string\",\n      \"homeTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"awayTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"currentTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"venue\": {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"city\": \"string\",\n        \"address\": \"string\",\n        \"fields\": [\n          {\n            \"id\": 0,\n            \"name\": \"string\"\n          }\n        ]\n      },\n      \"field\": {\n        \"id\": 0,\n        \"name\": \"string\"\n      },\n      \"rsvps\": {\n        \"maybe\": 0,\n        \"invited\": 0,\n        \"missing\": 0,\n        \"going\": 0,\n        \"declined\": 0\n      },\n      \"division\": {\n        \"name\": \"string\",\n        \"id\": 0,\n        \"abbreviation\": \"string\",\n        \"displayOrder\": 0,\n        \"gender\": \"m\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"isHomeManager\": true,\n      \"isAwayManager\": true,\n      \"isHomeMember\": true,\n      \"isAwayMember\": true,\n      \"postponed\": true,\n      \"played\": true,\n      \"homeScore\": 0,\n      \"awayScore\": 0,\n      \"hasPenalties\": true,\n      \"homePenalScore\": true,\n      \"awayPenalScore\": true,\n      \"homeForfeit\": true,\n      \"awayForfeit\": true,\n      \"isProfessional\": true,\n      \"gameMinute\": \"string\",\n      \"gameStatus\": \"Playing\",\n      \"round\": \"string\",\n      \"roundId\": 0,\n      \"competition\": {\n        \"id\": \"string\",\n        \"type\": \"league\",\n        \"name\": \"string\",\n        \"abbreviation\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"isProfessional\": true\n      },\n      \"season\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"code\": \"string\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"permaLink\": \"string\"\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompetitionGamesByDate",
+					"request": {
+						"url": {
+							"raw": "{{url}}/competitions/{{idCompetition}}/games/{{idDivision}}/{{idSeason}}/02/2018?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"competitions",
+								"{{idCompetition}}",
+								"games",
+								"{{idDivision}}",
+								"{{idSeason}}",
+								"02",
+								"2018"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /competitions/:idCompetition/games/:division/:season/:mes/:anno\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"code\": 0,\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"id\": 0,\n      \"eventType\": \"string\",\n      \"date\": \"string\",\n      \"homeTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"awayTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"currentTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"venue\": {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"city\": \"string\",\n        \"address\": \"string\",\n        \"fields\": [\n          {\n            \"id\": 0,\n            \"name\": \"string\"\n          }\n        ]\n      },\n      \"field\": {\n        \"id\": 0,\n        \"name\": \"string\"\n      },\n      \"rsvps\": {\n        \"maybe\": 0,\n        \"invited\": 0,\n        \"missing\": 0,\n        \"going\": 0,\n        \"declined\": 0\n      },\n      \"division\": {\n        \"name\": \"string\",\n        \"id\": 0,\n        \"abbreviation\": \"string\",\n        \"displayOrder\": 0,\n        \"gender\": \"m\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"isHomeManager\": true,\n      \"isAwayManager\": true,\n      \"isHomeMember\": true,\n      \"isAwayMember\": true,\n      \"postponed\": true,\n      \"played\": true,\n      \"homeScore\": 0,\n      \"awayScore\": 0,\n      \"hasPenalties\": true,\n      \"homePenalScore\": true,\n      \"awayPenalScore\": true,\n      \"homeForfeit\": true,\n      \"awayForfeit\": true,\n      \"isProfessional\": true,\n      \"gameMinute\": \"string\",\n      \"gameStatus\": \"Playing\",\n      \"round\": \"string\",\n      \"roundId\": 0,\n      \"competition\": {\n        \"id\": \"string\",\n        \"type\": \"league\",\n        \"name\": \"string\",\n        \"abbreviation\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"isProfessional\": true\n      },\n      \"season\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"code\": \"string\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"permaLink\": \"string\"\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompetitionTeams",
+					"request": {
+						"url": {
+							"raw": "{{url}}/competitions/{{idCompetition}}/teams/{{idDivision}}/{{idSeason}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"competitions",
+								"{{idCompetition}}",
+								"teams",
+								"{{idDivision}}",
+								"{{idSeason}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /competitions/:idCompetition/teams/:division/:season\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"code\": 0,\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"season\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"code\": \"string\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"divisionTeams\": [\n        {\n          \"division\": {\n            \"name\": \"string\",\n            \"id\": 0,\n            \"abbreviation\": \"string\",\n            \"displayOrder\": 0,\n            \"gender\": \"m\",\n            \"startDate\": \"string\",\n            \"endDate\": \"string\"\n          },\n          \"games\": [\n            {\n              \"id\": \"string\",\n              \"name\": \"string\",\n              \"location\": \"string\",\n              \"gender\": \"m\",\n              \"managerId\": 0,\n              \"competition\": {\n                \"id\": \"string\",\n                \"type\": \"league\",\n                \"name\": \"string\",\n                \"abbreviation\": \"string\",\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"crestPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"isProfessional\": true\n              },\n              \"coverPhoto\": {\n                \"id\": 0,\n                \"url\": \"string\",\n                \"thumbnailUrl\": \"string\",\n                \"width\": 0,\n                \"height\": 0\n              },\n              \"crestPicture\": {\n                \"id\": 0,\n                \"url\": \"string\",\n                \"thumbnailUrl\": \"string\",\n                \"width\": 0,\n                \"height\": 0\n              },\n              \"profilePicture\": {\n                \"id\": 0,\n                \"url\": \"string\",\n                \"thumbnailUrl\": \"string\",\n                \"width\": 0,\n                \"height\": 0\n              },\n              \"ownerEmail\": \"string\",\n              \"website\": \"string\",\n              \"phone\": \"string\",\n              \"about\": \"string\",\n              \"history\": \"string\",\n              \"socialNetworks\": [\n                {\n                  \"link\": \"string\",\n                  \"username\": \"string\",\n                  \"name\": \"Facebook\"\n                }\n              ],\n              \"username\": \"string\",\n              \"showInitialsOnly\": true,\n              \"private\": true,\n              \"isManager\": true,\n              \"isPlayer\": true,\n              \"isFollower\": true,\n              \"isPendingMember\": true,\n              \"currentForm\": [\n                \"string\"\n              ],\n              \"isRecruiting\": true,\n              \"recruitingMessage\": \"string\",\n              \"recruitingPositions\": [\n                \"string\"\n              ],\n              \"recruitingAgeGroupMax\": 0,\n              \"recruitingAgeGroupMin\": 0,\n              \"sponsors\": [\n                {\n                  \"id\": 0,\n                  \"name\": \"string\",\n                  \"picture\": {\n                    \"id\": 0,\n                    \"url\": \"string\",\n                    \"thumbnailUrl\": \"string\",\n                    \"width\": 0,\n                    \"height\": 0\n                  },\n                  \"link\": \"string\"\n                }\n              ],\n              \"contacts\": [\n                {\n                  \"userId\": 0,\n                  \"nationality\": \"string\",\n                  \"firstName\": \"string\",\n                  \"lastName\": \"string\",\n                  \"profilePicture\": {\n                    \"id\": 0,\n                    \"url\": \"string\",\n                    \"thumbnailUrl\": \"string\",\n                    \"width\": 0,\n                    \"height\": 0\n                  },\n                  \"followers\": 0,\n                  \"following\": 0,\n                  \"userFunction\": \"string\"\n                }\n              ],\n              \"followers\": 0,\n              \"followerId\": 0,\n              \"favorited\": 0,\n              \"favoriteId\": 0,\n              \"views\": 0,\n              \"stats\": {\n                \"played\": 0,\n                \"wins\": 0,\n                \"losses\": 0,\n                \"draws\": 0,\n                \"forfeits\": 0,\n                \"goalsFor\": 0,\n                \"goalsAgainst\": 0\n              },\n              \"teamCohesionRate\": 0,\n              \"userCohesionRate\": 0,\n              \"userCohesionCoefficients\": {\n                \"eventsParticipated\": 0,\n                \"interactions\": 0,\n                \"rsvps\": 0\n              },\n              \"isProfessional\": true\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetTournamentStandings",
+					"request": {
+						"url": {
+							"raw": "{{url}}/competitions/{{idCompetition}}/standings/{{idSeason}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"competitions",
+								"{{idCompetition}}",
+								"standings",
+								"{{idSeason}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /competitions/:idCompetition/standings/:season\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"code\": 0,\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"season\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"code\": \"string\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"divisionStandings\": [\n        {\n          \"division\": {\n            \"name\": \"string\",\n            \"id\": 0,\n            \"abbreviation\": \"string\",\n            \"displayOrder\": 0,\n            \"gender\": \"m\",\n            \"startDate\": \"string\",\n            \"endDate\": \"string\"\n          },\n          \"standings\": [\n            {\n              \"id\": 0,\n              \"team\": {\n                \"id\": 0,\n                \"name\": \"string\",\n                \"username\": \"string\",\n                \"crestPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"isManager\": true,\n                \"isPlayer\": true,\n                \"isFollower\": true,\n                \"isPendingMember\": true,\n                \"isCaptain\": true\n              },\n              \"place\": 0,\n              \"played\": 0,\n              \"won\": 0,\n              \"drawn\": 0,\n              \"lost\": 0,\n              \"forfeited\": 0,\n              \"penalties\": 0,\n              \"goalsFor\": 0,\n              \"goalsAgainst\": 0,\n              \"points\": 0\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetTournamentGames",
+					"request": {
+						"url": {
+							"raw": "{{url}}/competitions/{{idCompetition}}/games/{{idSeason}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"competitions",
+								"{{idCompetition}}",
+								"games",
+								"{{idSeason}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /competitions/:idCompetition/games/:season\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"code\": 0,\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"id\": 0,\n      \"eventType\": \"string\",\n      \"date\": \"string\",\n      \"homeTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"awayTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"currentTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"venue\": {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"city\": \"string\",\n        \"address\": \"string\",\n        \"fields\": [\n          {\n            \"id\": 0,\n            \"name\": \"string\"\n          }\n        ]\n      },\n      \"field\": {\n        \"id\": 0,\n        \"name\": \"string\"\n      },\n      \"rsvps\": {\n        \"maybe\": 0,\n        \"invited\": 0,\n        \"missing\": 0,\n        \"going\": 0,\n        \"declined\": 0\n      },\n      \"division\": {\n        \"name\": \"string\",\n        \"id\": 0,\n        \"abbreviation\": \"string\",\n        \"displayOrder\": 0,\n        \"gender\": \"m\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"isHomeManager\": true,\n      \"isAwayManager\": true,\n      \"isHomeMember\": true,\n      \"isAwayMember\": true,\n      \"postponed\": true,\n      \"played\": true,\n      \"homeScore\": 0,\n      \"awayScore\": 0,\n      \"hasPenalties\": true,\n      \"homePenalScore\": true,\n      \"awayPenalScore\": true,\n      \"homeForfeit\": true,\n      \"awayForfeit\": true,\n      \"isProfessional\": true,\n      \"gameMinute\": \"string\",\n      \"gameStatus\": \"Playing\",\n      \"round\": \"string\",\n      \"roundId\": 0,\n      \"competition\": {\n        \"id\": \"string\",\n        \"type\": \"league\",\n        \"name\": \"string\",\n        \"abbreviation\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"isProfessional\": true\n      },\n      \"season\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"code\": \"string\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"permaLink\": \"string\"\n    }\n  ]\n}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Events",
+			"description": "",
+			"item": [
+				{
+					"name": "EventosAmerica",
+					"request": {
+						"url": {
+							"raw": "{{url}}/events/{{idEquipo}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events",
+								"{{idEquipo}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /events/:teamId\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"id\": 0,\n      \"eventType\": \"Game\",\n      \"isMember\": true,\n      \"isManager\": true,\n      \"isHomeManager\": true,\n      \"isAwayManager\": true,\n      \"isHomeMember\": true,\n      \"isAwayMember\": true,\n      \"isProfessional\": true,\n      \"gameMinute\": \"string\",\n      \"gameStatus\": \"Playing\",\n      \"date\": \"string\",\n      \"endDate\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"privacy\": \"string\",\n      \"venue\": {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"city\": \"string\",\n        \"address\": \"string\",\n        \"fields\": [\n          {\n            \"id\": 0,\n            \"name\": \"string\"\n          }\n        ]\n      },\n      \"field\": {\n        \"id\": 0,\n        \"name\": \"string\"\n      },\n      \"rsvps\": {\n        \"maybe\": 0,\n        \"invited\": 0,\n        \"missing\": 0,\n        \"going\": 0,\n        \"declined\": 0\n      },\n      \"organizer\": {\n        \"id\": 0,\n        \"type\": \"Team\",\n        \"name\": \"string\",\n        \"crestPictureUrl\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"username\": \"string\"\n      },\n      \"team\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"awayTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"homeTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"currentTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"division\": {\n        \"name\": \"string\",\n        \"id\": 0,\n        \"abbreviation\": \"string\",\n        \"displayOrder\": 0,\n        \"gender\": \"m\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"competition\": {\n        \"id\": \"string\",\n        \"type\": \"league\",\n        \"name\": \"string\",\n        \"abbreviation\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"isProfessional\": true\n      },\n      \"season\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"code\": \"string\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"postponed\": true,\n      \"played\": true,\n      \"homeScore\": 0,\n      \"awayScore\": 0,\n      \"hasPenalties\": true,\n      \"homePenalScore\": 0,\n      \"awayPenalScore\": 0,\n      \"homeForfeit\": true,\n      \"awayForfeit\": true,\n      \"homeTeamForm\": [\n        \"string\"\n      ],\n      \"awayTeamForm\": [\n        \"string\"\n      ],\n      \"round\": \"string\",\n      \"roundId\": 0,\n      \"favoriteTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"permaLink\": \"string\"\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "americaByDate",
+					"request": {
+						"url": {
+							"raw": "{{url}}/events/{{idEquipo}}/3/2018?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events",
+								"{{idEquipo}}",
+								"3",
+								"2018"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /events/:teamId/:mes/:anno\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"id\": 0,\n      \"eventType\": \"Game\",\n      \"isMember\": true,\n      \"isManager\": true,\n      \"isHomeManager\": true,\n      \"isAwayManager\": true,\n      \"isHomeMember\": true,\n      \"isAwayMember\": true,\n      \"isProfessional\": true,\n      \"gameMinute\": \"string\",\n      \"gameStatus\": \"Playing\",\n      \"date\": \"string\",\n      \"endDate\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"privacy\": \"string\",\n      \"venue\": {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"city\": \"string\",\n        \"address\": \"string\",\n        \"fields\": [\n          {\n            \"id\": 0,\n            \"name\": \"string\"\n          }\n        ]\n      },\n      \"field\": {\n        \"id\": 0,\n        \"name\": \"string\"\n      },\n      \"rsvps\": {\n        \"maybe\": 0,\n        \"invited\": 0,\n        \"missing\": 0,\n        \"going\": 0,\n        \"declined\": 0\n      },\n      \"organizer\": {\n        \"id\": 0,\n        \"type\": \"Team\",\n        \"name\": \"string\",\n        \"crestPictureUrl\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"username\": \"string\"\n      },\n      \"team\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"awayTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"homeTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"currentTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"division\": {\n        \"name\": \"string\",\n        \"id\": 0,\n        \"abbreviation\": \"string\",\n        \"displayOrder\": 0,\n        \"gender\": \"m\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"competition\": {\n        \"id\": \"string\",\n        \"type\": \"league\",\n        \"name\": \"string\",\n        \"abbreviation\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"isProfessional\": true\n      },\n      \"season\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"code\": \"string\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"postponed\": true,\n      \"played\": true,\n      \"homeScore\": 0,\n      \"awayScore\": 0,\n      \"hasPenalties\": true,\n      \"homePenalScore\": 0,\n      \"awayPenalScore\": 0,\n      \"homeForfeit\": true,\n      \"awayForfeit\": true,\n      \"homeTeamForm\": [\n        \"string\"\n      ],\n      \"awayTeamForm\": [\n        \"string\"\n      ],\n      \"round\": \"string\",\n      \"roundId\": 0,\n      \"favoriteTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"permaLink\": \"string\"\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "MatchStats",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}/stats?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "playerpro-client-id",
+								"value": "123",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "playerpro-client-secret",
+								"value": "123",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /match/:idPartido/stats\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"id\": 0,\n      \"type\": \"goal\",\n      \"minute\": 0,\n      \"player\": {\n        \"address\": \"string\",\n        \"androidLogins\": 0,\n        \"assists\": 0,\n        \"associationNumber\": \"string\",\n        \"bio\": \"string\",\n        \"city\": \"string\",\n        \"cohesionCoefficients\": {\n          \"eventsParticipated\": 0,\n          \"interactions\": 0,\n          \"rsvps\": 0\n        },\n        \"cohesionRate\": 0,\n        \"country\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"createdAt\": \"string\",\n        \"deviceType\": \"ios\",\n        \"dob\": \"string\",\n        \"draws\": 0,\n        \"enabled\": true,\n        \"email\": \"string\",\n        \"favorited\": 0,\n        \"favoriteId\": 0,\n        \"favorites\": 0,\n        \"firstName\": \"string\",\n        \"followers\": 0,\n        \"followerId\": 0,\n        \"following\": 0,\n        \"gender\": \"m\",\n        \"generalCohesionRate\": 0,\n        \"goals\": 0,\n        \"hasInstalledApp\": true,\n        \"height\": 0,\n        \"invitationDetails\": {\n          \"code\": \"not_sent\",\n          \"createdAt\": \"string\",\n          \"openedAt\": \"string\",\n          \"link\": \"string\"\n        },\n        \"invitationsLeft\": 0,\n        \"iosLogins\": 0,\n        \"isCaptain\": true,\n        \"isManager\": true,\n        \"isPlayer\": true,\n        \"isProfessional\": true,\n        \"isReserve\": true,\n        \"isTeamContact\": true,\n        \"jerseyNumber\": 0,\n        \"lastActiveDate\": \"string\",\n        \"lastAndroidLogin\": \"string\",\n        \"lastIosLogin\": \"string\",\n        \"lastName\": \"string\",\n        \"lastWebLogin\": \"string\",\n        \"logins\": 0,\n        \"losses\": 0,\n        \"managerRole\": \"string\",\n        \"matchName\": \"string\",\n        \"multiLanguagePost\": true,\n        \"nationality\": \"string\",\n        \"nationalityCode\": \"string\",\n        \"phone\": \"string\",\n        \"played\": 0,\n        \"playerCard\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"playerId\": 0,\n        \"position\": \"string\",\n        \"preferredPositions\": [\n          {\n            \"name\": \"string\"\n          }\n        ],\n        \"profilePicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"qrcode\": {\n          \"class\": \"string\",\n          \"id\": 0,\n          \"height\": 0,\n          \"width\": 0,\n          \"thumbnailUrl\": \"string\",\n          \"url\": \"string\"\n        },\n        \"role\": \"string\",\n        \"rosterId\": 0,\n        \"rosterBio\": 0,\n        \"rosterPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"socialNetworks\": [\n          {\n            \"link\": \"string\",\n            \"username\": \"string\",\n            \"name\": \"Facebook\"\n          }\n        ],\n        \"squadNumber\": 0,\n        \"status\": \"string\",\n        \"teamCount\": 0,\n        \"userId\": 0,\n        \"username\": \"string\",\n        \"views\": 0,\n        \"weight\": 0,\n        \"wins\": 0\n      },\n      \"assistPlayer\": {\n        \"address\": \"string\",\n        \"androidLogins\": 0,\n        \"assists\": 0,\n        \"associationNumber\": \"string\",\n        \"bio\": \"string\",\n        \"city\": \"string\",\n        \"cohesionCoefficients\": {\n          \"eventsParticipated\": 0,\n          \"interactions\": 0,\n          \"rsvps\": 0\n        },\n        \"cohesionRate\": 0,\n        \"country\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"createdAt\": \"string\",\n        \"deviceType\": \"ios\",\n        \"dob\": \"string\",\n        \"draws\": 0,\n        \"enabled\": true,\n        \"email\": \"string\",\n        \"favorited\": 0,\n        \"favoriteId\": 0,\n        \"favorites\": 0,\n        \"firstName\": \"string\",\n        \"followers\": 0,\n        \"followerId\": 0,\n        \"following\": 0,\n        \"gender\": \"m\",\n        \"generalCohesionRate\": 0,\n        \"goals\": 0,\n        \"hasInstalledApp\": true,\n        \"height\": 0,\n        \"invitationDetails\": {\n          \"code\": \"not_sent\",\n          \"createdAt\": \"string\",\n          \"openedAt\": \"string\",\n          \"link\": \"string\"\n        },\n        \"invitationsLeft\": 0,\n        \"iosLogins\": 0,\n        \"isCaptain\": true,\n        \"isManager\": true,\n        \"isPlayer\": true,\n        \"isProfessional\": true,\n        \"isReserve\": true,\n        \"isTeamContact\": true,\n        \"jerseyNumber\": 0,\n        \"lastActiveDate\": \"string\",\n        \"lastAndroidLogin\": \"string\",\n        \"lastIosLogin\": \"string\",\n        \"lastName\": \"string\",\n        \"lastWebLogin\": \"string\",\n        \"logins\": 0,\n        \"losses\": 0,\n        \"managerRole\": \"string\",\n        \"matchName\": \"string\",\n        \"multiLanguagePost\": true,\n        \"nationality\": \"string\",\n        \"nationalityCode\": \"string\",\n        \"phone\": \"string\",\n        \"played\": 0,\n        \"playerCard\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"playerId\": 0,\n        \"position\": \"string\",\n        \"preferredPositions\": [\n          {\n            \"name\": \"string\"\n          }\n        ],\n        \"profilePicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"qrcode\": {\n          \"class\": \"string\",\n          \"id\": 0,\n          \"height\": 0,\n          \"width\": 0,\n          \"thumbnailUrl\": \"string\",\n          \"url\": \"string\"\n        },\n        \"role\": \"string\",\n        \"rosterId\": 0,\n        \"rosterBio\": 0,\n        \"rosterPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"socialNetworks\": [\n          {\n            \"link\": \"string\",\n            \"username\": \"string\",\n            \"name\": \"Facebook\"\n          }\n        ],\n        \"squadNumber\": 0,\n        \"status\": \"string\",\n        \"teamCount\": 0,\n        \"userId\": 0,\n        \"username\": \"string\",\n        \"views\": 0,\n        \"weight\": 0,\n        \"wins\": 0\n      },\n      \"team\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"notes\": \"string\",\n      \"currentTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      }\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "MatchById",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /match/:idPartido\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": {\n    \"id\": 0,\n    \"eventType\": \"string\",\n    \"date\": \"string\",\n    \"homeTeam\": {\n      \"id\": 0,\n      \"name\": \"string\",\n      \"username\": \"string\",\n      \"crestPicture\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"coverPhoto\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"permaLink\": \"string\"\n    },\n    \"awayTeam\": {\n      \"id\": 0,\n      \"name\": \"string\",\n      \"username\": \"string\",\n      \"crestPicture\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"coverPhoto\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"permaLink\": \"string\"\n    },\n    \"currentTeam\": {\n      \"id\": 0,\n      \"name\": \"string\",\n      \"username\": \"string\",\n      \"crestPicture\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"coverPhoto\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"permaLink\": \"string\"\n    },\n    \"venue\": {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"city\": \"string\",\n      \"address\": \"string\",\n      \"fields\": [\n        {\n          \"id\": 0,\n          \"name\": \"string\"\n        }\n      ]\n    },\n    \"field\": {\n      \"id\": 0,\n      \"name\": \"string\"\n    },\n    \"rsvps\": {\n      \"maybe\": 0,\n      \"invited\": 0,\n      \"missing\": 0,\n      \"going\": 0,\n      \"declined\": 0\n    },\n    \"division\": {\n      \"name\": \"string\",\n      \"id\": 0,\n      \"abbreviation\": \"string\",\n      \"displayOrder\": 0,\n      \"gender\": \"m\",\n      \"startDate\": \"string\",\n      \"endDate\": \"string\"\n    },\n    \"isHomeManager\": true,\n    \"isAwayManager\": true,\n    \"isHomeMember\": true,\n    \"isAwayMember\": true,\n    \"postponed\": true,\n    \"played\": true,\n    \"homeScore\": 0,\n    \"awayScore\": 0,\n    \"hasPenalties\": true,\n    \"homePenalScore\": true,\n    \"awayPenalScore\": true,\n    \"homeForfeit\": true,\n    \"awayForfeit\": true,\n    \"isProfessional\": true,\n    \"gameMinute\": \"string\",\n    \"gameStatus\": \"Playing\",\n    \"round\": \"string\",\n    \"roundId\": 0,\n    \"competition\": {\n      \"id\": \"string\",\n      \"type\": \"league\",\n      \"name\": \"string\",\n      \"abbreviation\": \"string\",\n      \"coverPhoto\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"crestPicture\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"isProfessional\": true\n    },\n    \"season\": {\n      \"id\": 0,\n      \"name\": \"string\",\n      \"code\": \"string\",\n      \"startDate\": \"string\",\n      \"endDate\": \"string\"\n    },\n    \"permaLink\": \"string\"\n  }\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "MatchStandings",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}/standings?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}",
+								"standings"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /match/:idPartido/standings\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"division\": {\n        \"name\": \"string\",\n        \"id\": 0,\n        \"abbreviation\": \"string\",\n        \"displayOrder\": 0,\n        \"gender\": \"m\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"standings\": [\n        {\n          \"id\": 0,\n          \"team\": {\n            \"id\": 0,\n            \"name\": \"string\",\n            \"username\": \"string\",\n            \"crestPicture\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"coverPhoto\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"isManager\": true,\n            \"isPlayer\": true,\n            \"isFollower\": true,\n            \"isPendingMember\": true,\n            \"isCaptain\": true\n          },\n          \"place\": 0,\n          \"played\": 0,\n          \"won\": 0,\n          \"drawn\": 0,\n          \"lost\": 0,\n          \"forfeited\": 0,\n          \"penalties\": 0,\n          \"goalsFor\": 0,\n          \"goalsAgainst\": 0,\n          \"points\": 0\n        }\n      ]\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Match Fecha Confirmada",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}/fecha-confirmada?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}",
+								"fecha-confirmada"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /match/:idPartido/fecha-confirmada\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  “ok”: true,\n  “message”: “”,\n  “data”: {\n        \"idPartido\" : integer,\n        \"fecha\" : yyyy-MM-dd,\n        \"hora\" : H:m\n    },\n  “code”: 200\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "MatchTeamStats",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}/teams-stats?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}",
+								"teams-stats"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "playerpro-client-id",
+								"value": "123",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "playerpro-client-secret",
+								"value": "secret",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /match/:idPartido/teams-stats\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": {\n    \"home\": {\n      \"possession\": 0,\n      \"freeKicks\": 0,\n      \"shotsTotal\": 0,\n      \"shotsOnTarget\": 0,\n      \"shotsOffTarget\": 0,\n      \"shotsBlocked\": 0,\n      \"shotsWoodwork\": 0,\n      \"crosses\": 0,\n      \"corners\": 0,\n      \"throwIns\": 0,\n      \"saves\": 0,\n      \"blocks\": 0,\n      \"clearances\": 0,\n      \"offsides\": 0,\n      \"handballs\": 0,\n      \"fouls\": 0,\n      \"yellowCards\": 0,\n      \"yellowRedCards\": 0,\n      \"redCards\": 0,\n      \"passes\": 0,\n      \"passesCompleted\": 0,\n      \"passingPercentage\": 0\n    },\n    \"away\": {\n      \"possession\": 0,\n      \"freeKicks\": 0,\n      \"shotsTotal\": 0,\n      \"shotsOnTarget\": 0,\n      \"shotsOffTarget\": 0,\n      \"shotsBlocked\": 0,\n      \"shotsWoodwork\": 0,\n      \"crosses\": 0,\n      \"corners\": 0,\n      \"throwIns\": 0,\n      \"saves\": 0,\n      \"blocks\": 0,\n      \"clearances\": 0,\n      \"offsides\": 0,\n      \"handballs\": 0,\n      \"fouls\": 0,\n      \"yellowCards\": 0,\n      \"yellowRedCards\": 0,\n      \"redCards\": 0,\n      \"passes\": 0,\n      \"passesCompleted\": 0,\n      \"passingPercentage\": 0\n    }\n  }\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "MatchPlayersStats",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}/players-stats?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}",
+								"players-stats"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /match/:idPartido/players-stats\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": {\n    \"home\": {\n      \"id\": 0,\n      \"player\": {\n        \"address\": \"string\",\n        \"androidLogins\": 0,\n        \"assists\": 0,\n        \"associationNumber\": \"string\",\n        \"bio\": \"string\",\n        \"city\": \"string\",\n        \"cohesionCoefficients\": {\n          \"eventsParticipated\": 0,\n          \"interactions\": 0,\n          \"rsvps\": 0\n        },\n        \"cohesionRate\": 0,\n        \"country\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"createdAt\": \"string\",\n        \"deviceType\": \"ios\",\n        \"dob\": \"string\",\n        \"draws\": 0,\n        \"enabled\": true,\n        \"email\": \"string\",\n        \"favorited\": 0,\n        \"favoriteId\": 0,\n        \"favorites\": 0,\n        \"firstName\": \"string\",\n        \"followers\": 0,\n        \"followerId\": 0,\n        \"following\": 0,\n        \"gender\": \"m\",\n        \"generalCohesionRate\": 0,\n        \"goals\": 0,\n        \"hasInstalledApp\": true,\n        \"height\": 0,\n        \"invitationDetails\": {\n          \"code\": \"not_sent\",\n          \"createdAt\": \"string\",\n          \"openedAt\": \"string\",\n          \"link\": \"string\"\n        },\n        \"invitationsLeft\": 0,\n        \"iosLogins\": 0,\n        \"isCaptain\": true,\n        \"isManager\": true,\n        \"isPlayer\": true,\n        \"isProfessional\": true,\n        \"isReserve\": true,\n        \"isTeamContact\": true,\n        \"jerseyNumber\": 0,\n        \"lastActiveDate\": \"string\",\n        \"lastAndroidLogin\": \"string\",\n        \"lastIosLogin\": \"string\",\n        \"lastName\": \"string\",\n        \"lastWebLogin\": \"string\",\n        \"logins\": 0,\n        \"losses\": 0,\n        \"managerRole\": \"string\",\n        \"matchName\": \"string\",\n        \"multiLanguagePost\": true,\n        \"nationality\": \"string\",\n        \"nationalityCode\": \"string\",\n        \"phone\": \"string\",\n        \"played\": 0,\n        \"playerCard\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"playerId\": 0,\n        \"position\": \"string\",\n        \"preferredPositions\": [\n          {\n            \"name\": \"string\"\n          }\n        ],\n        \"profilePicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"qrcode\": {\n          \"class\": \"string\",\n          \"id\": 0,\n          \"height\": 0,\n          \"width\": 0,\n          \"thumbnailUrl\": \"string\",\n          \"url\": \"string\"\n        },\n        \"role\": \"string\",\n        \"rosterId\": 0,\n        \"rosterBio\": 0,\n        \"rosterPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"socialNetworks\": [\n          {\n            \"link\": \"string\",\n            \"username\": \"string\",\n            \"name\": \"Facebook\"\n          }\n        ],\n        \"squadNumber\": 0,\n        \"status\": \"string\",\n        \"teamCount\": 0,\n        \"userId\": 0,\n        \"username\": \"string\",\n        \"views\": 0,\n        \"weight\": 0,\n        \"wins\": 0\n      },\n      \"freeKicks\": 0,\n      \"yellowCards\": 0,\n      \"redCards\": 0,\n      \"yellowRedCards\": 0,\n      \"goals\": 0,\n      \"ownGoals\": 0,\n      \"assists\": 0,\n      \"penaltySave\": 0,\n      \"penaltyMiss\": 0,\n      \"penaltyGoals\": 0,\n      \"cleanSheet\": 0,\n      \"singleGoalAgainst\": 0,\n      \"goalsAgainst\": 0,\n      \"win\": 0,\n      \"minutesPlayed\": 0\n    },\n    \"away\": {\n      \"id\": 0,\n      \"player\": {\n        \"address\": \"string\",\n        \"androidLogins\": 0,\n        \"assists\": 0,\n        \"associationNumber\": \"string\",\n        \"bio\": \"string\",\n        \"city\": \"string\",\n        \"cohesionCoefficients\": {\n          \"eventsParticipated\": 0,\n          \"interactions\": 0,\n          \"rsvps\": 0\n        },\n        \"cohesionRate\": 0,\n        \"country\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"createdAt\": \"string\",\n        \"deviceType\": \"ios\",\n        \"dob\": \"string\",\n        \"draws\": 0,\n        \"enabled\": true,\n        \"email\": \"string\",\n        \"favorited\": 0,\n        \"favoriteId\": 0,\n        \"favorites\": 0,\n        \"firstName\": \"string\",\n        \"followers\": 0,\n        \"followerId\": 0,\n        \"following\": 0,\n        \"gender\": \"m\",\n        \"generalCohesionRate\": 0,\n        \"goals\": 0,\n        \"hasInstalledApp\": true,\n        \"height\": 0,\n        \"invitationDetails\": {\n          \"code\": \"not_sent\",\n          \"createdAt\": \"string\",\n          \"openedAt\": \"string\",\n          \"link\": \"string\"\n        },\n        \"invitationsLeft\": 0,\n        \"iosLogins\": 0,\n        \"isCaptain\": true,\n        \"isManager\": true,\n        \"isPlayer\": true,\n        \"isProfessional\": true,\n        \"isReserve\": true,\n        \"isTeamContact\": true,\n        \"jerseyNumber\": 0,\n        \"lastActiveDate\": \"string\",\n        \"lastAndroidLogin\": \"string\",\n        \"lastIosLogin\": \"string\",\n        \"lastName\": \"string\",\n        \"lastWebLogin\": \"string\",\n        \"logins\": 0,\n        \"losses\": 0,\n        \"managerRole\": \"string\",\n        \"matchName\": \"string\",\n        \"multiLanguagePost\": true,\n        \"nationality\": \"string\",\n        \"nationalityCode\": \"string\",\n        \"phone\": \"string\",\n        \"played\": 0,\n        \"playerCard\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"playerId\": 0,\n        \"position\": \"string\",\n        \"preferredPositions\": [\n          {\n            \"name\": \"string\"\n          }\n        ],\n        \"profilePicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"qrcode\": {\n          \"class\": \"string\",\n          \"id\": 0,\n          \"height\": 0,\n          \"width\": 0,\n          \"thumbnailUrl\": \"string\",\n          \"url\": \"string\"\n        },\n        \"role\": \"string\",\n        \"rosterId\": 0,\n        \"rosterBio\": 0,\n        \"rosterPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"socialNetworks\": [\n          {\n            \"link\": \"string\",\n            \"username\": \"string\",\n            \"name\": \"Facebook\"\n          }\n        ],\n        \"squadNumber\": 0,\n        \"status\": \"string\",\n        \"teamCount\": 0,\n        \"userId\": 0,\n        \"username\": \"string\",\n        \"views\": 0,\n        \"weight\": 0,\n        \"wins\": 0\n      },\n      \"freeKicks\": 0,\n      \"yellowCards\": 0,\n      \"redCards\": 0,\n      \"yellowRedCards\": 0,\n      \"goals\": 0,\n      \"ownGoals\": 0,\n      \"assists\": 0,\n      \"penaltySave\": 0,\n      \"penaltyMiss\": 0,\n      \"penaltyGoals\": 0,\n      \"cleanSheet\": 0,\n      \"singleGoalAgainst\": 0,\n      \"goalsAgainst\": 0,\n      \"win\": 0,\n      \"minutesPlayed\": 0\n    }\n  }\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "MatchLineUps",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}/line-ups?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}",
+								"line-ups"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /match/:idPartido/line-ups\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"awayTeamLineup\": [\n        {\n          \"id\": 0,\n          \"type\": \"lineup\",\n          \"player\": {\n            \"address\": \"string\",\n            \"androidLogins\": 0,\n            \"assists\": 0,\n            \"associationNumber\": \"string\",\n            \"bio\": \"string\",\n            \"city\": \"string\",\n            \"cohesionCoefficients\": {\n              \"eventsParticipated\": 0,\n              \"interactions\": 0,\n              \"rsvps\": 0\n            },\n            \"cohesionRate\": 0,\n            \"country\": \"string\",\n            \"coverPhoto\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"createdAt\": \"string\",\n            \"deviceType\": \"ios\",\n            \"dob\": \"string\",\n            \"draws\": 0,\n            \"enabled\": true,\n            \"email\": \"string\",\n            \"favorited\": 0,\n            \"favoriteId\": 0,\n            \"favorites\": 0,\n            \"firstName\": \"string\",\n            \"followers\": 0,\n            \"followerId\": 0,\n            \"following\": 0,\n            \"gender\": \"m\",\n            \"generalCohesionRate\": 0,\n            \"goals\": 0,\n            \"hasInstalledApp\": true,\n            \"height\": 0,\n            \"invitationDetails\": {\n              \"code\": \"not_sent\",\n              \"createdAt\": \"string\",\n              \"openedAt\": \"string\",\n              \"link\": \"string\"\n            },\n            \"invitationsLeft\": 0,\n            \"iosLogins\": 0,\n            \"isCaptain\": true,\n            \"isManager\": true,\n            \"isPlayer\": true,\n            \"isProfessional\": true,\n            \"isReserve\": true,\n            \"isTeamContact\": true,\n            \"jerseyNumber\": 0,\n            \"lastActiveDate\": \"string\",\n            \"lastAndroidLogin\": \"string\",\n            \"lastIosLogin\": \"string\",\n            \"lastName\": \"string\",\n            \"lastWebLogin\": \"string\",\n            \"logins\": 0,\n            \"losses\": 0,\n            \"managerRole\": \"string\",\n            \"matchName\": \"string\",\n            \"multiLanguagePost\": true,\n            \"nationality\": \"string\",\n            \"nationalityCode\": \"string\",\n            \"phone\": \"string\",\n            \"played\": 0,\n            \"playerCard\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"playerId\": 0,\n            \"position\": \"string\",\n            \"preferredPositions\": [\n              {\n                \"name\": \"string\"\n              }\n            ],\n            \"profilePicture\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"qrcode\": {\n              \"class\": \"string\",\n              \"id\": 0,\n              \"height\": 0,\n              \"width\": 0,\n              \"thumbnailUrl\": \"string\",\n              \"url\": \"string\"\n            },\n            \"role\": \"string\",\n            \"rosterId\": 0,\n            \"rosterBio\": 0,\n            \"rosterPicture\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"socialNetworks\": [\n              {\n                \"link\": \"string\",\n                \"username\": \"string\",\n                \"name\": \"Facebook\"\n              }\n            ],\n            \"squadNumber\": 0,\n            \"status\": \"string\",\n            \"teamCount\": 0,\n            \"userId\": 0,\n            \"username\": \"string\",\n            \"views\": 0,\n            \"weight\": 0,\n            \"wins\": 0\n          },\n          \"team\": {\n            \"id\": 0,\n            \"name\": \"string\",\n            \"username\": \"string\",\n            \"crestPicture\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"coverPhoto\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"permaLink\": \"string\"\n          },\n          \"currentTeam\": {\n            \"id\": 0,\n            \"name\": \"string\",\n            \"username\": \"string\",\n            \"crestPicture\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"coverPhoto\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"permaLink\": \"string\"\n          },\n          \"position\": \"string\",\n          \"pitchPositionHorizontal\": \"string\",\n          \"pitchPositionVertical\": \"string\",\n          \"gameStats\": [\n            {\n              \"id\": 0,\n              \"type\": \"goal\",\n              \"minute\": 0,\n              \"player\": {\n                \"address\": \"string\",\n                \"androidLogins\": 0,\n                \"assists\": 0,\n                \"associationNumber\": \"string\",\n                \"bio\": \"string\",\n                \"city\": \"string\",\n                \"cohesionCoefficients\": {\n                  \"eventsParticipated\": 0,\n                  \"interactions\": 0,\n                  \"rsvps\": 0\n                },\n                \"cohesionRate\": 0,\n                \"country\": \"string\",\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"createdAt\": \"string\",\n                \"deviceType\": \"ios\",\n                \"dob\": \"string\",\n                \"draws\": 0,\n                \"enabled\": true,\n                \"email\": \"string\",\n                \"favorited\": 0,\n                \"favoriteId\": 0,\n                \"favorites\": 0,\n                \"firstName\": \"string\",\n                \"followers\": 0,\n                \"followerId\": 0,\n                \"following\": 0,\n                \"gender\": \"m\",\n                \"generalCohesionRate\": 0,\n                \"goals\": 0,\n                \"hasInstalledApp\": true,\n                \"height\": 0,\n                \"invitationDetails\": {\n                  \"code\": \"not_sent\",\n                  \"createdAt\": \"string\",\n                  \"openedAt\": \"string\",\n                  \"link\": \"string\"\n                },\n                \"invitationsLeft\": 0,\n                \"iosLogins\": 0,\n                \"isCaptain\": true,\n                \"isManager\": true,\n                \"isPlayer\": true,\n                \"isProfessional\": true,\n                \"isReserve\": true,\n                \"isTeamContact\": true,\n                \"jerseyNumber\": 0,\n                \"lastActiveDate\": \"string\",\n                \"lastAndroidLogin\": \"string\",\n                \"lastIosLogin\": \"string\",\n                \"lastName\": \"string\",\n                \"lastWebLogin\": \"string\",\n                \"logins\": 0,\n                \"losses\": 0,\n                \"managerRole\": \"string\",\n                \"matchName\": \"string\",\n                \"multiLanguagePost\": true,\n                \"nationality\": \"string\",\n                \"nationalityCode\": \"string\",\n                \"phone\": \"string\",\n                \"played\": 0,\n                \"playerCard\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"playerId\": 0,\n                \"position\": \"string\",\n                \"preferredPositions\": [\n                  {\n                    \"name\": \"string\"\n                  }\n                ],\n                \"profilePicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"qrcode\": {\n                  \"class\": \"string\",\n                  \"id\": 0,\n                  \"height\": 0,\n                  \"width\": 0,\n                  \"thumbnailUrl\": \"string\",\n                  \"url\": \"string\"\n                },\n                \"role\": \"string\",\n                \"rosterId\": 0,\n                \"rosterBio\": 0,\n                \"rosterPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"socialNetworks\": [\n                  {\n                    \"link\": \"string\",\n                    \"username\": \"string\",\n                    \"name\": \"Facebook\"\n                  }\n                ],\n                \"squadNumber\": 0,\n                \"status\": \"string\",\n                \"teamCount\": 0,\n                \"userId\": 0,\n                \"username\": \"string\",\n                \"views\": 0,\n                \"weight\": 0,\n                \"wins\": 0\n              },\n              \"assistPlayer\": {\n                \"address\": \"string\",\n                \"androidLogins\": 0,\n                \"assists\": 0,\n                \"associationNumber\": \"string\",\n                \"bio\": \"string\",\n                \"city\": \"string\",\n                \"cohesionCoefficients\": {\n                  \"eventsParticipated\": 0,\n                  \"interactions\": 0,\n                  \"rsvps\": 0\n                },\n                \"cohesionRate\": 0,\n                \"country\": \"string\",\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"createdAt\": \"string\",\n                \"deviceType\": \"ios\",\n                \"dob\": \"string\",\n                \"draws\": 0,\n                \"enabled\": true,\n                \"email\": \"string\",\n                \"favorited\": 0,\n                \"favoriteId\": 0,\n                \"favorites\": 0,\n                \"firstName\": \"string\",\n                \"followers\": 0,\n                \"followerId\": 0,\n                \"following\": 0,\n                \"gender\": \"m\",\n                \"generalCohesionRate\": 0,\n                \"goals\": 0,\n                \"hasInstalledApp\": true,\n                \"height\": 0,\n                \"invitationDetails\": {\n                  \"code\": \"not_sent\",\n                  \"createdAt\": \"string\",\n                  \"openedAt\": \"string\",\n                  \"link\": \"string\"\n                },\n                \"invitationsLeft\": 0,\n                \"iosLogins\": 0,\n                \"isCaptain\": true,\n                \"isManager\": true,\n                \"isPlayer\": true,\n                \"isProfessional\": true,\n                \"isReserve\": true,\n                \"isTeamContact\": true,\n                \"jerseyNumber\": 0,\n                \"lastActiveDate\": \"string\",\n                \"lastAndroidLogin\": \"string\",\n                \"lastIosLogin\": \"string\",\n                \"lastName\": \"string\",\n                \"lastWebLogin\": \"string\",\n                \"logins\": 0,\n                \"losses\": 0,\n                \"managerRole\": \"string\",\n                \"matchName\": \"string\",\n                \"multiLanguagePost\": true,\n                \"nationality\": \"string\",\n                \"nationalityCode\": \"string\",\n                \"phone\": \"string\",\n                \"played\": 0,\n                \"playerCard\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"playerId\": 0,\n                \"position\": \"string\",\n                \"preferredPositions\": [\n                  {\n                    \"name\": \"string\"\n                  }\n                ],\n                \"profilePicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"qrcode\": {\n                  \"class\": \"string\",\n                  \"id\": 0,\n                  \"height\": 0,\n                  \"width\": 0,\n                  \"thumbnailUrl\": \"string\",\n                  \"url\": \"string\"\n                },\n                \"role\": \"string\",\n                \"rosterId\": 0,\n                \"rosterBio\": 0,\n                \"rosterPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"socialNetworks\": [\n                  {\n                    \"link\": \"string\",\n                    \"username\": \"string\",\n                    \"name\": \"Facebook\"\n                  }\n                ],\n                \"squadNumber\": 0,\n                \"status\": \"string\",\n                \"teamCount\": 0,\n                \"userId\": 0,\n                \"username\": \"string\",\n                \"views\": 0,\n                \"weight\": 0,\n                \"wins\": 0\n              },\n              \"team\": {\n                \"id\": 0,\n                \"name\": \"string\",\n                \"username\": \"string\",\n                \"crestPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"permaLink\": \"string\"\n              },\n              \"notes\": \"string\",\n              \"currentTeam\": {\n                \"id\": 0,\n                \"name\": \"string\",\n                \"username\": \"string\",\n                \"crestPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"permaLink\": \"string\"\n              }\n            }\n          ]\n        }\n      ],\n      \"homeTeamLineup\": [\n        {\n          \"id\": 0,\n          \"type\": \"lineup\",\n          \"player\": {\n            \"address\": \"string\",\n            \"androidLogins\": 0,\n            \"assists\": 0,\n            \"associationNumber\": \"string\",\n            \"bio\": \"string\",\n            \"city\": \"string\",\n            \"cohesionCoefficients\": {\n              \"eventsParticipated\": 0,\n              \"interactions\": 0,\n              \"rsvps\": 0\n            },\n            \"cohesionRate\": 0,\n            \"country\": \"string\",\n            \"coverPhoto\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"createdAt\": \"string\",\n            \"deviceType\": \"ios\",\n            \"dob\": \"string\",\n            \"draws\": 0,\n            \"enabled\": true,\n            \"email\": \"string\",\n            \"favorited\": 0,\n            \"favoriteId\": 0,\n            \"favorites\": 0,\n            \"firstName\": \"string\",\n            \"followers\": 0,\n            \"followerId\": 0,\n            \"following\": 0,\n            \"gender\": \"m\",\n            \"generalCohesionRate\": 0,\n            \"goals\": 0,\n            \"hasInstalledApp\": true,\n            \"height\": 0,\n            \"invitationDetails\": {\n              \"code\": \"not_sent\",\n              \"createdAt\": \"string\",\n              \"openedAt\": \"string\",\n              \"link\": \"string\"\n            },\n            \"invitationsLeft\": 0,\n            \"iosLogins\": 0,\n            \"isCaptain\": true,\n            \"isManager\": true,\n            \"isPlayer\": true,\n            \"isProfessional\": true,\n            \"isReserve\": true,\n            \"isTeamContact\": true,\n            \"jerseyNumber\": 0,\n            \"lastActiveDate\": \"string\",\n            \"lastAndroidLogin\": \"string\",\n            \"lastIosLogin\": \"string\",\n            \"lastName\": \"string\",\n            \"lastWebLogin\": \"string\",\n            \"logins\": 0,\n            \"losses\": 0,\n            \"managerRole\": \"string\",\n            \"matchName\": \"string\",\n            \"multiLanguagePost\": true,\n            \"nationality\": \"string\",\n            \"nationalityCode\": \"string\",\n            \"phone\": \"string\",\n            \"played\": 0,\n            \"playerCard\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"playerId\": 0,\n            \"position\": \"string\",\n            \"preferredPositions\": [\n              {\n                \"name\": \"string\"\n              }\n            ],\n            \"profilePicture\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"qrcode\": {\n              \"class\": \"string\",\n              \"id\": 0,\n              \"height\": 0,\n              \"width\": 0,\n              \"thumbnailUrl\": \"string\",\n              \"url\": \"string\"\n            },\n            \"role\": \"string\",\n            \"rosterId\": 0,\n            \"rosterBio\": 0,\n            \"rosterPicture\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"socialNetworks\": [\n              {\n                \"link\": \"string\",\n                \"username\": \"string\",\n                \"name\": \"Facebook\"\n              }\n            ],\n            \"squadNumber\": 0,\n            \"status\": \"string\",\n            \"teamCount\": 0,\n            \"userId\": 0,\n            \"username\": \"string\",\n            \"views\": 0,\n            \"weight\": 0,\n            \"wins\": 0\n          },\n          \"team\": {\n            \"id\": 0,\n            \"name\": \"string\",\n            \"username\": \"string\",\n            \"crestPicture\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"coverPhoto\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"permaLink\": \"string\"\n          },\n          \"currentTeam\": {\n            \"id\": 0,\n            \"name\": \"string\",\n            \"username\": \"string\",\n            \"crestPicture\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"coverPhoto\": {\n              \"id\": 0,\n              \"url\": \"string\",\n              \"thumbnailUrl\": \"string\",\n              \"width\": 0,\n              \"height\": 0\n            },\n            \"permaLink\": \"string\"\n          },\n          \"position\": \"string\",\n          \"pitchPositionHorizontal\": \"string\",\n          \"pitchPositionVertical\": \"string\",\n          \"gameStats\": [\n            {\n              \"id\": 0,\n              \"type\": \"goal\",\n              \"minute\": 0,\n              \"player\": {\n                \"address\": \"string\",\n                \"androidLogins\": 0,\n                \"assists\": 0,\n                \"associationNumber\": \"string\",\n                \"bio\": \"string\",\n                \"city\": \"string\",\n                \"cohesionCoefficients\": {\n                  \"eventsParticipated\": 0,\n                  \"interactions\": 0,\n                  \"rsvps\": 0\n                },\n                \"cohesionRate\": 0,\n                \"country\": \"string\",\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"createdAt\": \"string\",\n                \"deviceType\": \"ios\",\n                \"dob\": \"string\",\n                \"draws\": 0,\n                \"enabled\": true,\n                \"email\": \"string\",\n                \"favorited\": 0,\n                \"favoriteId\": 0,\n                \"favorites\": 0,\n                \"firstName\": \"string\",\n                \"followers\": 0,\n                \"followerId\": 0,\n                \"following\": 0,\n                \"gender\": \"m\",\n                \"generalCohesionRate\": 0,\n                \"goals\": 0,\n                \"hasInstalledApp\": true,\n                \"height\": 0,\n                \"invitationDetails\": {\n                  \"code\": \"not_sent\",\n                  \"createdAt\": \"string\",\n                  \"openedAt\": \"string\",\n                  \"link\": \"string\"\n                },\n                \"invitationsLeft\": 0,\n                \"iosLogins\": 0,\n                \"isCaptain\": true,\n                \"isManager\": true,\n                \"isPlayer\": true,\n                \"isProfessional\": true,\n                \"isReserve\": true,\n                \"isTeamContact\": true,\n                \"jerseyNumber\": 0,\n                \"lastActiveDate\": \"string\",\n                \"lastAndroidLogin\": \"string\",\n                \"lastIosLogin\": \"string\",\n                \"lastName\": \"string\",\n                \"lastWebLogin\": \"string\",\n                \"logins\": 0,\n                \"losses\": 0,\n                \"managerRole\": \"string\",\n                \"matchName\": \"string\",\n                \"multiLanguagePost\": true,\n                \"nationality\": \"string\",\n                \"nationalityCode\": \"string\",\n                \"phone\": \"string\",\n                \"played\": 0,\n                \"playerCard\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"playerId\": 0,\n                \"position\": \"string\",\n                \"preferredPositions\": [\n                  {\n                    \"name\": \"string\"\n                  }\n                ],\n                \"profilePicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"qrcode\": {\n                  \"class\": \"string\",\n                  \"id\": 0,\n                  \"height\": 0,\n                  \"width\": 0,\n                  \"thumbnailUrl\": \"string\",\n                  \"url\": \"string\"\n                },\n                \"role\": \"string\",\n                \"rosterId\": 0,\n                \"rosterBio\": 0,\n                \"rosterPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"socialNetworks\": [\n                  {\n                    \"link\": \"string\",\n                    \"username\": \"string\",\n                    \"name\": \"Facebook\"\n                  }\n                ],\n                \"squadNumber\": 0,\n                \"status\": \"string\",\n                \"teamCount\": 0,\n                \"userId\": 0,\n                \"username\": \"string\",\n                \"views\": 0,\n                \"weight\": 0,\n                \"wins\": 0\n              },\n              \"assistPlayer\": {\n                \"address\": \"string\",\n                \"androidLogins\": 0,\n                \"assists\": 0,\n                \"associationNumber\": \"string\",\n                \"bio\": \"string\",\n                \"city\": \"string\",\n                \"cohesionCoefficients\": {\n                  \"eventsParticipated\": 0,\n                  \"interactions\": 0,\n                  \"rsvps\": 0\n                },\n                \"cohesionRate\": 0,\n                \"country\": \"string\",\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"createdAt\": \"string\",\n                \"deviceType\": \"ios\",\n                \"dob\": \"string\",\n                \"draws\": 0,\n                \"enabled\": true,\n                \"email\": \"string\",\n                \"favorited\": 0,\n                \"favoriteId\": 0,\n                \"favorites\": 0,\n                \"firstName\": \"string\",\n                \"followers\": 0,\n                \"followerId\": 0,\n                \"following\": 0,\n                \"gender\": \"m\",\n                \"generalCohesionRate\": 0,\n                \"goals\": 0,\n                \"hasInstalledApp\": true,\n                \"height\": 0,\n                \"invitationDetails\": {\n                  \"code\": \"not_sent\",\n                  \"createdAt\": \"string\",\n                  \"openedAt\": \"string\",\n                  \"link\": \"string\"\n                },\n                \"invitationsLeft\": 0,\n                \"iosLogins\": 0,\n                \"isCaptain\": true,\n                \"isManager\": true,\n                \"isPlayer\": true,\n                \"isProfessional\": true,\n                \"isReserve\": true,\n                \"isTeamContact\": true,\n                \"jerseyNumber\": 0,\n                \"lastActiveDate\": \"string\",\n                \"lastAndroidLogin\": \"string\",\n                \"lastIosLogin\": \"string\",\n                \"lastName\": \"string\",\n                \"lastWebLogin\": \"string\",\n                \"logins\": 0,\n                \"losses\": 0,\n                \"managerRole\": \"string\",\n                \"matchName\": \"string\",\n                \"multiLanguagePost\": true,\n                \"nationality\": \"string\",\n                \"nationalityCode\": \"string\",\n                \"phone\": \"string\",\n                \"played\": 0,\n                \"playerCard\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"playerId\": 0,\n                \"position\": \"string\",\n                \"preferredPositions\": [\n                  {\n                    \"name\": \"string\"\n                  }\n                ],\n                \"profilePicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"qrcode\": {\n                  \"class\": \"string\",\n                  \"id\": 0,\n                  \"height\": 0,\n                  \"width\": 0,\n                  \"thumbnailUrl\": \"string\",\n                  \"url\": \"string\"\n                },\n                \"role\": \"string\",\n                \"rosterId\": 0,\n                \"rosterBio\": 0,\n                \"rosterPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"socialNetworks\": [\n                  {\n                    \"link\": \"string\",\n                    \"username\": \"string\",\n                    \"name\": \"Facebook\"\n                  }\n                ],\n                \"squadNumber\": 0,\n                \"status\": \"string\",\n                \"teamCount\": 0,\n                \"userId\": 0,\n                \"username\": \"string\",\n                \"views\": 0,\n                \"weight\": 0,\n                \"wins\": 0\n              },\n              \"team\": {\n                \"id\": 0,\n                \"name\": \"string\",\n                \"username\": \"string\",\n                \"crestPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"permaLink\": \"string\"\n              },\n              \"notes\": \"string\",\n              \"currentTeam\": {\n                \"id\": 0,\n                \"name\": \"string\",\n                \"username\": \"string\",\n                \"crestPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"permaLink\": \"string\"\n              }\n            }\n          ]\n        }\n      ],\n      \"hasAwayFormation\": true,\n      \"hasHomeFormation\": true\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "MatchWeather",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}/weather?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /match/:idPartido/weather\n\ntoken:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "LastsEventsByTeam",
+					"request": {
+						"url": {
+							"raw": "{{url}}/events/{{idEquipo}}/lastMatchs?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"events",
+								"{{idEquipo}}",
+								"lastMatchs"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /events/:teamId/lastMatchs\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"id\": 0,\n      \"eventType\": \"Game\",\n      \"isMember\": true,\n      \"isManager\": true,\n      \"isHomeManager\": true,\n      \"isAwayManager\": true,\n      \"isHomeMember\": true,\n      \"isAwayMember\": true,\n      \"isProfessional\": true,\n      \"gameMinute\": \"string\",\n      \"gameStatus\": \"Playing\",\n      \"date\": \"string\",\n      \"endDate\": \"string\",\n      \"title\": \"string\",\n      \"description\": \"string\",\n      \"privacy\": \"string\",\n      \"venue\": {\n        \"id\": \"string\",\n        \"name\": \"string\",\n        \"city\": \"string\",\n        \"address\": \"string\",\n        \"fields\": [\n          {\n            \"id\": 0,\n            \"name\": \"string\"\n          }\n        ]\n      },\n      \"field\": {\n        \"id\": 0,\n        \"name\": \"string\"\n      },\n      \"rsvps\": {\n        \"maybe\": 0,\n        \"invited\": 0,\n        \"missing\": 0,\n        \"going\": 0,\n        \"declined\": 0\n      },\n      \"organizer\": {\n        \"id\": 0,\n        \"type\": \"Team\",\n        \"name\": \"string\",\n        \"crestPictureUrl\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"username\": \"string\"\n      },\n      \"team\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"awayTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"homeTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"currentTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"division\": {\n        \"name\": \"string\",\n        \"id\": 0,\n        \"abbreviation\": \"string\",\n        \"displayOrder\": 0,\n        \"gender\": \"m\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"competition\": {\n        \"id\": \"string\",\n        \"type\": \"league\",\n        \"name\": \"string\",\n        \"abbreviation\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"isProfessional\": true\n      },\n      \"season\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"code\": \"string\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"postponed\": true,\n      \"played\": true,\n      \"homeScore\": 0,\n      \"awayScore\": 0,\n      \"hasPenalties\": true,\n      \"homePenalScore\": 0,\n      \"awayPenalScore\": 0,\n      \"homeForfeit\": true,\n      \"awayForfeit\": true,\n      \"homeTeamForm\": [\n        \"string\"\n      ],\n      \"awayTeamForm\": [\n        \"string\"\n      ],\n      \"round\": \"string\",\n      \"roundId\": 0,\n      \"favoriteTeam\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"username\": \"string\",\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"permaLink\": \"string\"\n      },\n      \"permaLink\": \"string\"\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "GetMatchNews",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}/news?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}",
+								"news"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetMatchStreaming",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}/live-streaming?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}",
+								"live-streaming"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /match/:idPartido/live-streaming\r\ntoken:\"string\"\r\n\r\nRESPUESTA:\r\n\r\ndata:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "GetMatchTicket",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}/buyticket?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}",
+								"buyticket"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "get /match/:idPartido/buyticket\n\ntoken:\"string\"\n\nRESPUESTA:\n\ndata:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "GetMatchCaliente",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match/{{idMatch}}/caliente/{{idEquipoCaliente}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match",
+								"{{idMatch}}",
+								"caliente",
+								"{{idEquipoCaliente}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "get /match/:idPartido/caliente\n\ntoken:\"string\"\n\nRESPUESTA:\n\ndata:{}"
+					},
+					"response": []
+				},
+				{
+					"name": "V2 Match Standings",
+					"request": {
+						"url": {
+							"raw": "{{url}}/v2/match/{{IdOptaMatch}}/standings?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"match",
+								"{{IdOptaMatch}}",
+								"standings"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "V2 MatchLineups",
+					"request": {
+						"url": {
+							"raw": "{{url}}/v2/match/{{IdOptaMatch}}/line-ups?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v2",
+								"match",
+								"{{IdOptaMatch}}",
+								"line-ups"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Request para obtener resultados desde el Api del América"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feedback",
+			"description": "",
+			"item": [
+				{
+					"name": "PostFeedback",
+					"request": {
+						"url": "{{url}}/feedback",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "text"
+								},
+								{
+									"key": "idDispositivo",
+									"value": "21331d131fcd",
+									"type": "text"
+								},
+								{
+									"key": "dispositivo",
+									"value": "{\"os\":\"android\",\"versionOs\":\"2.5.3\",\"modelo\":\"ladrillo\",\"marca\":\"nokia\"}",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Mensaje de pruebas",
+									"type": "text"
+								},
+								{
+									"key": "mail",
+									"value": "mario@gafa.mx",
+									"type": "text"
+								}
+							]
+						},
+						"description": "POST /feedback\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n    \"nombre\": \"string\",\n    \"mail\": \"string\",\n    \"idUser\": \"string\",\n    \"idDispositivo\": \"string\",\n    \"dispositivo\": \"json\",\n    \"eliminado\": \"integer\",\n    \"createdAt\": \"date\",\n    \"updatedAt\": \"date\",\n    \"id\": \"string\",\n  }"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feeds",
+			"description": "",
+			"item": [
+				{
+					"name": "NoticiaById",
+					"request": {
+						"url": {
+							"raw": "{{url}}/noticia/47174?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"noticia",
+								"47174"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /noticia/:idNoticia\n\ntoken:\"token\"\nidNoticia:\"integer\""
+					},
+					"response": []
+				},
+				{
+					"name": "Noticias",
+					"request": {
+						"url": {
+							"raw": "{{url}}/noticias/1?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"noticias",
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /noticias/:page\n\ntoken:\"token\"\npage:\"integer\""
+					},
+					"response": []
+				},
+				{
+					"name": "Noticias Exclusivas",
+					"request": {
+						"url": {
+							"raw": "{{url}}/exclusivas/noticias/1?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"exclusivas",
+								"noticias",
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /exclusivas/noticias/:page\n\ntoken:\"token\"\npage:\"integer\""
+					},
+					"response": []
+				},
+				{
+					"name": "Galerias",
+					"request": {
+						"url": {
+							"raw": "{{url}}/galerias/1?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"galerias",
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /galerias/:page\n\ntoken:\"string\"\npage:\"integer\""
+					},
+					"response": []
+				},
+				{
+					"name": "Videos",
+					"request": {
+						"url": {
+							"raw": "{{url}}/videos/1?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"videos",
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /videos/:page\n\ntoken:\"string\"\npage:\"integer\""
+					},
+					"response": []
+				},
+				{
+					"name": "Videos Exclusivas",
+					"request": {
+						"url": {
+							"raw": "{{url}}/exclusivas/videos/1?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"exclusivas",
+								"videos",
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /exclusivas/videos/:page\n\ntoken:\"token\"\npage:\"integer\""
+					},
+					"response": []
+				},
+				{
+					"name": "Multimedias",
+					"request": {
+						"url": {
+							"raw": "{{url}}/multimedia/2?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"multimedia",
+								"2"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /multimedia/:page\n\ntoken:\"string\"\npage:\"integer\""
+					},
+					"response": []
+				},
+				{
+					"name": "AllFeeds",
+					"request": {
+						"url": {
+							"raw": "{{url}}/allfeeds/1?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"allfeeds",
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /allfeeds/:page\n\ntoken:\"string\"\npage:\"integer\""
+					},
+					"response": []
+				},
+				{
+					"name": "AlFeeds Exclusivos",
+					"request": {
+						"url": {
+							"raw": "{{url}}/exclusivas/allfeeds/1?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"exclusivas",
+								"allfeeds",
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /exclusivas/allfeeds/:page\n\ntoken:\"token\"\npage:\"integer\""
+					},
+					"response": []
+				},
+				{
+					"name": "FeedAmericanista",
+					"request": {
+						"url": {
+							"raw": "{{url}}/feed-americanista/1?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"feed-americanista",
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /feed-americanista/:page\n\ntoken:\"string\"\npage:\"integer\""
+					},
+					"response": []
+				},
+				{
+					"name": "AmericaHistory",
+					"request": {
+						"url": {
+							"raw": "{{url}}/america/history?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"america",
+								"history"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /america/history\n\ntoken:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "AmericaHistoryById",
+					"request": {
+						"url": {
+							"raw": "{{url}}/america/history/58753a5a0a7770c84015a42f?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"america",
+								"history",
+								"58753a5a0a7770c84015a42f"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /america/history/:idHistory\n\ntoken:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "AmericaManagers",
+					"request": {
+						"url": {
+							"raw": "{{url}}/america/managers?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"america",
+								"managers"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /america/managers\n\ntoken:\"string\"\n\nRESPUESTA:\n\ndata : [\n    {\n      \"nombre\": \"string\",\n      \"puesto\": \"string\",\n      \"foto\": \"string\",\n      \"posicion\": \"integer\",\n      \"eliminado\": \"integer\",\n      \"createdAt\": \"date\",\n      \"updatedAt\": \"date\",\n      \"id\": \"string\"\n    }\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "AmericaProteccionDatos",
+					"request": {
+						"url": {
+							"raw": "{{url}}/america/proteccion-datos?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"america",
+								"proteccion-datos"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /america/proteccion-datos\n\ntoken:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "AmericaAvisoLegal",
+					"request": {
+						"url": {
+							"raw": "{{url}}/america/aviso-legal?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"america",
+								"aviso-legal"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /america/aviso-legal\n\ntoken:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "AmericaResponsabilidadSocial",
+					"request": {
+						"url": {
+							"raw": "{{url}}/america/responsabilidad-social?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"america",
+								"responsabilidad-social"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /america/responsabilidad-social\n\ntoken:\"string\"\n\nRESPUESTA:\n\ndata:\n{\n\nfeed:\"array\"\ninfo:{}\n\n}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gamification",
+			"description": "",
+			"item": [
+				{
+					"name": "Compartir Nota o Galeria",
+					"request": {
+						"url": {
+							"raw": "{{url}}/gamificacion/compartir/nota/1234?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gamificacion",
+								"compartir",
+								"nota",
+								"1234"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /gamificacion/compartir/nota/:idNota (o galeria)\n\n{\n    \"idUser\": \"string\",\n    \"type\": \"string\",\n    \"referencia_id\": \"string\",\n    \"createdAt\": \"date\",\n    \"updatedAt\": \"date\",\n    \"id\": \"string\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Compartir Video",
+					"request": {
+						"url": {
+							"raw": "{{url}}/gamificacion/compartir/video/1234?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gamificacion",
+								"compartir",
+								"video",
+								"1234"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /gamificacion/compartir/video/:idVideo\n\n{\n    \"idUser\": \"string\",\n    \"type\": \"string\",\n    \"referencia_id\": \"string\",\n    \"createdAt\": \"date\",\n    \"updatedAt\": \"date\",\n    \"id\": \"string\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Compartir Perfil",
+					"request": {
+						"url": {
+							"raw": "{{url}}/gamificacion/compartir/perfil?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gamificacion",
+								"compartir",
+								"perfil"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /gamificacion/compartir/perfil\n\n{\n    \"idUser\": \"string\",\n    \"type\": \"string\",\n    \"referencia_id\": \"string\",\n    \"createdAt\": \"date\",\n    \"updatedAt\": \"date\",\n    \"id\": \"string\"\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "Canjear Producto",
+					"request": {
+						"url": {
+							"raw": "{{url}}/gamificacion/canjear/producto/{{idProducto}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"gamificacion",
+								"canjear",
+								"producto",
+								"{{idProducto}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /gamificacion/canjear/producto/:idProducto"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"description": "POST /notificacion",
+			"item": [
+				{
+					"name": "ReciveNotification",
+					"request": {
+						"url": "{{url}}/notifications",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "news",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "Noticias",
+									"type": "text"
+								},
+								{
+									"key": "referenceId",
+									"value": "30345",
+									"type": "text"
+								}
+							]
+						},
+						"description": "POST /notifications"
+					},
+					"response": []
+				},
+				{
+					"name": "SubscribeMeToTag",
+					"request": {
+						"url": "{{url}}/notifications/subscribe/news_123/Dispositivo2",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"description": "POST /notifications/subscribe/:tag/:idDispositivo\n\ntoken:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "GetValidTags",
+					"request": {
+						"url": {
+							"raw": "{{url}}/notification/tags?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"notification",
+								"tags"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /notification/tags\n\ntoken:\"string\"\n\nRESPUESTA:\n\ndata:\n[\n    {\n      name: 'string',//NOMBRE A IMPRIMIR EN LA APP\n      product: 'string',\n      tag: 'string'//TAG PARA IMPLEMENTAR EN LAS LLAMADAS\n    },\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "UnSubscribeMeToTag",
+					"request": {
+						"url": "{{url}}/notifications/unsubscribe/news_123/Dispositivo1",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"description": "POST /notifications/unsubscribe/:tag/:idDispositivo\n\ntoken:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "GetSuscriptionTags",
+					"request": {
+						"url": {
+							"raw": "{{url}}/notification/subscriptions/cf5da5a8-23ab-4278-9f1d-7d21fcf5a598?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"notification",
+								"subscriptions",
+								"cf5da5a8-23ab-4278-9f1d-7d21fcf5a598"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3OWI4OTk4Y2Y1Mzc5ZGMyMWYxZmM1MiIsImlhdCI6MTQ3MTg4NzY5MiwiZXhwIjoxNDcyMDY3NjkyfQ.WitHJIePWpqITA57NbjbFtt66-jGDmWQ5Joj6eEfCg0",
+									"type": "text"
+								}
+							]
+						},
+						"description": "GET /notification/subscriptions/:idDispositivo\n\ntoken:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "SubscribeToMatch",
+					"request": {
+						"url": "{{url}}/notifications/subscribe-to-match/123123/idDispositivo",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "POST /notifications/subscribe-to-match/:idMatch/:idDispositivo\n\ntoken:\"string\"\n\nRESPUESTA:"
+					},
+					"response": []
+				},
+				{
+					"name": "UnSubscribeToMatch",
+					"request": {
+						"url": "{{url}}/notifications/un-subscribe-to-match/61690/b9e5ad9c-59fb-4cd8-9326-45eb302edd1c",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"description": "POST /notifications/un-subscribe-to-match/:idMatch/:idDispositivo\r\ntoken:\"string\""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Opciones",
+			"description": "",
+			"item": [
+				{
+					"name": "GetOpciones",
+					"request": {
+						"url": {
+							"raw": "{{url}}/options/redes?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"options",
+								"redes"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /options/:name\n\ntoken:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "GetCountries",
+					"request": {
+						"url": {
+							"raw": "{{url}}/countries?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"countries"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /countries\n\ntoken:\"string\"\n\nRESPUESTA:\n\ndata:[\n\n{\n      \"name\": \"string\",\n      \"code\": \"string\",\n      \"flag\": \"string\"\n}\n    \n]"
+					},
+					"response": []
+				},
+				{
+					"name": "GetCities",
+					"request": {
+						"url": {
+							"raw": "{{url}}/cities/Spain?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"cities",
+								"Spain"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /cities/:country\n\nLo que se reciva en :country debe estar bajo URL encode. Enviaran aqui el valor del \"name\" del request GET /countries\n\n\ntoken:\"string\"\n\nRESPUESTA\n\ndata:\"array\""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"description": "",
+			"item": [
+				{
+					"name": "GetProducts",
+					"request": {
+						"url": {
+							"raw": "{{url}}/products?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /products\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n      \"foto\": \"string\",\n      \"foto2\": \"string\",\n      \"puntos\": \"integer\",\n      \"nombre\": \"string\",\n      \"createdAt\": \"date\",\n      \"updatedAt\": \"date\",\n      \"id\": \"string\"\n    }"
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductById",
+					"request": {
+						"url": {
+							"raw": "{{url}}/products/{{idProducto}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"products",
+								"{{idProducto}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /products/:idProducto\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n      \"foto\": \"string\",\n      \"foto2\": \"string\",\n      \"puntos\": \"integer\",\n      \"nombre\": \"string\",\n      \"createdAt\": \"date\",\n      \"updatedAt\": \"date\",\n      \"id\": \"string\"\n    }"
+					},
+					"response": []
+				},
+				{
+					"name": "GetBadges",
+					"request": {
+						"url": {
+							"raw": "{{url}}/badges?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"badges"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /badges\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n      \"foto\": \"string\",\n      \"texto\": \"string\",\n      \"puntos\": \"integer\",\n      \"nombre\": \"string\",\n      \"eliminado\": \"integer\",\n      \"createdAt\": \"date\",\n      \"updatedAt\": \"date\",\n      \"id\": \"string\"\n    }"
+					},
+					"response": []
+				},
+				{
+					"name": "GetBadgeById",
+					"request": {
+						"url": {
+							"raw": "{{url}}/badges/57ab90607444b1b80ec84109?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"badges",
+								"57ab90607444b1b80ec84109"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /badges/:idBadged\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n      \"foto\": \"string\",\n      \"texto\": \"string\",\n      \"puntos\": \"integer\",\n      \"nombre\": \"string\",\n      \"eliminado\": \"integer\",\n      \"createdAt\": \"date\",\n      \"updatedAt\": \"date\",\n      \"id\": \"string\"\n    }"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Publicidad",
+			"description": "",
+			"item": [
+				{
+					"name": "GetPublicidades",
+					"request": {
+						"url": {
+							"raw": "{{url}}/publicidad/?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"publicidad",
+								""
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /publicidad\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n      \"nombre\": \"string\",\n      \"foto\": \"string\",\n      \"link\": \"string\",\n      \"seccion\": \"string\",\n      \"posicion\": \"string\",\n      \"eliminado\": \"boolean\",\n      \"createdAt\": \"date\",\n      \"updatedAt\": \"date\",\n      \"id\": \"string\",\n    }"
+					},
+					"response": []
+				},
+				{
+					"name": "GetPublicidadBySeccionPosicion",
+					"request": {
+						"url": {
+							"raw": "{{url}}/publicidad/home/1?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"publicidad",
+								"home",
+								"1"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /publicidad/:seccion/:posicion\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n      \"nombre\": \"string\",\n      \"foto\": \"string\",\n      \"link\": \"string\",\n      \"seccion\": \"string\",\n      \"posicion\": \"string\",\n      \"eliminado\": \"boolean\",\n      \"createdAt\": \"date\",\n      \"updatedAt\": \"date\",\n      \"id\": \"string\",\n    }"
+					},
+					"response": []
+				},
+				{
+					"name": "GetPublicidadesBySeccion",
+					"request": {
+						"url": {
+							"raw": "{{url}}/publicidad-seccion/home?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"publicidad-seccion",
+								"home"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /publicidad-seccion/:seccion\n\ntoken:\"string\"\n\nPosibles secciones:\namericanista,\ngaleria,\nhome,\nnoticia,\nvideo,\nstandings,\nline-up,\ntimeline,\n\n\nRESPUESTA:\n[\n{\n      \"nombre\": \"string\",\n      \"foto\": \"string\",\n      \"link\": \"string\",\n      \"seccion\": \"string\",\n      \"posicion\": \"string\",\n      \"eliminado\": \"boolean\",\n      \"createdAt\": \"date\",\n      \"updatedAt\": \"date\",\n      \"id\": \"string\",\n    }\n]"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teams",
+			"description": "",
+			"item": [
+				{
+					"name": "GetTeamInfo",
+					"request": {
+						"url": {
+							"raw": "{{url}}/teams/{{idEquipo}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"teams",
+								"{{idEquipo}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /teams/:teamId\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"id\": \"string\",\n      \"name\": \"string\",\n      \"location\": \"string\",\n      \"gender\": \"m\",\n      \"managerId\": 0,\n      \"competition\": {\n        \"id\": \"string\",\n        \"type\": \"league\",\n        \"name\": \"string\",\n        \"abbreviation\": \"string\",\n        \"coverPhoto\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"crestPicture\": {\n          \"id\": 0,\n          \"url\": \"string\",\n          \"thumbnailUrl\": \"string\",\n          \"width\": 0,\n          \"height\": 0\n        },\n        \"isProfessional\": true\n      },\n      \"coverPhoto\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"crestPicture\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"profilePicture\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"ownerEmail\": \"string\",\n      \"website\": \"string\",\n      \"phone\": \"string\",\n      \"about\": \"string\",\n      \"history\": \"string\",\n      \"socialNetworks\": [\n        {\n          \"link\": \"string\",\n          \"username\": \"string\",\n          \"name\": \"Facebook\"\n        }\n      ],\n      \"username\": \"string\",\n      \"showInitialsOnly\": true,\n      \"private\": true,\n      \"isManager\": true,\n      \"isPlayer\": true,\n      \"isFollower\": true,\n      \"isPendingMember\": true,\n      \"currentForm\": [\n        \"string\"\n      ],\n      \"isRecruiting\": true,\n      \"recruitingMessage\": \"string\",\n      \"recruitingPositions\": [\n        \"string\"\n      ],\n      \"recruitingAgeGroupMax\": 0,\n      \"recruitingAgeGroupMin\": 0,\n      \"sponsors\": [\n        {\n          \"id\": 0,\n          \"name\": \"string\",\n          \"picture\": {\n            \"id\": 0,\n            \"url\": \"string\",\n            \"thumbnailUrl\": \"string\",\n            \"width\": 0,\n            \"height\": 0\n          },\n          \"link\": \"string\"\n        }\n      ],\n      \"contacts\": [\n        {\n          \"userId\": 0,\n          \"nationality\": \"string\",\n          \"firstName\": \"string\",\n          \"lastName\": \"string\",\n          \"profilePicture\": {\n            \"id\": 0,\n            \"url\": \"string\",\n            \"thumbnailUrl\": \"string\",\n            \"width\": 0,\n            \"height\": 0\n          },\n          \"followers\": 0,\n          \"following\": 0,\n          \"userFunction\": \"string\"\n        }\n      ],\n      \"followers\": 0,\n      \"followerId\": 0,\n      \"favorited\": 0,\n      \"favoriteId\": 0,\n      \"views\": 0,\n      \"stats\": {\n        \"played\": 0,\n        \"wins\": 0,\n        \"losses\": 0,\n        \"draws\": 0,\n        \"forfeits\": 0,\n        \"goalsFor\": 0,\n        \"goalsAgainst\": 0\n      },\n      \"teamCohesionRate\": 0,\n      \"userCohesionRate\": 0,\n      \"userCohesionCoefficients\": {\n        \"eventsParticipated\": 0,\n        \"interactions\": 0,\n        \"rsvps\": 0\n      },\n      \"isProfessional\": true\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "TeamStandings",
+					"request": {
+						"url": {
+							"raw": "{{url}}/teams/{{idEquipo}}/standings/254/225/?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"teams",
+								"{{idEquipo}}",
+								"standings",
+								"254",
+								"225",
+								""
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /teams/:teamId/standings/:division/:season\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"code\": 0,\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"season\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"code\": \"string\",\n        \"startDate\": \"string\",\n        \"endDate\": \"string\"\n      },\n      \"divisionStandings\": [\n        {\n          \"division\": {\n            \"name\": \"string\",\n            \"id\": 0,\n            \"abbreviation\": \"string\",\n            \"displayOrder\": 0,\n            \"gender\": \"m\",\n            \"startDate\": \"string\",\n            \"endDate\": \"string\"\n          },\n          \"standings\": [\n            {\n              \"id\": 0,\n              \"team\": {\n                \"id\": 0,\n                \"name\": \"string\",\n                \"username\": \"string\",\n                \"crestPicture\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"coverPhoto\": {\n                  \"id\": 0,\n                  \"url\": \"string\",\n                  \"thumbnailUrl\": \"string\",\n                  \"width\": 0,\n                  \"height\": 0\n                },\n                \"isManager\": true,\n                \"isPlayer\": true,\n                \"isFollower\": true,\n                \"isPendingMember\": true,\n                \"isCaptain\": true\n              },\n              \"place\": 0,\n              \"played\": 0,\n              \"won\": 0,\n              \"drawn\": 0,\n              \"lost\": 0,\n              \"forfeited\": 0,\n              \"penalties\": 0,\n              \"goalsFor\": 0,\n              \"goalsAgainst\": 0,\n              \"points\": 0\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "TeamCompetitions",
+					"request": {
+						"url": {
+							"raw": "{{url}}/teams/{{idEquipo}}/competitions?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"teams",
+								"{{idEquipo}}",
+								"competitions"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /teams/:teamId/competitions\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n      \"abbreviation\": \"string\",\n      \"coverPhoto\": {\n        \"height\": \"float\",\n        \"id\": \"integer\",\n        \"thumbnailUrl\": \"string\",\n        \"url\": \"string\",\n        \"width\": \"float\"\n      },\n      \"crestPicture\": {\n        \"height\": \"float\",\n        \"id\": \"integer\",\n        \"thumbnailUrl\": \"string\",\n        \"url\": \"string\",\n        \"width\": \"float\",\n      },\n      \"id\": \"integer\",\n      \"isProfessional\": \"boolean\",\n      \"name\": \"string\",\n      \"type\": \"string\",\n      \"division\": {\n        \"abbreviation\": \"string\",\n        \"product\": \"string\",\n        \"displayOrder\": \"integer\",\n        \"endDate\": \"date\",\n        \"gender\": \"string\",\n        \"id\": \"integer\",\n        \"name\": \"string\",\n        \"startDate\": \"date\",\n      },\n      \"season\": {\n        \"code\": \"string\",\n        \"endDate\": \"date\",\n        \"id\": \"integer\",\n        \"name\": \"string\",\n        \"startDate\": \"date\",\n      }\n    }"
+					},
+					"response": []
+				},
+				{
+					"name": "TeamRosters",
+					"request": {
+						"url": {
+							"raw": "{{url}}/teams/{{idEquipo}}/rosters?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"teams",
+								"{{idEquipo}}",
+								"rosters"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /teams/:teamId/rosters\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"address\": \"string\",\n      \"androidLogins\": 0,\n      \"assists\": 0,\n      \"associationNumber\": \"string\",\n      \"bio\": \"string\",\n      \"city\": \"string\",\n      \"cohesionCoefficients\": {\n        \"eventsParticipated\": 0,\n        \"interactions\": 0,\n        \"rsvps\": 0\n      },\n      \"cohesionRate\": 0,\n      \"country\": \"string\",\n      \"coverPhoto\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"createdAt\": \"string\",\n      \"deviceType\": \"ios\",\n      \"dob\": \"string\",\n      \"draws\": 0,\n      \"enabled\": true,\n      \"email\": \"string\",\n      \"favorited\": 0,\n      \"favoriteId\": 0,\n      \"favorites\": 0,\n      \"firstName\": \"string\",\n      \"followers\": 0,\n      \"followerId\": 0,\n      \"following\": 0,\n      \"gender\": \"m\",\n      \"generalCohesionRate\": 0,\n      \"goals\": 0,\n      \"hasInstalledApp\": true,\n      \"height\": 0,\n      \"invitationDetails\": {\n        \"code\": \"not_sent\",\n        \"createdAt\": \"string\",\n        \"openedAt\": \"string\",\n        \"link\": \"string\"\n      },\n      \"invitationsLeft\": 0,\n      \"iosLogins\": 0,\n      \"isCaptain\": true,\n      \"isManager\": true,\n      \"isPlayer\": true,\n      \"isProfessional\": true,\n      \"isReserve\": true,\n      \"isTeamContact\": true,\n      \"jerseyNumber\": 0,\n      \"lastActiveDate\": \"string\",\n      \"lastAndroidLogin\": \"string\",\n      \"lastIosLogin\": \"string\",\n      \"lastName\": \"string\",\n      \"lastWebLogin\": \"string\",\n      \"logins\": 0,\n      \"losses\": 0,\n      \"managerRole\": \"string\",\n      \"matchName\": \"string\",\n      \"multiLanguagePost\": true,\n      \"nationality\": \"string\",\n      \"nationalityCode\": \"string\",\n      \"phone\": \"string\",\n      \"played\": 0,\n      \"playerCard\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"playerId\": 0,\n      \"position\": \"string\",\n      \"preferredPositions\": [\n        {\n          \"name\": \"string\"\n        }\n      ],\n      \"profilePicture\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"qrcode\": {\n        \"class\": \"string\",\n        \"id\": 0,\n        \"height\": 0,\n        \"width\": 0,\n        \"thumbnailUrl\": \"string\",\n        \"url\": \"string\"\n      },\n      \"role\": \"string\",\n      \"rosterId\": 0,\n      \"rosterBio\": 0,\n      \"rosterPicture\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"socialNetworks\": [\n        {\n          \"link\": \"string\",\n          \"username\": \"string\",\n          \"name\": \"Facebook\"\n        }\n      ],\n      \"squadNumber\": 0,\n      \"status\": \"string\",\n      \"teamCount\": 0,\n      \"userId\": 0,\n      \"username\": \"string\",\n      \"views\": 0,\n      \"weight\": 0,\n      \"wins\": 0\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "AmericaRosters",
+					"request": {
+						"url": {
+							"raw": "{{url}}/america/rosters?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"america",
+								"rosters"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /america/rosters\n\ntoken:\"string\"\n\nNo poseemos estructura de tipos"
+					},
+					"response": []
+				},
+				{
+					"name": "AmericaRostersWomen",
+					"request": {
+						"url": {
+							"raw": "{{url}}/america/rosters-women?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"america",
+								"rosters-women"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /america/rosters\n\ntoken:\"string\"\n\nNo poseemos estructura de tipos"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Testeos De Notificaciones",
+			"description": "",
+			"item": [
+				{
+					"name": "Notificacion de noticia",
+					"request": {
+						"url": "{{url}}/notifications",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "news",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "Noticias",
+									"type": "text"
+								},
+								{
+									"key": "referenceId",
+									"value": "30345",
+									"type": "text"
+								}
+							]
+						},
+						"description": "POST /notifications"
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacion de Gol",
+					"request": {
+						"url": "{{url}}/notifications",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"push_id\":\"1F4ACE89-722B-12FD-F0C0-49827DE933DE\",\"push_date\":\"2016-11-22T23:55:49Z\",\"push_type\":\"match_goal\",\"push_data\":{\"gameId\":\"95813\",\"statId\":\"18221\",\"updatedAt\":\"2016-11-22T23:55:49Z\",\"minute\":25,\"type\":\"goal\",\"team\":{\"teamId\":2561,\"name\":\"CF Am\\u00e9rica\"},\"player\":{\"playerId\":12505,\"name\":\"R. Sambueza\"}}}"
+						},
+						"description": "POST /notifications"
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacion de Sustitucion",
+					"request": {
+						"url": "{{url}}/notifications",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"push_id\":\"0D7845D1-47DE-BBF7-B9CE-9CED6D18A1E8\",\"push_date\":\"2016-11-23T00:01:26Z\",\"push_type\":\"match_substitution\",\"push_data\":{\"gameId\":\"95813\",\"statId\":\"5898\",\"updatedAt\":\"2016-11-23T00:01:26Z\",\"minute\":46,\"type\":\"substitute_in\",\"team\":{\"teamId\":2561,\"name\":\"CF Am\\u00e9rica\"},\"player\":{\"playerId\":12525,\"name\":\"S. Romero\"},\"associatedStat\":{\"statId\":\"5897\",\"updatedAt\":\"2016-11-23T00:01:26Z\",\"minute\":46,\"type\":\"substitute_out\",\"team\":{\"teamId\":2561,\"name\":\"CF Am\\u00e9rica\"},\"player\":{\"playerId\":12508,\"name\":\"E. Pimentel\"}}}}"
+						},
+						"description": "POST /notifications"
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacion de Tarjeta Amarilla",
+					"request": {
+						"url": "{{url}}/notifications",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"push_id\":\"6C1AFD36-72CD-827C-D292-4BC600E61FE0\",\"push_date\":\"2016-11-23T00:02:08Z\",\"push_type\":\"match_yellow_card\",\"push_data\":{\"gameId\":\"49143\",\"statId\":\"6874\",\"updatedAt\":\"2016-11-23T00:02:08Z\",\"minute\":88,\"type\":\"yellow_card\",\"team\":{\"teamId\":2561,\"name\":\"CF Am\\u00e9rica\"},\"player\":{\"playerId\":12522,\"name\":\"C. Rosel\"}}}"
+						},
+						"description": "POST /notifications"
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacion de Tarjeta Roja",
+					"request": {
+						"url": "{{url}}/notifications",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"push_id\":\"DD8CE4D3-70B0-F236-68C0-4DB5190335AF\",\"push_date\":\"2016-11-23T00:02:48Z\",\"push_type\":\"match_red_card\",\"push_data\":{\"gameId\":\"48967\",\"statId\":\"7175\",\"updatedAt\":\"2016-11-23T00:02:48Z\",\"minute\":19,\"type\":\"red_card\",\"team\":{\"teamId\":2561,\"name\":\"CF Am\\u00e9rica\"},\"player\":{\"playerId\":12508,\"name\":\"E. Pimentel\"}}}"
+						},
+						"description": "POST /notifications"
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacion de Inicio de Partido",
+					"request": {
+						"url": "{{url}}/notifications",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"push_id\":\"1A115477-29B0-C2B1-32E6-4B5143AA693F\",\"push_date\":\"2016-11-23T00:03:23Z\",\"push_type\":\"match_start\",\"push_data\":{\"gameId\":\"95813\",\"statId\":\"20040\",\"updatedAt\":\"2016-11-23T00:03:23Z\",\"minute\":null,\"type\":\"game_start\"}}"
+						},
+						"description": "POST /notifications"
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacion de Medio Tiempo",
+					"request": {
+						"url": "{{url}}/notifications",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"push_id\":\"6A2B9226-37A7-5AB2-39CD-C20E2A1BED0A\",\"push_date\":\"2016-11-23T00:03:57Z\",\"push_type\":\"match_half\",\"push_data\":{\"gameId\":\"50287\",\"statId\":\"18222\",\"updatedAt\":\"2016-11-23T00:03:57Z\",\"minute\":null,\"type\":\"game_half\"}}"
+						},
+						"description": "POST /notifications"
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacion de Fin de partido",
+					"request": {
+						"url": "{{url}}/notifications",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"push_id\":\"921DA313-D604-C090-39B8-5BF136481E39\",\"push_date\":\"2016-11-23T00:04:39Z\",\"push_type\":\"match_end\",\"push_data\":{\"gameId\":\"50287\",\"statId\":\"18240\",\"updatedAt\":\"2016-11-23T00:04:39Z\",\"minute\":null,\"type\":\"game_end\"}}"
+						},
+						"description": "POST /notifications"
+					},
+					"response": []
+				},
+				{
+					"name": "Notificacion de Test",
+					"request": {
+						"url": "{{url}}/notifications",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"push_id\":\"5FFEC7DB-9311-B339-E506-DCC2B31AC936\",\n   \"push_date\":\"2018-04-24T18:25:55Z\",\n   \"push_type\":\"test\",\n   \"push_data\":{\n      \"gameId\":\"61708\",\n      \"statId\":\"18221\",\n      \"updatedAt\":\"2018-04-24T18:25:55Z\",\n      \"minute\":72,\n      \"type\":\"substitute_out\",\n      \"team\":{\n         \"teamId\":3070,\n         \"name\":\"Santa Coloma\"\n      },\n      \"player\":{\n         \"playerId\":25687,\n         \"name\":\"Robert Ramos Isus\"\n      },\n      \"associatedStat\":{\n         \"statId\":\"18220\",\n         \"updatedAt\":\"2018-04-24T18:25:55Z\",\n         \"minute\":72,\n         \"type\":\"substitute_in\",\n         \"team\":{\n            \"teamId\":3070,\n            \"name\":\"Santa Coloma\"\n         },\n         \"player\":{\n            \"playerId\":25691,\n            \"name\":\"Juan Fernando La\\u00edn Gonz\\u00e1lez\"\n         }\n      }\n   }\n}"
+						},
+						"description": "POST /notifications"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "User",
+					"request": {
+						"url": {
+							"raw": "{{url}}/me?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"me"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "playerpro-client-id",
+								"value": "5_y4ienadi9mow0wk4sc8oc0o8scgws04ogcos0wsws44owgksc",
+								"description": "",
+								"disabled": true
+							},
+							{
+								"key": "playerpro-client-secret",
+								"value": "4cydzcwswt2cgkgww8gco4044s08k8s04swgccg0gscokcgwgs",
+								"description": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /me\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n    \"email\": \"string\",\n    \"createdAt\": \"date\",\n    \"updatedAt\": \"date\",\n    \"firstName\": \"string\",\n    \"lastname\": \"string\",\n    \"height\": \"float\",\n    \"weight\": \"float\",\n    \"position\": \"string\",\n    \"gender\": \"string\",\n    \"birthDate\": \"date\",\n    \"bornLocation\": \"string\",\n    \"dorsal\": \"integer\",\n    \"biography\": \"string\",\n    \"phone\": \"integer\",\n    \"id\": \"string\",\n    \"points\": \"integer\",\n    \"Americanista\": \"boolean\",\n    \"PlayerProId\": \"integer\",\n    \"image\": \"string\",\n    \"percentComplete\": \"integer\",\n  }"
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarPerfil",
+					"request": {
+						"url": "{{url}}/me",
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "122",
+									"type": "text"
+								}
+							]
+						},
+						"description": "PUT /me\n\nSe aceptan como parametros cualquier propiedad del usuario a sobreescribir menos image\n\ntoken:\"string\""
+					},
+					"response": []
+				},
+				{
+					"name": "User/Roster Id",
+					"request": {
+						"url": {
+							"raw": "{{url}}/roster/12288?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"roster",
+								"12288"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /user/:idUser\nGET /roster/:idUser\n\nEn este sistema los jugadores y los usuarios son llamados de la misma manera\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": [\n    {\n      \"address\": \"string\",\n      \"androidLogins\": 0,\n      \"assists\": 0,\n      \"associationNumber\": \"string\",\n      \"bio\": \"string\",\n      \"city\": \"string\",\n      \"country\": \"string\",\n      \"coverPhoto\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"createdAt\": \"string\",\n      \"deviceType\": \"ios\",\n      \"dob\": \"string\",\n      \"draws\": 0,\n      \"enabled\": true,\n      \"email\": \"string\",\n      \"favorited\": 0,\n      \"favoriteId\": 0,\n      \"favorites\": 0,\n      \"firstName\": \"string\",\n      \"followers\": 0,\n      \"followerId\": 0,\n      \"following\": 0,\n      \"gender\": \"m\",\n      \"generalCohesionRate\": 0,\n      \"goals\": 0,\n      \"hasInstalledApp\": true,\n      \"height\": 0,\n      \"invitationsLeft\": 0,\n      \"iosLogins\": 0,\n      \"isProfessional\": true,\n      \"jerseyNumber\": 0,\n      \"lastActiveDate\": \"string\",\n      \"lastAndroidLogin\": \"string\",\n      \"lastIosLogin\": \"string\",\n      \"lastName\": \"string\",\n      \"lastWebLogin\": \"string\",\n      \"logins\": 0,\n      \"losses\": 0,\n      \"matchName\": \"string\",\n      \"multiLanguagePost\": true,\n      \"nationality\": \"string\",\n      \"nationalityCode\": \"string\",\n      \"phone\": \"string\",\n      \"played\": 0,\n      \"playerCard\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"playerId\": 0,\n      \"preferredPositions\": [\n        {\n          \"name\": \"string\"\n        }\n      ],\n      \"profilePicture\": {\n        \"id\": 0,\n        \"url\": \"string\",\n        \"thumbnailUrl\": \"string\",\n        \"width\": 0,\n        \"height\": 0\n      },\n      \"qrcode\": {\n        \"class\": \"string\",\n        \"id\": 0,\n        \"height\": 0,\n        \"width\": 0,\n        \"thumbnailUrl\": \"string\",\n        \"url\": \"string\"\n      },\n      \"role\": \"string\",\n      \"socialNetworks\": [\n        {\n          \"link\": \"string\",\n          \"username\": \"string\",\n          \"name\": \"Facebook\"\n        }\n      ],\n      \"teamCount\": 0,\n      \"userId\": 0,\n      \"username\": \"string\",\n      \"views\": 0,\n      \"weight\": 0,\n      \"wins\": 0,\n      \"permaLink\": \"string\"\n    }\n  ]\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "PutAvatar",
+					"request": {
+						"url": {
+							"raw": "{{url}}/me/avatar?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"me",
+								"avatar"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"value": "",
+									"type": "file"
+								}
+							]
+						},
+						"description": "PUT /me/avatar\n\ntoken:\"string\" //Token se enviara como variable GET\nimage:\"formDataImage\"\n\nRESPUESTA:\n\n{\n    \"email\": \"string\",\n    \"createdAt\": \"date\",\n    \"updatedAt\": \"date\",\n    \"firstName\": \"string\",\n    \"lastname\": \"string\",\n    \"height\": \"float\",\n    \"weight\": \"float\",\n    \"position\": \"string\",\n    \"gender\": \"string\",\n    \"birthDate\": \"date\",\n    \"bornLocation\": \"string\",\n    \"dorsal\": \"integer\",\n    \"biography\": \"string\",\n    \"phone\": \"integer\",\n    \"id\": \"string\",\n    \"points\": \"integer\",\n    \"Americanista\": \"boolean\",\n    \"PlayerProId\": \"integer\",\n    \"image\": \"string\",\n  }"
+					},
+					"response": []
+				},
+				{
+					"name": "User Badges",
+					"request": {
+						"url": {
+							"raw": "{{url}}/me/badges?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"me",
+								"badges"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /me/badges\n\ntoken:\"string\"\n\nRESPUESTA:\n\n[\n    {\n      \"foto\": \"string\",\n      \"texto\": \"string\",\n      \"puntos\": \"int\",\n      \"nombre\": \"string\",\n      \"eliminado\": \"int\",\n      \"createdAt\": \"timestamp\",\n      \"updatedAt\": \"timestamp\",\n      \"owner\": \"string\",\n      \"id\": \"string\"\n    }\n  ]"
+					},
+					"response": []
+				},
+				{
+					"name": "User Products",
+					"request": {
+						"url": {
+							"raw": "{{url}}/me/products?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"me",
+								"products"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /me/products\n\ntoken:\"string\""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MatchDates",
+			"description": "",
+			"item": [
+				{
+					"name": "MatchDates",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match-date?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match-date"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /match-date\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": {\n      'idPartido': idPartido,\n      'fecha': 'yyyy-MM-dd',\n      'hora': 'H:m'\n    }\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "MatchDatesEdit",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match-date?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match-date"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idPartido",
+									"value": "{{idMatch}}",
+									"type": "text"
+								},
+								{
+									"key": "fecha",
+									"value": "2016-01-03",
+									"type": "text"
+								},
+								{
+									"key": "hora",
+									"value": "20:50",
+									"type": "text"
+								}
+							]
+						},
+						"description": "PUT /match-date\n\ntoken:\"string\"\nidPartido:\"string\"\nfecha:\"string\"\nhora:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": {\n      'idPartido': idPartido,\n      'fecha': 'yyyy-MM-dd',\n      'hora': 'H:m'\n    }\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "MatchDatesDelete",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match-date?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match-date"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "idPartido",
+									"value": "{{idMatch}}",
+									"type": "text"
+								}
+							]
+						},
+						"description": "DELETE /match-date\n\nidPartido:\"string\"\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": {\n      'idPartido': idPartido,\n      'fecha': 'yyyy-MM-dd',\n      'hora': 'H:m'\n    }\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "MatchDatesGetByIdPartido",
+					"request": {
+						"url": {
+							"raw": "{{url}}/match-date/{{idMatch}}?token={{token}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"match-date",
+								"{{idMatch}}"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"equals": true
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "GET /match-date/:idPartido\n\ntoken:\"string\"\n\nRESPUESTA:\n\n{\n  \"message\": \"string\",\n  \"body\": {\n      'idPartido': idPartido,\n      'fecha': 'yyyy-MM-dd',\n      'hora': 'H:m'\n    }\n}"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,3521 @@
+{
+	"id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+	"name": "GafaFit",
+	"description": "",
+	"order": [
+		"4f3a8a65-3f98-0c10-4116-eada930847a6"
+	],
+	"folders": [
+		{
+			"id": "8f141510-8eae-bc9b-0ac3-adcf60351023",
+			"name": "Auth",
+			"description": "",
+			"order": [
+				"64dffb67-10b5-5898-f4fe-577740447f86",
+				"bf88173d-dc3e-8d60-cb8c-94b7baca113e",
+				"494088b4-9690-0550-a789-c8c39d29b10b",
+				"8e2a6170-55bf-88ce-c911-bb4d8e85b411",
+				"523fa41e-be4b-8c7a-06d7-64909a1f0d9a",
+				"af8ea90f-6d38-d705-4128-83991681557d"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "4c16a020-6284-ecff-fed7-f76179f7e3a6",
+			"name": "Brand",
+			"description": "",
+			"order": [
+				"6ef97826-f094-1bb1-31be-8f3e0ac12fc5",
+				"66b6cefa-5297-9e83-a2c0-d0e63294c8f6"
+			],
+			"folders_order": [
+				"22255d68-8b7e-72cd-fd83-b2282796475b",
+				"1b2e1199-6436-6149-7f2e-3652cf2acbb8",
+				"c5d453fa-e40c-d2e8-1e7f-b0183bb78684",
+				"f74004d9-daeb-715c-f052-73b806bdf402",
+				"0bd48651-9a3f-01be-f45e-5daf2e0bb5ca",
+				"f290a259-1b8f-2985-fee4-8e5424bebabf"
+			],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "f74004d9-daeb-715c-f052-73b806bdf402",
+			"name": "Combo",
+			"description": "",
+			"order": [
+				"30ee0019-9e92-5375-e666-e2682e36b88c",
+				"07152bdd-68ac-5ffb-c90a-2e98c6397a17"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "5a7805c2-cbf7-25a5-3e01-141bdd844e87",
+			"name": "Credits",
+			"description": "",
+			"order": [
+				"4ed8824e-3399-3797-dd66-87cdbcd7ec86"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "f290a259-1b8f-2985-fee4-8e5424bebabf",
+			"name": "GiftCards",
+			"description": "Control de tarjetas de regalo.",
+			"order": [
+				"816590e1-0da9-7eeb-9945-05c8648ed568"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "1b2e1199-6436-6149-7f2e-3652cf2acbb8",
+			"name": "Location",
+			"description": "",
+			"order": [
+				"dd1ad153-e500-327c-9b2a-bb1d974e0f91",
+				"ff556f6b-ce3f-5b5b-188e-8332e0f042ae"
+			],
+			"folders_order": [
+				"50d30679-e0f4-de0e-9de9-75f4ad4a42d2",
+				"2316f96a-8ad9-8ded-7b0a-7d01e924882f"
+			],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "50d30679-e0f4-de0e-9de9-75f4ad4a42d2",
+			"name": "Meeting",
+			"description": "",
+			"order": [
+				"1aadfce9-55ee-0794-e943-77024bba2a90",
+				"45c4cd1d-51cb-2926-9644-ae3e52df99ba"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "0bd48651-9a3f-01be-f45e-5daf2e0bb5ca",
+			"name": "Membership",
+			"description": "",
+			"order": [
+				"4f4c0bf9-b0ab-673c-6b2a-f032d86325b3",
+				"88be8f8a-bcde-d752-7811-07fc59abb331"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "19c31b59-4f86-1e00-32df-5c67d1767110",
+			"name": "Memberships",
+			"description": "Información de membresías del usuario",
+			"order": [
+				"121eecb9-5e9e-5503-43e8-69785743af2e"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "bd23ba37-9c83-f63d-88f1-c991be431e48",
+			"name": "Payments",
+			"description": "",
+			"order": [
+				"80b83921-e9c6-1265-e857-eb507ac110ad",
+				"18d946f6-4a0f-b94c-d040-4fbd914b0117",
+				"59a3e7dd-4638-211e-3776-282e7ae97d3b"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "c5fd90f2-fcb9-b8e2-a895-69535d27f179",
+			"name": "Places",
+			"description": "",
+			"order": [
+				"1faed926-a88b-aca5-280d-d13190a60909",
+				"3fe89777-b970-3842-cf47-3473369a092b",
+				"d1211188-ccd6-892f-a602-5a662a114029"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "9598e370-db09-aff4-85f8-1738bd07ceef",
+			"name": "Purchases",
+			"description": "",
+			"order": [
+				"ef2d3ced-0a25-1849-fc8b-f9cabe73248a",
+				"167e6fe5-d2d7-dbc1-fd98-06b09b82a94f",
+				"7b145d97-cc9e-f12e-d24c-e6e63fc01138"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "2316f96a-8ad9-8ded-7b0a-7d01e924882f",
+			"name": "Reservation",
+			"description": "",
+			"order": [
+				"c5589542-cd43-3f65-0f44-a062868be552"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "ffcf463a-ccd7-1e3a-0d93-9ab18460f136",
+			"name": "Reservations",
+			"description": "",
+			"order": [
+				"eef58c39-ad2f-e73a-c485-7b5b1089556a",
+				"4ebc886f-fdc3-1f6d-8227-9264d3181353",
+				"522d500e-599d-f4cc-f0c3-43a8404d9e80",
+				"587654e9-1bb2-e94a-01f5-0f2e03324d7b"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "c5d453fa-e40c-d2e8-1e7f-b0183bb78684",
+			"name": "Service",
+			"description": "",
+			"order": [
+				"4d3721a6-6093-522b-1dfb-c157e3d34e69",
+				"e255c6fa-3331-fd32-a902-dbba94e2a4cc",
+				"771c09ba-ebda-fb5b-b920-0bee1130b20b",
+				"ba8a8942-6669-3f61-2093-6c2022941ab2"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "28cf6c27-901b-7d73-aa1b-7d4ae2c6ad27",
+			"name": "SpecialText",
+			"description": "",
+			"order": [
+				"2d02d39a-3c81-d474-3992-299bf036c6c8",
+				"8fdd00db-5df4-ee3e-455b-c311e44c9420"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "22255d68-8b7e-72cd-fd83-b2282796475b",
+			"name": "Staff",
+			"description": "",
+			"order": [
+				"fcd30df3-60c7-5e8b-4be4-30d6c1c14a6c",
+				"f26e9df2-e968-5807-9d2d-39c57dc1fae0",
+				"dab37576-1dc4-1240-8d5d-849d4254000c",
+				"a9539469-5141-7229-f8cb-050d12adf23d",
+				"97c8e8de-3448-5165-9235-981190560d79",
+				"a710e0a6-2783-67c2-27e7-732f322165db",
+				"978ab38a-7bbc-9028-0906-10b8e917c54d",
+				"9c408c21-b76d-2451-fdf3-d0c5bb3fc474"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "d7a3d40c-f346-eb00-ceb3-048d68e5d2c3",
+			"name": "User",
+			"description": "",
+			"order": [
+				"6f545a1b-ec01-ed4f-b0cd-8ffdeeedc8d1",
+				"26f3465f-3eaa-cb2c-2664-746bd7c081bd",
+				"05a98267-ac52-109a-a9da-b35e12f28fad",
+				"682a7e87-cc06-bcea-bb58-6a79e0a09019",
+				"4c06b09c-bf78-a8d7-d307-d65d55e303fb",
+				"bdda86c6-e849-d53f-2409-d0601dfcde30",
+				"ef3d2f12-cf3d-04f7-473c-356c473f29fd"
+			],
+			"folders_order": [
+				"9598e370-db09-aff4-85f8-1738bd07ceef",
+				"ffcf463a-ccd7-1e3a-0d93-9ab18460f136",
+				"bd23ba37-9c83-f63d-88f1-c991be431e48",
+				"5a7805c2-cbf7-25a5-3e01-141bdd844e87",
+				"19c31b59-4f86-1e00-32df-5c67d1767110",
+				"bec8175f-78be-df87-63ee-6cb56ab2b67b"
+			],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "bec8175f-78be-df87-63ee-6cb56ab2b67b",
+			"name": "Waitlist",
+			"description": "",
+			"order": [
+				"1ecdb6bf-eb6b-b26f-0df1-378fec46eac4",
+				"e88301de-db62-64c1-4192-3a35b966b877",
+				"68c35b15-7290-d041-abfb-e8d3bf3b8839"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		}
+	],
+	"folders_order": [
+		"8f141510-8eae-bc9b-0ac3-adcf60351023",
+		"d7a3d40c-f346-eb00-ceb3-048d68e5d2c3",
+		"4c16a020-6284-ecff-fed7-f76179f7e3a6",
+		"28cf6c27-901b-7d73-aa1b-7d4ae2c6ad27",
+		"c5fd90f2-fcb9-b8e2-a895-69535d27f179"
+	],
+	"timestamp": 0,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "05a98267-ac52-109a-a9da-b35e12f28fad",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nGAFAFIT-COMPANY: {{company}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/users/{{user_profile_id}}/update",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "first_name",
+					"value": "New name",
+					"type": "text"
+				},
+				{
+					"key": "last_name",
+					"value": "Apellido1",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "{{password}}",
+					"description": "Cambio contraseña",
+					"type": "text"
+				},
+				{
+					"key": "password_confirmation",
+					"value": "{{password}}",
+					"description": "Cambio contraseña",
+					"type": "text"
+				},
+				{
+					"key": "birth_date",
+					"value": "2017-05-31 00:00:00",
+					"type": "text"
+				},
+				{
+					"key": "address",
+					"value": "Direccion",
+					"type": "text"
+				},
+				{
+					"key": "internal_number",
+					"value": "1234",
+					"type": "text"
+				},
+				{
+					"key": "external_number",
+					"value": "1r A",
+					"type": "text"
+				},
+				{
+					"key": "municipality",
+					"value": "Colima",
+					"type": "text"
+				},
+				{
+					"key": "postal_code",
+					"value": "20154",
+					"type": "text"
+				},
+				{
+					"key": "city",
+					"value": "Ciudad de México",
+					"type": "text"
+				},
+				{
+					"key": "countries_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "state",
+					"value": "México",
+					"type": "text"
+				},
+				{
+					"key": "phone",
+					"value": "5542879532",
+					"type": "text"
+				},
+				{
+					"key": "cel_phone",
+					"value": "5542879532",
+					"type": "text"
+				},
+				{
+					"key": "gender",
+					"value": "male",
+					"type": "text"
+				},
+				{
+					"key": "picture",
+					"type": "file",
+					"src": "/Users/norlis.viamonte/Desktop/Captura de Pantalla 2019-07-16 a la(s) 16.12.35.png",
+					"value": ""
+				},
+				{
+					"key": "custom_fields[2][0][2][0]",
+					"value": "5",
+					"type": "text"
+				},
+				{
+					"key": "custom_fields[2][0][2][1]",
+					"value": "2",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1564529424055,
+			"name": "Update User",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"responses": []
+		},
+		{
+			"id": "07152bdd-68ac-5ffb-c90a-2e98c6397a17",
+			"name": "Get Brand Combo List For User",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/combos/userPosibilities?page=1&per_page=15&only_actives=true&propagate=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1"
+				},
+				{
+					"key": "per_page",
+					"value": "15"
+				},
+				{
+					"key": "only_actives",
+					"value": "true"
+				},
+				{
+					"key": "propagate",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "f74004d9-daeb-715c-f052-73b806bdf402"
+		},
+		{
+			"id": "121eecb9-5e9e-5503-43e8-69785743af2e",
+			"name": "Get User Memberships",
+			"description": "Obtiene los datos de membresías del usuario en una marca",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/brand/{{brand}}/memberships",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "19c31b59-4f86-1e00-32df-5c67d1767110"
+		},
+		{
+			"id": "167e6fe5-d2d7-dbc1-fd98-06b09b82a94f",
+			"name": "Get User Purchases In Brand",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/brand/{{brand}}/purchases/?page=1&per_page=5",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1"
+				},
+				{
+					"key": "per_page",
+					"value": "5"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "9598e370-db09-aff4-85f8-1738bd07ceef"
+		},
+		{
+			"id": "18d946f6-4a0f-b94c-d040-4fbd914b0117",
+			"name": "Get User Add Payment option",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "option[token]",
+					"value": "tok_test_mastercard_4444",
+					"type": "text"
+				},
+				{
+					"key": "option[phone]",
+					"value": "5562439616",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/payments/brand/{{brand}}/method/{{paymentMethod}}",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "bd23ba37-9c83-f63d-88f1-c991be431e48"
+		},
+		{
+			"id": "1aadfce9-55ee-0794-e943-77024bba2a90",
+			"name": "Get Room Meeting List",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/location/{{locationToSee}}/rooms/{{room}}/meetings?start=2017-05-18 11:56:43&end=2019-05-18 11:56:43",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "start",
+					"value": "2017-05-18 11:56:43"
+				},
+				{
+					"key": "end",
+					"value": "2019-05-18 11:56:43"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "50d30679-e0f4-de0e-9de9-75f4ad4a42d2"
+		},
+		{
+			"id": "1ecdb6bf-eb6b-b26f-0df1-378fec46eac4",
+			"name": "Get User Future Waitlist in Brand",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/brand/{{brand}}/waitlist/future?reducePopulation=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "reducePopulation",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "bec8175f-78be-df87-63ee-6cb56ab2b67b"
+		},
+		{
+			"id": "1faed926-a88b-aca5-280d-d13190a60909",
+			"name": "Get Country List",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/places/countries/",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "c5fd90f2-fcb9-b8e2-a895-69535d27f179"
+		},
+		{
+			"id": "26f3465f-3eaa-cb2c-2664-746bd7c081bd",
+			"name": "Put Me",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nGAFAFIT-COMPANY: {{company}}",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "first_name",
+					"value": "Nombre",
+					"type": "text"
+				},
+				{
+					"key": "last_name",
+					"value": "Apellido",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "{{password}}",
+					"description": "Cambio contraseña",
+					"type": "text"
+				},
+				{
+					"key": "password_confirmation",
+					"value": "{{password}}",
+					"description": "Cambio contraseña",
+					"type": "text"
+				},
+				{
+					"key": "birth_date",
+					"value": "2017-05-31 00:00:00",
+					"type": "text"
+				},
+				{
+					"key": "address",
+					"value": "Direccion",
+					"type": "text"
+				},
+				{
+					"key": "internal_number",
+					"value": "123",
+					"type": "text"
+				},
+				{
+					"key": "external_number",
+					"value": "1r A",
+					"type": "text"
+				},
+				{
+					"key": "municipality",
+					"value": "Colima",
+					"type": "text"
+				},
+				{
+					"key": "postal_code",
+					"value": "20154",
+					"type": "text"
+				},
+				{
+					"key": "city",
+					"value": "Ciudad de México",
+					"type": "text"
+				},
+				{
+					"key": "countries_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "state",
+					"value": "México",
+					"type": "text"
+				},
+				{
+					"key": "phone",
+					"value": "5542879532",
+					"type": "text"
+				},
+				{
+					"key": "cel_phone",
+					"value": "5542879532",
+					"type": "text"
+				},
+				{
+					"key": "gender",
+					"value": "male",
+					"type": "text"
+				},
+				{
+					"key": "picture",
+					"type": "file",
+					"src": "/Users/norlis.viamonte/Desktop/Captura de Pantalla 2019-07-16 a la(s) 16.12.35.png",
+					"value": ""
+				},
+				{
+					"key": "custom_fields[2][0][2][0]",
+					"value": "5",
+					"type": "text"
+				},
+				{
+					"key": "custom_fields[2][0][2][1]",
+					"value": "2",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{url}}/api/me",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "d7a3d40c-f346-eb00-ceb3-048d68e5d2c3"
+		},
+		{
+			"id": "2d02d39a-3c81-d474-3992-299bf036c6c8",
+			"name": "Get Special Text Form",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/special-text/form/{{catalog}}/{{brand}}?section={{section}}",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "section",
+					"value": "{{section}}"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "28cf6c27-901b-7d73-aa1b-7d4ae2c6ad27"
+		},
+		{
+			"id": "30ee0019-9e92-5375-e666-e2682e36b88c",
+			"name": "Get Brand Combo List",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/combos?page=1&per_page=15&only_actives=true&propagate=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1"
+				},
+				{
+					"key": "per_page",
+					"value": "15"
+				},
+				{
+					"key": "only_actives",
+					"value": "true"
+				},
+				{
+					"key": "propagate",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "f74004d9-daeb-715c-f052-73b806bdf402"
+		},
+		{
+			"id": "3fe89777-b970-3842-cf47-3473369a092b",
+			"name": "Get Country City List",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/places/countries/{{country}}/cities",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "c5fd90f2-fcb9-b8e2-a895-69535d27f179"
+		},
+		{
+			"id": "45c4cd1d-51cb-2926-9644-ae3e52df99ba",
+			"name": "Get Location Meeting List",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/location/{{locationToSee}}/meetings?start=2017-05-18 11:56:43&end=2019-05-18 11:56:43?only_actives=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "start",
+					"value": "2017-05-18 11:56:43"
+				},
+				{
+					"key": "end",
+					"value": "2019-05-18 11:56:43?only_actives=true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "50d30679-e0f4-de0e-9de9-75f4ad4a42d2"
+		},
+		{
+			"id": "494088b4-9690-0550-a789-c8c39d29b10b",
+			"name": "RequestNewPassword",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "email",
+					"value": "{{user_email}}",
+					"type": "text"
+				},
+				{
+					"key": "return_url",
+					"value": "https://github.com/laravel/passport/issues/339",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{url}}/api/password/email",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "8f141510-8eae-bc9b-0ac3-adcf60351023"
+		},
+		{
+			"id": "4c06b09c-bf78-a8d7-d307-d65d55e303fb",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nGAFAFIT-COMPANY: {{company}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/users/{{user_profile_id}}",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1564523932199,
+			"name": "Delete User",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"responses": []
+		},
+		{
+			"id": "4d3721a6-6093-522b-1dfb-c157e3d34e69",
+			"name": "Get Brand Service List",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/service?page=1&per_page=15&only_actives=true&only_parents=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1"
+				},
+				{
+					"key": "per_page",
+					"value": "15"
+				},
+				{
+					"key": "only_actives",
+					"value": "true"
+				},
+				{
+					"key": "only_parents",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "c5d453fa-e40c-d2e8-1e7f-b0183bb78684"
+		},
+		{
+			"id": "4ebc886f-fdc3-1f6d-8227-9264d3181353",
+			"name": "Get User Future Reservations in Brand",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/brand/{{brand}}/reservation-future?reducePopulation=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "reducePopulation",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "ffcf463a-ccd7-1e3a-0d93-9ab18460f136"
+		},
+		{
+			"id": "4ed8824e-3399-3797-dd66-87cdbcd7ec86",
+			"name": "Get User Credits",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/brand/{{brand}}/credits",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "5a7805c2-cbf7-25a5-3e01-141bdd844e87"
+		},
+		{
+			"id": "4f3a8a65-3f98-0c10-4116-eada930847a6",
+			"name": "Get Brand Staff Next Meetings2",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/location/{{location}}/user/{{client_id}}/meetings",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d"
+		},
+		{
+			"id": "4f4c0bf9-b0ab-673c-6b2a-f032d86325b3",
+			"name": "Get Brand Membership List",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/membership?page=1&per_page=15&only_actives=true&propagate=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1"
+				},
+				{
+					"key": "per_page",
+					"value": "15"
+				},
+				{
+					"key": "only_actives",
+					"value": "true"
+				},
+				{
+					"key": "propagate",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "0bd48651-9a3f-01be-f45e-5daf2e0bb5ca"
+		},
+		{
+			"id": "522d500e-599d-f4cc-f0c3-43a8404d9e80",
+			"name": "Get User Reservation",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/brand/{{brand}}/reservations/{{reservation}}",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "ffcf463a-ccd7-1e3a-0d93-9ab18460f136"
+		},
+		{
+			"id": "523fa41e-be4b-8c7a-06d7-64909a1f0d9a",
+			"name": "Post Register",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text"
+				},
+				{
+					"key": "client_id",
+					"value": "{{client_id}}",
+					"type": "text"
+				},
+				{
+					"key": "client_secret",
+					"value": "{{client_secret}}",
+					"type": "text"
+				},
+				{
+					"key": "username",
+					"value": "12123s123@email.com",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "{{password}}",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "{{password}}",
+					"type": "text"
+				},
+				{
+					"key": "scope",
+					"value": "*",
+					"type": "text"
+				},
+				{
+					"key": "password_confirmation",
+					"value": "{{password}}",
+					"type": "text"
+				},
+				{
+					"key": "first_name",
+					"value": "Nombre",
+					"type": "text"
+				},
+				{
+					"key": "last_name",
+					"value": "Apellido",
+					"type": "text"
+				},
+				{
+					"key": "birth_date",
+					"value": "2001-01-05",
+					"type": "text"
+				},
+				{
+					"key": "gender",
+					"value": "male",
+					"type": "text"
+				},
+				{
+					"key": "custom_fields[requerimientos-de-clase][0][shoe-size][0]",
+					"value": "12",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"Request Correcto\"] = jsonData.ok === true;",
+			"preRequestScript": "",
+			"url": "{{url}}/api/register",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "8f141510-8eae-bc9b-0ac3-adcf60351023"
+		},
+		{
+			"id": "587654e9-1bb2-e94a-01f5-0f2e03324d7b",
+			"name": "Post User Cancel Reservation",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/brand/{{brand}}/reservation-future/{{reservation}}/cancel",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "ffcf463a-ccd7-1e3a-0d93-9ab18460f136"
+		},
+		{
+			"id": "59a3e7dd-4638-211e-3776-282e7ae97d3b",
+			"name": "Get User Remove Payment option",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "option",
+					"value": "src_2ipfsfaYLpo8U39AS",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/payments/brand/{{brand}}/method/{{paymentMethod}}/remove",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "bd23ba37-9c83-f63d-88f1-c991be431e48"
+		},
+		{
+			"id": "64dffb67-10b5-5898-f4fe-577740447f86",
+			"name": "Get Token",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text"
+				},
+				{
+					"key": "client_id",
+					"value": "{{client_id}}",
+					"type": "text"
+				},
+				{
+					"key": "client_secret",
+					"value": "{{client_secret}}",
+					"type": "text"
+				},
+				{
+					"key": "username",
+					"value": "{{user_email}}",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "{{password}}",
+					"type": "text"
+				},
+				{
+					"key": "scope",
+					"value": "*",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"Request Correcto\"] = !!jsonData.access_token;\n\nif(!!jsonData.access_token){\n let token = jsonData.access_token;\n postman.setEnvironmentVariable(\"token\", token);\n}",
+			"preRequestScript": "",
+			"url": "{{url}}/oauth/token",
+			"responses": [
+				{
+					"request": {
+						"id": "5f6f4fc1-1c89-4eb6-b539-d94af395c244",
+						"description": "",
+						"method": "POST",
+						"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "grant_type",
+								"value": "password",
+								"type": "text"
+							},
+							{
+								"key": "client_id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA",
+								"type": "text"
+							},
+							{
+								"key": "username",
+								"value": "{{user_email}}",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}",
+								"type": "text"
+							},
+							{
+								"key": "scope",
+								"value": "*",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "{{url}}/oauth/token",
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						]
+					},
+					"requestObject": "{\"id\":\"5f6f4fc1-1c89-4eb6-b539-d94af395c244\",\"description\":\"\",\"method\":\"POST\",\"headers\":\"Accept: application/json\\nGAFAFIT-COMPANY: {{company}}\",\"dataMode\":\"params\",\"data\":[{\"key\":\"grant_type\",\"value\":\"password\",\"type\":\"text\"},{\"key\":\"client_id\",\"value\":\"{{client_id}}\",\"type\":\"text\"},{\"key\":\"client_secret\",\"value\":\"6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA\",\"type\":\"text\"},{\"key\":\"username\",\"value\":\"{{user_email}}\",\"type\":\"text\"},{\"key\":\"password\",\"value\":\"{{password}}\",\"type\":\"text\"},{\"key\":\"scope\",\"value\":\"*\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"{{url}}/oauth/token\",\"queryParams\":[],\"headerData\":[{\"key\":\"Accept\",\"value\":\"application/json\"},{\"key\":\"GAFAFIT-COMPANY\",\"value\":\"{{company}}\"}]}",
+					"id": "d19ec62d-2b94-824b-8dca-1e61b6311515",
+					"name": "Cliente invalido",
+					"status": "Unauthorized",
+					"responseCode": {
+						"code": 401,
+						"name": "Unauthorized",
+						"detail": ""
+					},
+					"language": "json",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 03 Feb 2017 22:19:25 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.11.5",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56",
+							"name": "X-RateLimit-Remaining",
+							"description": ""
+						}
+					],
+					"cookies": [],
+					"text": "{\"ok\":false,\"mensaje\":\"Cliente Inv\\u00e1lido\",\"data\":{\"error\":\"invalid_client\",\"message\":\"Client authentication failed\"},\"code\":401}",
+					"rawDataType": "text",
+					"owner": 0
+				},
+				{
+					"request": {
+						"id": "a678a74a-ea15-4ab9-befc-d354e3c0a50b",
+						"description": "",
+						"method": "POST",
+						"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "grant_type",
+								"value": "password",
+								"type": "text"
+							},
+							{
+								"key": "client_id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA",
+								"type": "text"
+							},
+							{
+								"key": "username",
+								"value": "{{user_email}}",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}",
+								"type": "text"
+							},
+							{
+								"key": "scope",
+								"value": "*",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "{{url}}/oauth/token",
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						]
+					},
+					"requestObject": "{\"id\":\"a678a74a-ea15-4ab9-befc-d354e3c0a50b\",\"description\":\"\",\"method\":\"POST\",\"headers\":\"Accept: application/json\\nGAFAFIT-COMPANY: {{company}}\",\"dataMode\":\"params\",\"data\":[{\"key\":\"grant_type\",\"value\":\"password\",\"type\":\"text\"},{\"key\":\"client_id\",\"value\":\"{{client_id}}\",\"type\":\"text\"},{\"key\":\"client_secret\",\"value\":\"6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA\",\"type\":\"text\"},{\"key\":\"username\",\"value\":\"{{user_email}}\",\"type\":\"text\"},{\"key\":\"password\",\"value\":\"{{password}}\",\"type\":\"text\"},{\"key\":\"scope\",\"value\":\"*\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"{{url}}/oauth/token\",\"queryParams\":[],\"headerData\":[{\"key\":\"Accept\",\"value\":\"application/json\"},{\"key\":\"GAFAFIT-COMPANY\",\"value\":\"{{company}}\"}]}",
+					"id": "ae036e53-5df2-ba1a-a714-e642574f4e9a",
+					"name": "Credenciales incorrectas",
+					"status": "Unauthorized",
+					"responseCode": {
+						"code": 401,
+						"name": "Unauthorized",
+						"detail": ""
+					},
+					"language": "json",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 03 Feb 2017 22:19:40 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.11.5",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "54",
+							"name": "X-RateLimit-Remaining",
+							"description": ""
+						}
+					],
+					"cookies": [],
+					"text": "{\"ok\":false,\"mensaje\":\"Credenciales inv\\u00e1lidas\",\"data\":{\"error\":\"invalid_credentials\",\"message\":\"The user credentials were incorrect.\"},\"code\":401}",
+					"rawDataType": "text",
+					"owner": 0
+				},
+				{
+					"request": {
+						"id": "b8a8d2f2-ec51-4ec6-a0c2-2aab70bec0f0",
+						"description": "",
+						"method": "POST",
+						"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+						"dataMode": "params",
+						"data": [
+							{
+								"key": "grant_type",
+								"value": "password",
+								"type": "text"
+							},
+							{
+								"key": "client_id",
+								"value": "{{client_id}}",
+								"type": "text"
+							},
+							{
+								"key": "client_secret",
+								"value": "6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA",
+								"type": "text"
+							},
+							{
+								"key": "username",
+								"value": "{{user_email}}",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "{{password}}",
+								"type": "text"
+							},
+							{
+								"key": "scope",
+								"value": "*",
+								"type": "text"
+							}
+						],
+						"rawModeData": "",
+						"url": "{{url}}/oauth/token",
+						"queryParams": [],
+						"headerData": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						]
+					},
+					"requestObject": "{\"id\":\"b8a8d2f2-ec51-4ec6-a0c2-2aab70bec0f0\",\"description\":\"\",\"method\":\"POST\",\"headers\":\"Accept: application/json\\nGAFAFIT-COMPANY: {{company}}\",\"dataMode\":\"params\",\"data\":[{\"key\":\"grant_type\",\"value\":\"password\",\"type\":\"text\"},{\"key\":\"client_id\",\"value\":\"{{client_id}}\",\"type\":\"text\"},{\"key\":\"client_secret\",\"value\":\"6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA\",\"type\":\"text\"},{\"key\":\"username\",\"value\":\"{{user_email}}\",\"type\":\"text\"},{\"key\":\"password\",\"value\":\"{{password}}\",\"type\":\"text\"},{\"key\":\"scope\",\"value\":\"*\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"{{url}}/oauth/token\",\"queryParams\":[],\"headerData\":[{\"key\":\"Accept\",\"value\":\"application/json\"},{\"key\":\"GAFAFIT-COMPANY\",\"value\":\"{{company}}\"}]}",
+					"id": "d2dc10be-f3a3-4338-6094-03a012fed202",
+					"name": "Respuesta correcta",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "json",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Feb 2017 18:23:47 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Host",
+							"value": "localhost:8000",
+							"name": "Host",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.0.0",
+							"name": "X-Powered-By",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58",
+							"name": "X-RateLimit-Remaining",
+							"description": ""
+						}
+					],
+					"cookies": [],
+					"text": "{\"ok\":true,\"mensaje\":\"\",\"data\":{\"token_type\":\"Bearer\",\"expires_in\":31535998,\"access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJjNmFmYTY1YWM5NzBmYTc0MTM5NzVkYzE0YmJkZjVhNGMzNjg5OWUwYWYwOTdlZDgwNDRkZTg0ZmEzYjdlYjY3YTJjNzY0YWQ0ZTg4YWQ4In0.eyJhdWQiOiIxIiwianRpIjoiMmM2YWZhNjVhYzk3MGZhNzQxMzk3NWRjMTRiYmRmNWE0YzM2ODk5ZTBhZjA5N2VkODA0NGRlODRmYTNiN2ViNjdhMmM3NjRhZDRlODhhZDgiLCJpYXQiOjE0ODYwNTk4MjYsIm5iZiI6MTQ4NjA1OTgyNiwiZXhwIjoxNTE3NTk1ODI1LCJzdWIiOiIxIiwic2NvcGVzIjpbIioiXX0.L0Dm0SE3w8YVFfWp2pr2TRRv248tzY57rkIeyEKvoee6jDy4l6sVveP4GQ_lb4vdGn8sKCdhNJr5H-pQNVYC8vjgWV6SHab0jl1HfAp98ai6qeE7fcaq7Gnb_mBWyUIqbmedE7KODRot4e-piGVmJM4r7mz9ZF21Y1fO6M4KJOURoqQyDwAFyapl7xCgofMRmLzVZbfmFOwzvqovOgjrMQOt3F3ovJdIexjOnjjWE7Fqsh0b6ohUMTM98UPXdMmE6-0tdxYmd-6hwHYOUyL_0vilE-45CSeEV9B3O8eBhcFkKiG8hYL3UrEVRl8dJ8N3iPCe9MPpwadmk27BHcmNVrQcDlzToLIWtm0aQ-p0qOAgJ-dm2bglPUg0rqxp3WOZRHUJ3k6yM6mj0EIlzExhuip9PWZ_FEYhEv4AOHqk-1VrglnDFFA3dJMK764a2XS3nnumfIQkcfkr3hGgtW1SWkYTMrmAhvjHlejGBHk4WJQRIOIMW_xacoMZnzDQENXaPy8q9NsIzQGU0cQ3Y01lzEDQcLId9HnzoD4Z1m10D9F4RcHCE4MsoR-CyIR4Fl9DWs-AP-h6tN52mNtJ5tf4nhRLi-y2LnKniGKJf01pAepKUulk5zfRdNkpL_Us5n4sgEcGirrtFy0a5jZahkVxW04-eNG25JbIqeSZgTRUU9k\",\"refresh_token\":\"pPM6nukrnhYNtP6KSDM0ZdzlIE0FCMANm4m+\\/fCxORN4QRTGGqqCTJGQtNIytHYRhb+ckyAUcc3sh9zPCXcOe5iE4T\\/spxzVbwXVO1QHeX6OIXbNE98F4G5j41TGco5nMX73ELHAw6WLDiiayjRRreMGkJUDPVcAcrulTdamJ1bQ\\/mwnqo2F7Azv\\/U4igzcySlr6FSaMgv6NHA11mToJVzG1o+4HtHAwtVXDJVVdX1nMXs+1RFT4EWbuvlUsAf3lsgD6mB4MjNLJrcE8tllkeWOTBaEMPyfpFVmuwou1G7szFspLBVUHgACQZFu\\/E4BeYyiIl56mE7teBIMkX0WId2cr60JXl8NCmpSLJrhajYTJbA0j6qgLnv7g1unY8O89kkvB\\/5Vx1MLS+uMEbihiDfgli8zSE7TDNt9umm4QFQT\\/7XMyNYMaDybo02vdYVCL75\\/Ta7JzkIrU\\/1M7vvXXSMSQaViPZqGAhIQUVJoPgBMd+t4jY+AvzF5hVrPXNgTtLO+v4JitfQ+Ff87bXEFBIYbLl7GRkIyTko\\/3nNB\\/hWwRCcS0F+2jtz2lDKnGsI5ymv2MEokV2Xkc6ailAWqSo5mdWd7OB+8A6DiVVn4964Ln74C4cBAJtS28t7SVbV+\\/GamO2oeR4bmLn2CWIM6Z7Zpi5nGWTMdjDN+rbSJsIMs=\"},\"code\":200}",
+					"rawDataType": "text",
+					"owner": 0
+				}
+			],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "8f141510-8eae-bc9b-0ac3-adcf60351023"
+		},
+		{
+			"id": "66b6cefa-5297-9e83-a2c0-d0e63294c8f6",
+			"name": "Get Brand",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "4c16a020-6284-ecff-fed7-f76179f7e3a6"
+		},
+		{
+			"id": "682a7e87-cc06-bcea-bb58-6a79e0a09019",
+			"name": "Create User",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nGAFAFIT-COMPANY: {{company}}",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "first_name",
+					"value": "Nombre",
+					"type": "text"
+				},
+				{
+					"key": "last_name",
+					"value": "Apellido",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "test1",
+					"description": "Cambio contraseña",
+					"type": "text"
+				},
+				{
+					"key": "password_confirmation",
+					"value": "test1",
+					"description": "Cambio contraseña",
+					"type": "text"
+				},
+				{
+					"key": "birth_date",
+					"value": "2017-05-31 00:00:00",
+					"type": "text"
+				},
+				{
+					"key": "address",
+					"value": "Direccion",
+					"type": "text"
+				},
+				{
+					"key": "internal_number",
+					"value": "123",
+					"type": "text"
+				},
+				{
+					"key": "external_number",
+					"value": "1r A",
+					"type": "text"
+				},
+				{
+					"key": "municipality",
+					"value": "Colima",
+					"type": "text"
+				},
+				{
+					"key": "postal_code",
+					"value": "20154",
+					"type": "text"
+				},
+				{
+					"key": "city",
+					"value": "Ciudad de México",
+					"type": "text"
+				},
+				{
+					"key": "countries_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "state",
+					"value": "México",
+					"type": "text"
+				},
+				{
+					"key": "phone",
+					"value": "5542879532",
+					"type": "text"
+				},
+				{
+					"key": "cel_phone",
+					"value": "5542879532",
+					"type": "text"
+				},
+				{
+					"key": "gender",
+					"value": "male",
+					"type": "text"
+				},
+				{
+					"key": "picture",
+					"type": "file",
+					"src": [],
+					"value": ""
+				},
+				{
+					"key": "custom_fields[2][0][2][0]",
+					"value": "5",
+					"type": "text"
+				},
+				{
+					"key": "custom_fields[2][0][2][1]",
+					"value": "2",
+					"type": "text"
+				},
+				{
+					"key": "username",
+					"value": "norlis.viamonte1@gmail.com",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{url}}/api/users",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "d7a3d40c-f346-eb00-ceb3-048d68e5d2c3"
+		},
+		{
+			"id": "68c35b15-7290-d041-abfb-e8d3bf3b8839",
+			"name": "Post User Cancel Waitlist in Brand",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/brand/{{brand}}/waitlist/remove/{{waitlist}}?reducePopulation=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "reducePopulation",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "bec8175f-78be-df87-63ee-6cb56ab2b67b"
+		},
+		{
+			"id": "6ef97826-f094-1bb1-31be-8f3e0ac12fc5",
+			"name": "Get Brand List",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/?page=1&per_page=15&only_actives=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1"
+				},
+				{
+					"key": "per_page",
+					"value": "15"
+				},
+				{
+					"key": "only_actives",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "4c16a020-6284-ecff-fed7-f76179f7e3a6"
+		},
+		{
+			"id": "6f545a1b-ec01-ed4f-b0cd-8ffdeeedc8d1",
+			"name": "Get Me",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "d7a3d40c-f346-eb00-ceb3-048d68e5d2c3"
+		},
+		{
+			"id": "771c09ba-ebda-fb5b-b920-0bee1130b20b",
+			"name": "Get Brand Service Special Texts",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/service/{{serviceToSee}}/special-text",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "c5d453fa-e40c-d2e8-1e7f-b0183bb78684"
+		},
+		{
+			"id": "7b145d97-cc9e-f12e-d24c-e6e63fc01138",
+			"name": "Get User Purchase",
+			"description": "Obtiene una compra del usuario para una cierta marca con los artículos de la compra y los giftcards.",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/brand/{{brand}}/purchases/{{purchase}}",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "9598e370-db09-aff4-85f8-1738bd07ceef"
+		},
+		{
+			"id": "80b83921-e9c6-1265-e857-eb507ac110ad",
+			"name": "Get User Payment Info",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/payments/brand/{{brand}}/payment-methods",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "bd23ba37-9c83-f63d-88f1-c991be431e48"
+		},
+		{
+			"id": "816590e1-0da9-7eeb-9945-05c8648ed568",
+			"name": "Post Redeem GiftCard",
+			"description": "Redimir una tarjeta de regalo para el usuario.",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/giftcards/brand/{{brand}}/redeem?code=9C74C66B796D9B6894A103477BB585C7",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "code",
+					"value": "9C74C66B796D9B6894A103477BB585C7"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "f290a259-1b8f-2985-fee4-8e5424bebabf"
+		},
+		{
+			"id": "88be8f8a-bcde-d752-7811-07fc59abb331",
+			"name": "Get Brand Membership List For User",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/membership/userPosibilities?page=1&per_page=15&only_actives=true&propagate=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1"
+				},
+				{
+					"key": "per_page",
+					"value": "15"
+				},
+				{
+					"key": "only_actives",
+					"value": "true"
+				},
+				{
+					"key": "propagate",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "0bd48651-9a3f-01be-f45e-5daf2e0bb5ca"
+		},
+		{
+			"id": "8e2a6170-55bf-88ce-c911-bb4d8e85b411",
+			"name": "NewPassword",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"dataMode": "params",
+			"data": [
+				{
+					"key": "email",
+					"value": "{{user_email}}",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "{{password}}",
+					"type": "text"
+				},
+				{
+					"key": "password_confirmation",
+					"value": "{{password}}",
+					"type": "text"
+				},
+				{
+					"key": "token",
+					"value": "87f67b7719a5434a42a7fbbb547a33aaacabb8ec3c059e7b9375ee623568cce0",
+					"type": "text"
+				}
+			],
+			"rawModeData": "",
+			"url": "{{url}}/api/password/reset",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "8f141510-8eae-bc9b-0ac3-adcf60351023"
+		},
+		{
+			"id": "8fdd00db-5df4-ee3e-455b-c311e44c9420",
+			"name": "Get Special Text Values",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/special-text/values/{{catalog}}/{{model_id}}/{{brand}}?section={{section}}",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "section",
+					"value": "{{section}}"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "28cf6c27-901b-7d73-aa1b-7d4ae2c6ad27"
+		},
+		{
+			"id": "978ab38a-7bbc-9028-0906-10b8e917c54d",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/brand/{{brand}}/staff/252",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1564520503810,
+			"name": "Delete Brand Staff",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"responses": []
+		},
+		{
+			"id": "97c8e8de-3448-5165-9235-981190560d79",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/brand/{{brand}}/staff",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "name",
+					"value": "Norlis 222",
+					"type": "text"
+				},
+				{
+					"key": "lastname",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "slug",
+					"value": "pruebas-222",
+					"type": "text"
+				},
+				{
+					"key": "admin_profile_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "job",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "quote",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "description",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "email",
+					"value": "norlis.viamonte@gmail.com",
+					"type": "text"
+				},
+				{
+					"key": "phone",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "birth_date",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "gender",
+					"value": "male",
+					"type": "text"
+				},
+				{
+					"key": "order",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "picture_web",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "picture_web_list",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "picture_web_over",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "picture_movil",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "picture_movil_list",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "hide_in_home",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "address",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "external_number",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "municipality",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "postal_code",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "city",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "country_states_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "countries_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "companies_id",
+					"value": "3",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1564517893300,
+			"name": "Create Brand Staff",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"responses": []
+		},
+		{
+			"id": "9c408c21-b76d-2451-fdf3-d0c5bb3fc474",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/brand/{{brand}}/staff/252/restore",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1564521256740,
+			"name": "Restore Brand Staff",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"responses": []
+		},
+		{
+			"id": "a710e0a6-2783-67c2-27e7-732f322165db",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/brand/{{brand}}/staff/252/update",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "name",
+					"value": "Norlis 2.... ni idea 55",
+					"type": "text"
+				},
+				{
+					"key": "lastname",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "slug",
+					"value": "pruebas-2",
+					"type": "text"
+				},
+				{
+					"key": "admin_profile_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "job",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "quote",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "description",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "email",
+					"value": "norlis.viamonte@gmail.com",
+					"type": "text"
+				},
+				{
+					"key": "phone",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "birth_date",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "gender",
+					"value": "male",
+					"type": "text"
+				},
+				{
+					"key": "order",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "picture_web",
+					"type": "file",
+					"src": [],
+					"value": ""
+				},
+				{
+					"key": "picture_web_list",
+					"type": "file",
+					"src": [],
+					"value": ""
+				},
+				{
+					"key": "picture_web_over",
+					"type": "file",
+					"src": [],
+					"value": ""
+				},
+				{
+					"key": "picture_movil",
+					"type": "file",
+					"src": [],
+					"value": ""
+				},
+				{
+					"key": "picture_movil_list",
+					"type": "file",
+					"src": "/Users/norlis.viamonte/Desktop/Captura de Pantalla 2019-07-16 a la(s) 16.11.39.png",
+					"value": ""
+				},
+				{
+					"key": "hide_in_home",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "address",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "external_number",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "municipality",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "postal_code",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "city",
+					"value": "",
+					"type": "text"
+				},
+				{
+					"key": "country_states_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "countries_id",
+					"value": "1",
+					"type": "text"
+				},
+				{
+					"key": "companies_id",
+					"value": "3",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1564520409237,
+			"name": "Update Brand Staff",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"responses": []
+		},
+		{
+			"id": "a9539469-5141-7229-f8cb-050d12adf23d",
+			"name": "Get Staff Special Texts",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/staff/{{staff}}/special-text",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "22255d68-8b7e-72cd-fd83-b2282796475b"
+		},
+		{
+			"id": "af8ea90f-6d38-d705-4128-83991681557d",
+			"name": "Post Logout",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "POST",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/logout",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "8f141510-8eae-bc9b-0ac3-adcf60351023"
+		},
+		{
+			"id": "ba8a8942-6669-3f61-2093-6c2022941ab2",
+			"name": "Get Brand Service Next meetings",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/service/{{serviceToSee}}/meetings?start=2017-05-18 11:56:43&end=2019-05-18 11:56:43",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "start",
+					"value": "2017-05-18 11:56:43"
+				},
+				{
+					"key": "end",
+					"value": "2019-05-18 11:56:43"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "c5d453fa-e40c-d2e8-1e7f-b0183bb78684"
+		},
+		{
+			"id": "bdda86c6-e849-d53f-2409-d0601dfcde30",
+			"name": "Get all users",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/users",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "d7a3d40c-f346-eb00-ceb3-048d68e5d2c3"
+		},
+		{
+			"id": "bf88173d-dc3e-8d60-cb8c-94b7baca113e",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/login",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "password",
+					"type": "text"
+				},
+				{
+					"key": "client_id",
+					"value": "{{client_id}}",
+					"type": "text"
+				},
+				{
+					"key": "client_secret",
+					"value": "{{client_secret}}",
+					"type": "text"
+				},
+				{
+					"key": "email",
+					"value": "{{user_email}}",
+					"type": "text"
+				},
+				{
+					"key": "password",
+					"value": "{{password}}",
+					"type": "text"
+				}
+			],
+			"dataMode": "params",
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"Request Correcto\"] = !!jsonData.access_token;\n\nif(!!jsonData.access_token){\n let token = jsonData.access_token;\n postman.setEnvironmentVariable(\"token\", token);\n}",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1564523042741,
+			"name": "Login",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"responses": [
+				{
+					"request": "bf88173d-dc3e-8d60-cb8c-94b7baca113e",
+					"requestObject": "{\"id\":\"5f6f4fc1-1c89-4eb6-b539-d94af395c244\",\"description\":\"\",\"method\":\"POST\",\"headers\":\"Accept: application/json\\nGAFAFIT-COMPANY: {{company}}\",\"dataMode\":\"params\",\"data\":[{\"key\":\"grant_type\",\"value\":\"password\",\"type\":\"text\"},{\"key\":\"client_id\",\"value\":\"{{client_id}}\",\"type\":\"text\"},{\"key\":\"client_secret\",\"value\":\"6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA\",\"type\":\"text\"},{\"key\":\"username\",\"value\":\"{{user_email}}\",\"type\":\"text\"},{\"key\":\"password\",\"value\":\"{{password}}\",\"type\":\"text\"},{\"key\":\"scope\",\"value\":\"*\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"{{url}}/oauth/token\",\"queryParams\":[],\"headerData\":[{\"key\":\"Accept\",\"value\":\"application/json\"},{\"key\":\"GAFAFIT-COMPANY\",\"value\":\"{{company}}\"}]}",
+					"id": "d081a966-19be-dbdf-9791-7434b511948f",
+					"name": "Cliente invalido",
+					"status": "Unauthorized",
+					"responseCode": {
+						"code": 401,
+						"name": "Unauthorized",
+						"detail": ""
+					},
+					"language": "json",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 03 Feb 2017 22:19:25 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.11.5",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "56",
+							"name": "X-RateLimit-Remaining",
+							"description": ""
+						}
+					],
+					"cookies": [],
+					"text": "{\"ok\":false,\"mensaje\":\"Cliente Inv\\u00e1lido\",\"data\":{\"error\":\"invalid_client\",\"message\":\"Client authentication failed\"},\"code\":401}",
+					"rawDataType": "text",
+					"owner": 0,
+					"write": true
+				},
+				{
+					"request": "bf88173d-dc3e-8d60-cb8c-94b7baca113e",
+					"requestObject": "{\"id\":\"a678a74a-ea15-4ab9-befc-d354e3c0a50b\",\"description\":\"\",\"method\":\"POST\",\"headers\":\"Accept: application/json\\nGAFAFIT-COMPANY: {{company}}\",\"dataMode\":\"params\",\"data\":[{\"key\":\"grant_type\",\"value\":\"password\",\"type\":\"text\"},{\"key\":\"client_id\",\"value\":\"{{client_id}}\",\"type\":\"text\"},{\"key\":\"client_secret\",\"value\":\"6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA\",\"type\":\"text\"},{\"key\":\"username\",\"value\":\"{{user_email}}\",\"type\":\"text\"},{\"key\":\"password\",\"value\":\"{{password}}\",\"type\":\"text\"},{\"key\":\"scope\",\"value\":\"*\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"{{url}}/oauth/token\",\"queryParams\":[],\"headerData\":[{\"key\":\"Accept\",\"value\":\"application/json\"},{\"key\":\"GAFAFIT-COMPANY\",\"value\":\"{{company}}\"}]}",
+					"id": "caed382e-93af-1f20-f85e-f12a9934d7c0",
+					"name": "Credenciales incorrectas",
+					"status": "Unauthorized",
+					"responseCode": {
+						"code": 401,
+						"name": "Unauthorized",
+						"detail": ""
+					},
+					"language": "json",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 03 Feb 2017 22:19:40 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.11.5",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "54",
+							"name": "X-RateLimit-Remaining",
+							"description": ""
+						}
+					],
+					"cookies": [],
+					"text": "{\"ok\":false,\"mensaje\":\"Credenciales inv\\u00e1lidas\",\"data\":{\"error\":\"invalid_credentials\",\"message\":\"The user credentials were incorrect.\"},\"code\":401}",
+					"rawDataType": "text",
+					"owner": 0,
+					"write": true
+				},
+				{
+					"request": "bf88173d-dc3e-8d60-cb8c-94b7baca113e",
+					"requestObject": "{\"id\":\"b8a8d2f2-ec51-4ec6-a0c2-2aab70bec0f0\",\"description\":\"\",\"method\":\"POST\",\"headers\":\"Accept: application/json\\nGAFAFIT-COMPANY: {{company}}\",\"dataMode\":\"params\",\"data\":[{\"key\":\"grant_type\",\"value\":\"password\",\"type\":\"text\"},{\"key\":\"client_id\",\"value\":\"{{client_id}}\",\"type\":\"text\"},{\"key\":\"client_secret\",\"value\":\"6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA\",\"type\":\"text\"},{\"key\":\"username\",\"value\":\"{{user_email}}\",\"type\":\"text\"},{\"key\":\"password\",\"value\":\"{{password}}\",\"type\":\"text\"},{\"key\":\"scope\",\"value\":\"*\",\"type\":\"text\"}],\"rawModeData\":\"\",\"url\":\"{{url}}/oauth/token\",\"queryParams\":[],\"headerData\":[{\"key\":\"Accept\",\"value\":\"application/json\"},{\"key\":\"GAFAFIT-COMPANY\",\"value\":\"{{company}}\"}]}",
+					"id": "4031d2bf-5f2a-a5ed-7a27-8f94c147442e",
+					"name": "Respuesta correcta",
+					"status": "OK",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"language": "json",
+					"previewType": "html",
+					"headers": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache",
+							"name": "Cache-Control",
+							"description": ""
+						},
+						{
+							"key": "Connection",
+							"value": "close",
+							"name": "Connection",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 02 Feb 2017 18:23:47 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Host",
+							"value": "localhost:8000",
+							"name": "Host",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.0.0",
+							"name": "X-Powered-By",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60",
+							"name": "X-RateLimit-Limit",
+							"description": ""
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58",
+							"name": "X-RateLimit-Remaining",
+							"description": ""
+						}
+					],
+					"cookies": [],
+					"text": "{\"ok\":true,\"mensaje\":\"\",\"data\":{\"token_type\":\"Bearer\",\"expires_in\":31535998,\"access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJjNmFmYTY1YWM5NzBmYTc0MTM5NzVkYzE0YmJkZjVhNGMzNjg5OWUwYWYwOTdlZDgwNDRkZTg0ZmEzYjdlYjY3YTJjNzY0YWQ0ZTg4YWQ4In0.eyJhdWQiOiIxIiwianRpIjoiMmM2YWZhNjVhYzk3MGZhNzQxMzk3NWRjMTRiYmRmNWE0YzM2ODk5ZTBhZjA5N2VkODA0NGRlODRmYTNiN2ViNjdhMmM3NjRhZDRlODhhZDgiLCJpYXQiOjE0ODYwNTk4MjYsIm5iZiI6MTQ4NjA1OTgyNiwiZXhwIjoxNTE3NTk1ODI1LCJzdWIiOiIxIiwic2NvcGVzIjpbIioiXX0.L0Dm0SE3w8YVFfWp2pr2TRRv248tzY57rkIeyEKvoee6jDy4l6sVveP4GQ_lb4vdGn8sKCdhNJr5H-pQNVYC8vjgWV6SHab0jl1HfAp98ai6qeE7fcaq7Gnb_mBWyUIqbmedE7KODRot4e-piGVmJM4r7mz9ZF21Y1fO6M4KJOURoqQyDwAFyapl7xCgofMRmLzVZbfmFOwzvqovOgjrMQOt3F3ovJdIexjOnjjWE7Fqsh0b6ohUMTM98UPXdMmE6-0tdxYmd-6hwHYOUyL_0vilE-45CSeEV9B3O8eBhcFkKiG8hYL3UrEVRl8dJ8N3iPCe9MPpwadmk27BHcmNVrQcDlzToLIWtm0aQ-p0qOAgJ-dm2bglPUg0rqxp3WOZRHUJ3k6yM6mj0EIlzExhuip9PWZ_FEYhEv4AOHqk-1VrglnDFFA3dJMK764a2XS3nnumfIQkcfkr3hGgtW1SWkYTMrmAhvjHlejGBHk4WJQRIOIMW_xacoMZnzDQENXaPy8q9NsIzQGU0cQ3Y01lzEDQcLId9HnzoD4Z1m10D9F4RcHCE4MsoR-CyIR4Fl9DWs-AP-h6tN52mNtJ5tf4nhRLi-y2LnKniGKJf01pAepKUulk5zfRdNkpL_Us5n4sgEcGirrtFy0a5jZahkVxW04-eNG25JbIqeSZgTRUU9k\",\"refresh_token\":\"pPM6nukrnhYNtP6KSDM0ZdzlIE0FCMANm4m+\\/fCxORN4QRTGGqqCTJGQtNIytHYRhb+ckyAUcc3sh9zPCXcOe5iE4T\\/spxzVbwXVO1QHeX6OIXbNE98F4G5j41TGco5nMX73ELHAw6WLDiiayjRRreMGkJUDPVcAcrulTdamJ1bQ\\/mwnqo2F7Azv\\/U4igzcySlr6FSaMgv6NHA11mToJVzG1o+4HtHAwtVXDJVVdX1nMXs+1RFT4EWbuvlUsAf3lsgD6mB4MjNLJrcE8tllkeWOTBaEMPyfpFVmuwou1G7szFspLBVUHgACQZFu\\/E4BeYyiIl56mE7teBIMkX0WId2cr60JXl8NCmpSLJrhajYTJbA0j6qgLnv7g1unY8O89kkvB\\/5Vx1MLS+uMEbihiDfgli8zSE7TDNt9umm4QFQT\\/7XMyNYMaDybo02vdYVCL75\\/Ta7JzkIrU\\/1M7vvXXSMSQaViPZqGAhIQUVJoPgBMd+t4jY+AvzF5hVrPXNgTtLO+v4JitfQ+Ff87bXEFBIYbLl7GRkIyTko\\/3nNB\\/hWwRCcS0F+2jtz2lDKnGsI5ymv2MEokV2Xkc6ailAWqSo5mdWd7OB+8A6DiVVn4964Ln74C4cBAJtS28t7SVbV+\\/GamO2oeR4bmLn2CWIM6Z7Zpi5nGWTMdjDN+rbSJsIMs=\"},\"code\":200}",
+					"rawDataType": "text",
+					"owner": 0,
+					"write": true
+				}
+			]
+		},
+		{
+			"id": "c5589542-cd43-3f65-0f44-a062868be552",
+			"name": "Get Create Reservation Form",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/location/{{location}}/reservation/create-form?users_id=32",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "users_id",
+					"value": "32"
+				},
+				{
+					"key": "meetings_id",
+					"value": "1",
+					"enabled": false
+				},
+				{
+					"key": "combos_id",
+					"value": "1",
+					"enabled": false
+				},
+				{
+					"key": "memberships_id",
+					"value": "1",
+					"enabled": false
+				},
+				{
+					"key": "json",
+					"value": "true",
+					"enabled": false
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "2316f96a-8ad9-8ded-7b0a-7d01e924882f"
+		},
+		{
+			"id": "d1211188-ccd6-892f-a602-5a662a114029",
+			"name": "Get Country State List",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/places/countries/{{country}}/states",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "c5fd90f2-fcb9-b8e2-a895-69535d27f179"
+		},
+		{
+			"id": "dab37576-1dc4-1240-8d5d-849d4254000c",
+			"name": "Get Brand Staff Next Meetings",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/staff/{{staff}}/next-meetings?start=2017-05-18 11:56:43&end=2019-05-18 11:56:43",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "start",
+					"value": "2017-05-18 11:56:43"
+				},
+				{
+					"key": "end",
+					"value": "2019-05-18 11:56:43"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "22255d68-8b7e-72cd-fd83-b2282796475b"
+		},
+		{
+			"id": "dd1ad153-e500-327c-9b2a-bb1d974e0f91",
+			"name": "Get Brand Locations List",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/location?page=1&per_page=15&only_actives=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1"
+				},
+				{
+					"key": "per_page",
+					"value": "15"
+				},
+				{
+					"key": "only_actives",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "1b2e1199-6436-6149-7f2e-3652cf2acbb8"
+		},
+		{
+			"id": "e255c6fa-3331-fd32-a902-dbba94e2a4cc",
+			"name": "Get Brand Service",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/service/{{serviceToSee}}",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "c5d453fa-e40c-d2e8-1e7f-b0183bb78684"
+		},
+		{
+			"id": "e88301de-db62-64c1-4192-3a35b966b877",
+			"name": "Get User Past Waitlist in Brand",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/brand/{{brand}}/waitlist/past?reducePopulation=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "reducePopulation",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "bec8175f-78be-df87-63ee-6cb56ab2b67b"
+		},
+		{
+			"id": "eef58c39-ad2f-e73a-c485-7b5b1089556a",
+			"name": "Get User Past Reservations in Brand",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/brand/{{brand}}/reservation-past/?page=1&per_page=5",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1"
+				},
+				{
+					"key": "per_page",
+					"value": "5"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "ffcf463a-ccd7-1e3a-0d93-9ab18460f136"
+		},
+		{
+			"id": "ef2d3ced-0a25-1849-fc8b-f9cabe73248a",
+			"name": "Get User Purchases In Location",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}\nAuthorization: Bearer {{token}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/me/location/{{locationToSee}}/purchases/?page=1&per_page=5",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1"
+				},
+				{
+					"key": "per_page",
+					"value": "5"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "9598e370-db09-aff4-85f8-1738bd07ceef"
+		},
+		{
+			"id": "ef3d2f12-cf3d-04f7-473c-356c473f29fd",
+			"headers": "Accept: application/json\nAuthorization: Bearer {{token}}\nGAFAFIT-COMPANY: {{company}}\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer {{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{url}}/api/users/{{user_profile_id}}/restore",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1564524003292,
+			"name": "Restore User",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"responses": []
+		},
+		{
+			"id": "f26e9df2-e968-5807-9d2d-39c57dc1fae0",
+			"name": "Get Brand Staff",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/staff/{{staff}}",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "22255d68-8b7e-72cd-fd83-b2282796475b"
+		},
+		{
+			"id": "fcd30df3-60c7-5e8b-4be4-30d6c1c14a6c",
+			"name": "Get Brand Staff List",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/staff?page=1&per_page=15&only_actives=true",
+			"responses": [],
+			"queryParams": [
+				{
+					"key": "page",
+					"value": "1"
+				},
+				{
+					"key": "per_page",
+					"value": "15"
+				},
+				{
+					"key": "only_actives",
+					"value": "true"
+				}
+			],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "22255d68-8b7e-72cd-fd83-b2282796475b"
+		},
+		{
+			"id": "ff556f6b-ce3f-5b5b-188e-8332e0f042ae",
+			"name": "Get Brand Location",
+			"description": "",
+			"collectionId": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"method": "GET",
+			"headers": "Accept: application/json\nGAFAFIT-COMPANY: {{company}}",
+			"data": [],
+			"rawModeData": "",
+			"url": "{{url}}/api/brand/{{brand}}/location/{{locationToSee}}",
+			"responses": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json"
+				},
+				{
+					"key": "GAFAFIT-COMPANY",
+					"value": "{{company}}"
+				}
+			],
+			"collection_id": "59ec6fb2-f063-1761-c08b-c30dabb62e2d",
+			"folder": "1b2e1199-6436-6149-7f2e-3652cf2acbb8"
+		}
+	]
+}

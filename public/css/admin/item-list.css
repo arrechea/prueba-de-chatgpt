@@ -1,0 +1,30 @@
+.category-selected {
+    background: var(--secondary2-color) !important;
+}
+
+.category-list-item {
+    border: solid 1px var(--secondary2-color);
+    text-align: center;
+    padding-top: 15px !important;
+    padding-bottom: 15px;
+    background: var(--secondary3-color);
+    margin: 5px;
+}
+
+.category-modal {
+    max-width: 450px;
+    height: 250px !important;
+}
+
+.item-modal {
+    max-width: 470px;
+    height: 400px !important;
+}
+
+.product-list-item {
+    margin: 10px;
+}
+
+.item-list-edit-button {
+    width: 35px !important;
+}

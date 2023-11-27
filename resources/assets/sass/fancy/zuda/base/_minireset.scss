@@ -1,0 +1,90 @@
+/*! minireset.scss v0.0.1*/
+
+// Blocks
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  padding: 0;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+  color: inherit;
+  margin:0;
+}
+
+// List
+ul{
+    list-style: none;
+    padding:0;
+}
+
+// Form
+button, input, select, textarea{
+    margin: 0;
+}
+
+// Box sizing
+html{
+    box-sizing: border-box;
+}
+
+*{
+    &,
+    &:before,
+    &:after{
+        box-sizing: inherit;
+    }
+}
+
+// Media
+img, audio, video {
+    height: auto;
+    max-width: 100%;
+}
+
+// Iframe
+iframe{
+    border: 0;
+}
+
+// Table
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 0;
+    text-align: left;
+}
+
+section, footer{
+    padding-top: 0;
+    padding-bottom:0;
+}
+
+ul,ol{
+    line-height: initial;
+}
+
+.text-block h3, .text-block .h3 {
+    margin-bottom: 0;
+}
+
+p strong{
+    color:inherit;
+}
+
+.menu-horizontal > li, .menu-vertical > li{
+    font-family: inherit;
+}
+
+input:not([class*='col-']), select:not([class*='col-']), .input-select:not([class*='col-']), textarea:not([class*='col-']), button[type="submit"]:not([class*='col-']){
+    width:initial;
+}
+
+input[type] + input[type], input[type] + .input-checkbox, input[type] + button, input[type] + .input-select {
+    margin-top: initial;
+}

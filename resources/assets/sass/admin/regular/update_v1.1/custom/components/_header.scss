@@ -1,0 +1,9 @@
+header{
+    border-bottom: 1px solid #edf1f5;
+    transition: .2s ease;
+    transition-property: padding;
+
+    &.hide-side{
+        padding-left:36px;
+    }
+}

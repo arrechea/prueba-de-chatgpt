@@ -1,0 +1,82 @@
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+
+	to{
+		opacity: 1;
+	}
+}
+
+.custom-container{
+	width: 880px;
+	margin: 0 auto;
+}
+
+.d-none{
+	display: none;
+}
+
+.main-content{
+	display: grid;
+	grid-template-columns: 60% 40%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.productContentContainer{
+	display: grid;
+	grid-template-rows: 10% 90%;
+	height: 100%;
+	padding: 0 5%;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+    border-right: 1px solid gray;
+    box-shadow: unset;
+}
+
+.SelectProductsStepNav{
+	display: flex;
+	grid-row: 1 / 2;
+	height: auto;
+	background-color: transparent;
+	box-shadow: unset;
+}
+
+.SelectProductsStepNav ul{
+	display: flex;
+	flex: 1;
+    justify-content: flex-start;
+	padding: 0;
+	margin-bottom: 0;
+} 
+
+.SelectProductsStepNav ul > li{
+	list-style: none;
+    line-height: initial;
+    padding: 15px 5%;
+	border-bottom: 1px solid #d6dadc;
+    width: fit-content;
+}
+
+.SelectProductsStepNav ul > li.active{
+	border-bottom: 1px solid black;
+    background-color: transparent;
+}
+
+.SelectProductsStepNav ul > li a:hover{
+	background-color: transparent;
+}
+
+.SelectProductsStepNav ul > li > a{
+	align-items: center;
+	line-height: unset;
+	height: auto;
+	text-decoration: none;
+	color: black;
+}
+
+.ThankyouStep .totalAmount{
+	display: flex;
+	justify-content: flex-end;
+}

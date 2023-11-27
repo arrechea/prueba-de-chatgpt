@@ -1,0 +1,106 @@
+html {
+    width: 100%;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.87);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    @media only screen and (min-width: 1200px){
+        font-size: 13px;
+    }
+    @media only screen and (min-width: 992px){
+        font-size: 12px;
+    }
+    @media only screen and (min-width: 0){
+        font-size: 12px;
+    }
+}
+
+a {
+    color: var(--black-color);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    outline: none;
+}
+
+button, select {
+    text-transform: none;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility!important;
+    -webkit-font-smoothing: antialiased!important;
+}
+
+h3 {
+    font-size: 2.92rem;
+    line-height: 110%;
+    margin: 1.46rem 0 1.168rem 0;
+}
+
+h5 {
+    font-size: 1.64em;
+    line-height: 110%;
+    margin: 0.82rem 0 0.656rem 0;
+    text-align: left;
+}
+
+p {
+    color: #000;
+    padding: 0;
+    text-rendering: optimizeLegibility!important;
+    -webkit-font-smoothing: antialiased!important;
+    line-height: 1.5rem;
+    font-size: 15px;
+}
+
+input:not([type]), input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], textarea.materialize-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    border-radius: 0;
+    outline: none;
+    height: 2rem;
+    width: 100%;
+    font-size: 12px;
+    margin: 0 0 20px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+
+nav ul a {
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+}

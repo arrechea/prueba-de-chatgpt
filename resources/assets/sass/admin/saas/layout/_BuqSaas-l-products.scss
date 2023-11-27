@@ -1,0 +1,186 @@
+@import "../base/saas_variables";
+
+.#{$prefix}-l-products{
+   display:grid;
+   grid-template-rows: auto 1fr;
+   row-gap: 28px;
+   
+   &__header{
+      // display:grid;
+      // grid-template-rows: repeat(2, auto);
+      // row-gap: 35px;
+   }
+
+   &__body{
+      position:relative;
+
+      #item-management-list > .item-list{
+         display: grid;
+         grid-template-columns: 1fr 3fr;
+         column-gap: 20px;
+
+         & > .category-list, & > .item-list{
+            display: grid;
+            row-gap: 15px;
+            align-items: start;
+         }
+
+         & > .category-list{
+            grid-template-rows:auto 1fr;
+
+            .categories-list{
+               display:grid;
+               row-gap:.75rem;
+            }
+
+            .category-list-item{
+               background-color:#FFFFFF;
+               border: 0 transparent none;
+               color: #707073;
+               border-radius: 10px;
+               padding:15px;
+               margin:0;
+               cursor: pointer;
+
+               & > .row{
+                  display: grid;
+                  grid-template-columns: 1fr auto;
+                  column-gap: 15px;
+   
+                  & > div{
+                     margin:0;
+                     padding:0;
+                  }
+               }
+               .category-list-name{
+                  color: inherit;
+                  font-weight: 600;
+                  text-transform: uppercase;
+                  letter-spacing:.8px;
+                  text-align: left;
+               }
+
+               .category-edit-buttons{
+                  width:initial;
+                  float:initial;
+                  .btn{
+                     box-shadow: 0px 1px 3px 0px rgba(153,175,196,1);
+                  }
+               }
+   
+               &.category-selected{
+                  background-color:#99AFC4!important;
+                  color:white;
+               }
+            }
+         }
+
+         & > .item-list{
+            grid-template-rows: auto 1fr auto;
+
+            .product-list{
+               display:grid;
+               row-gap:.75rem;
+
+               .product-list-item{
+                  background-color:#FFFFFF;
+                  border: 0 transparent none;
+                  color: #707073;
+                  border-radius: 10px;
+                  padding:15px;
+                  margin:0;
+
+                  & > .row{
+                     display: grid;
+                     grid-template-columns: 1fr auto;
+                     align-items: center;
+                     column-gap: 15px;
+      
+                     & > div{
+                        margin:0;
+                        padding:0;
+                        float:initial;
+                        width:initial;
+                     }
+                  }
+               }
+
+               .product-list-name{
+                  color: inherit;
+                  font-weight: 500;
+                  letter-spacing:.3px;
+                  text-align: left;
+               }
+
+               .product-edit-buttons{
+                  display: grid;
+                  grid-auto-flow: column;
+                  column-gap: .75rem;
+               }
+
+            }
+
+            .pagination{
+               & > li{
+                  &:first-child, &:last-child{
+                     display:none;
+                  }
+                  height: 40px;
+                  width: 40px;
+                  background-color: white !important;
+                  border: 1px #DFE3E6 solid;
+
+                  &:nth-child(4){
+                     border-radius: 0 10px 10px 0!important;
+                  }
+
+                  &:nth-child(2){
+                     border-radius: 10px 0px 0px 10px!important;
+                  }
+               }
+            }
+         }
+      }
+
+      // & > .is-calendarTool{
+      //    position:absolute;
+      //    top:0;
+      //    left:0;
+      // }
+
+      // hr.fc-divider.fc-widget-header{
+      //    padding:0;
+      // }
+
+      // .fc-event{
+      //    background-color: lighten(#99AFC4, 10%);
+
+      //    .fc-content{
+      //       padding:0 15px;
+      //       text-align: left;
+
+      //       .fc-time{
+      //          font-size: 12px;
+      //       }
+
+      //       .fc-title{
+      //          font-size: 16px;
+      //       }
+      //    }
+
+      //    &:hover{
+      //       background-color: #FF3E4F;
+      //       opacity:1;
+      //    }
+      // }
+
+      // td.fc-day{
+      //    &.fc-today{
+      //       background-color:lighten(#F5F6F8, 10%);
+      //    }
+      //    &.fc-past{
+      //       background-color:darken(#F5F6F8, 10%);
+      //    }
+      // }
+   }
+}

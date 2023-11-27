@@ -1,0 +1,346 @@
+.ConfirmBuyStep{
+    display: flex;
+    width:100%;
+    @media screen and (max-width: 500px){
+        height:calc(100vh - 30px);
+        justify-content: center;
+        flex-flow: column;
+    }
+    &--title{
+        width:100%;
+        text-align:left;
+        font-size:480%;
+        font-weight: bold;
+        color:lightgrey;
+        line-height: 1.2;
+        @media screen and (max-width: 769px){
+            font-size:300%;
+        }
+    }
+    &--col{
+        display:flex;
+        align-items: center;
+        width:50%;
+        box-sizing: border-box;
+        padding:30px;
+        @media screen and (max-width: 500px){
+            width: 100%;
+            padding:15px 0;
+        }
+        &:first-child{
+            border-right: solid 1px #dedede;
+            @media screen and (max-width: 500px){
+                border-right: none 0 transparent;
+                border-bottom: solid 1px #dedede;
+            }
+        }
+    }
+    &--container{
+        width:100%;
+    }
+    &--user, &--info{
+        position: relative;
+        z-index:1;
+    }
+    &--user{
+        &--name {
+            font-size:140%;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: grey;
+            padding:0 0 2rem;
+            @media screen and (max-width: 769px){
+                padding:0 0 1rem;
+            }
+        }
+
+        &--subtitle {
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #9d9d9d;
+            text-transform: uppercase;
+        }
+    }
+
+    &--purchase{
+        .ThankyouStep--purchase{
+            border-top:0 none transparent;
+            padding:0;
+        }
+    }
+    &--info{
+        color: grey;
+        .ThankyouStep--purchase{
+
+            .ThankyouStep--purchase--title{
+                text-align:left;
+                font-size:140%;
+                font-weight:400;
+            }
+
+            .PurchaseThankyou--items--quantity, .PurchaseThankyou--items--price{
+                font-size:110%;
+            }
+        }
+    }
+}
+
+@keyframes transComplete {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: .4;
+    }
+}
+
+.gs-thankyou{
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-row-gap: .5em;
+    // top:50%;
+    // left:50%;
+    padding:15px;
+    border: #dedede 1px solid;
+    // transform: translate(-50%, -50%);
+    border-radius: 20px;
+    width:80%;
+    text-align: center;
+    overflow: hidden;
+
+    &.is-meetingSummary{
+        padding-bottom:10px;
+        
+        @media screen and (min-width:768px) {
+            padding-bottom:60px;
+        }
+    }
+
+    &__header{
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width:992px){
+        // background: white;
+        grid-template-columns: 40px 1fr;
+        grid-column-gap: 1em;
+        grid-row-gap: 0;
+        width:600px;
+        text-align: left;
+    }
+
+    &__icon{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:lightgrey;
+        height: 100%;
+        svg{
+            position: relative;
+            z-index: -1;
+            width: 80px;
+            height:80px;
+            @media screen and (min-width:992px){
+                position: absolute;
+                left: -40px;
+                opacity: 0;
+                width:auto;
+                height:80%;
+                animation: transComplete 2s ease 1 normal forwards;
+            }
+        }
+    }
+
+    &__status{
+        padding:0 15px;
+        .gs-buySummary{
+            .gs-title{
+                display: none;
+            }
+            padding:0;
+            background-color: transparent;
+            border: 0 transparent none;
+        }
+    }
+
+    &__terms{
+        padding:0 15px;
+        display: grid;
+        grid-auto-flow: row;
+        row-gap: .4em;
+        width:100%;
+        text-align:left;
+        
+        @media screen and (min-width:768px) {
+            width:60%;
+            text-align:right;
+            margin-left:auto;
+            grid-column: 2/3;
+        }
+
+        p{
+            color: lighten(grey, 10%);
+            font-size:10px;
+            line-height: 1.4;
+        }
+    }
+}
+
+.gs-orderSummary{
+
+    &__header{
+        margin-bottom: 20px;
+    }
+
+    &__total{
+        border-top: #dedede 1px solid;
+        padding-top:10px;
+    }
+}
+
+.ThankyouStep{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:500px;
+    text-align: center;
+    .gs-title{
+        width:100%;
+        padding: 5px 0;
+    }
+    &--column {
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 69px;
+        padding-top: 18px;
+        margin: 0 auto;
+    }
+    &--user {
+        padding: 42px 38px;
+        font-size: 1.2em;
+        position: relative;
+        background: #e4e6e9;
+        padding-right: 107px;
+    }
+    &--left {
+        width: 70%;
+        padding-top:9rem;
+        padding-right: 30px;
+    }
+    &--right{
+        position: relative;
+        width: 30%;
+        height: 400px;
+        text-align: right;
+        background-color:white;
+        border: #dedede 1px solid;
+        padding:20px;
+        overflow: hidden;
+    }
+    &--reservation {
+        text-align: center;
+        font-size: 1.4em;
+        &--title {
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+    }
+    &--purchase {
+        border-top:1px #dedede solid;
+        border-bottom:1px #dedede solid;
+        padding:2rem 0;
+        @media screen and (max-width: 769px) {
+            padding:0 0 1rem;
+            border-top: 0 none transparent;
+        }
+
+        & > .ThankyouStep--purchase--title{
+            @media screen and (max-width: 769px) {
+                display:none;
+            }
+        }
+
+        &--title {
+            text-transform: uppercase;
+            font-weight:bold;
+            color: grey;
+            margin-bottom: 11px;
+            letter-spacing: 0.9px;
+        }
+        &--table {
+            border: 0px;
+            width: 100%;
+            margin-top: 4px;
+            td {
+                text-align: left;
+                padding: 9px 2px;
+                color: darkgrey;
+                line-height: 16px;
+                letter-spacing: 1.3px;
+            }
+            & > tbody td {
+                border: 0px;
+            }
+            & tfoot td {
+                color: #53befb;
+                background: #e4e6e9;
+            }
+            & tfoot td:first-child {
+                text-align: right;
+                padding-right: 20px;
+            }
+            & > tbody td.PurchaseThankyou--items--price {
+                font-weight: 800;
+                text-align: right !important;
+                padding-bottom: 0px;
+                padding-top: 11px;
+                color: grey;
+            }
+        }
+    }
+}
+
+.ReservationThankyou{
+    &--marketing{
+        margin-top: 21px;
+        &--name {
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+    }
+    &--reservation {
+        line-height: 1.4em;
+        &--day {
+            text-transform: capitalize;
+        }
+        &--hour {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.gs-table{
+    width:100%;
+}
+
+.totalAmount{
+    text-align: right;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 0;
+    width: 100%;
+    letter-spacing: 2px;
+    color: black;
+
+    @media screen and (min-width: 992px) {
+        font-size:200%;
+    }
+}

@@ -1,0 +1,29 @@
+@import "../base/saas_variables";
+
+.#{$prefix}-e-label{
+   font-size:10px;
+   display:inline-block;
+   color:white;
+   border-radius:100px;
+   padding:3px 8px;
+   line-height: 14px;
+   letter-spacing: 0;
+
+   &.is-active{
+      background-color: #B7CCE0;
+   }
+   
+   &.is-parentService, &.is-creditService{
+      background-color: white;
+      color:#707073;
+      transition: all .3s ease;
+      
+      &:hover{
+            background-color: lighten(#B7CCE0, 15%);
+      }
+   }
+
+   &.is-inactive{
+      background-color: #FFA3AB;
+   }
+}

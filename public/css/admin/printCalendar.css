@@ -1,0 +1,66 @@
+.imprimirLista{
+    display: none !important;
+}
+
+html{
+    width: 100%;
+}
+
+span{
+    width: 50%;
+    text-align: center;
+
+}
+
+th{
+    font-size: 20px;
+    border: 1px solid rgb(117,117,117);
+}
+
+.fondo{
+    background: #CCCCCC;
+}
+
+td {
+    font-size: 18px;
+    border: 1px solid rgb(117,117,117);
+    text-align: center;
+    padding: 3px;
+}
+
+.header{
+    font-size: 22px;
+    width: 100%;
+    border-bottom: 1px solid rgb(117,117,117) ;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.dataReservation{
+    font-size: 18px;
+    width: 50%;
+    border: 1px solid rgb(170,170,170);
+    background: #eeeeee;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+}
+
+.ClassNo {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+table{
+    width: 100%;
+    border: 1px solid #424242;
+    border-spacing: 0;
+}
+
+body{
+    width:auto;
+    margin: 35px;
+    text-align: center;
+}
+

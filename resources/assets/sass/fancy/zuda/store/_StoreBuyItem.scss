@@ -1,0 +1,139 @@
+
+
+.#{$store}__ProductsItems{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    justify-items: center;
+    position: relative;
+    background-color:white;
+    padding:20px 20px 0;
+    margin:10px;
+    height:220px;
+    border-radius: 20px;
+    overflow: hidden;
+    @media screen and (min-width:767px) {
+        display:flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    @media screen and (min-width:992px) {
+        height:260px;
+    }
+
+    .product{
+        width:100%;
+        @media screen and (min-width:767px) {
+            height: 90%;
+        }
+        @media screen and (min-width:992px) {
+            height: 70%;
+        }
+
+        .value{
+            padding-top:15px;
+            width:100%;
+            display:inline-block;
+            letter-spacing:1px;
+            font-weight: 600;
+            
+        }
+
+        & > h3{
+            font-size:100%;
+            font-weight: 600;
+            letter-spacing: .3px;
+            margin:0 0 5px;
+            @media screen and (min-width: 992px) {
+                font-size:120%;
+                line-height: 1.4;
+                width:80%;
+            }
+        }
+        & > p{
+            margin:0 0 5px;
+            font-size:90%;
+            color:darkgray;
+            letter-spacing: 1px;
+            @media screen and (min-width:992px) {
+                font-size:90%;
+                line-height: 1.6;
+                margin-bottom: 5px;
+                width: 80%;
+            }
+        }
+    }
+    .amount{
+        display: block;
+        z-index: 1;
+        margin-bottom: 10px;
+        width:100%;
+        text-align:left;
+        & > span{
+            display: inline-block;
+            line-height: 1;
+            margin:0 5px;
+
+            // @media screen and (min-width:767px) {
+            //     height:40px;
+            //     font-size:180%;
+            // }
+
+            @media screen and (min-width:992px) {
+                height:30px;
+                font-size:100%;
+            }
+        }
+        button{
+            appearance: none;
+            background-color:lighten(grey, 40%);
+            height:21px!important;
+            width:21px;
+            border-radius: 100%;
+            border: 0 transparent none;
+            padding:0 5px;
+            line-height: 21px!important;
+            font-weight:bold;
+            margin:0 2.5px;
+            color:white;
+            transition: .2s ease;
+            transition-property: background-color;
+            position: relative;
+            top:5px;
+
+            &:hover{
+                background-color:darken(grey, 10%);
+            }
+
+            svg{
+                height:100%;
+                width:100%;
+                position: relative;
+            }
+
+            @media screen and (max-width:992px) and (min-height: 900px) {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+
+    .add-to-card{
+        width:calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+        color: white;
+        background-color: rgba(0,0,0,.8);
+        border: 0;
+        padding:10px 0;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: .2s ease;
+        transition-property: background-color;
+        font-size:10px;
+
+        &:hover{
+            background-color: #000;
+        }
+    }
+}

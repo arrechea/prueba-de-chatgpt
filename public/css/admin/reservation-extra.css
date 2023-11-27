@@ -1,0 +1,142 @@
+.gs-thankyou .invitedPeople__item {
+    /*display: grid;*/
+    align-items: center;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+    /*grid-column-gap: 1em;*/
+    font-size: 12px;
+    padding: 5px 0;
+    margin: 0;
+    color: gray;
+    border-bottom: 1px #d3d3d3 solid;
+}
+
+.gs-thankyou .invitedPeople__item .this-invitedLabel {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 992px) {
+    div.MapMeeting__summary {
+        height: 470px;
+    }
+}
+
+div#CreateReservationFancyTemplate--Block {
+    position: fixed;
+}
+
+@media (min-width: 992px) {
+    #CreateReservationFancyTemplate {
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .MapMeeting--left .MapMeeting--canvas {
+        max-height: calc(100% - 40px);
+        overflow-y: auto;
+    }
+}
+
+.MapMeeting--right {
+    background-color: #fff;
+}
+
+.CellGrid--position--coachName {
+    display: inline-block;
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.CellGrid--position--coachName span {
+    font-size: 1.5em;
+}
+
+.gs-summary table.gs-table tbody > tr > td, .gs-summary table.gs-table tbody > tr > th {
+    background-color: #fff;
+    border: none;
+    padding: 2px;
+}
+
+.MapMeeting__summary .summary__section h3 {
+    margin-top: 7px;
+}
+
+#CreateReservationFancyTemplate .touchpoint {
+    background-color: #fff;
+}
+
+#CreateReservationFancyTemplate .productSelection__summary .gs-summary, #CreateReservationFancyTemplate .paymentSelection__resume .gs-summary {
+    background-color: #fff;
+}
+
+.product-search-container {
+    background-position: 98% 10px;
+}
+
+#CreateReservationFancyTemplate .productSelection__content .SelectProductsStepNav ul > li > div {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.gs-cartItem button.gs-link {
+    font-size: 10px;
+}
+
+.gs-reservation-meeting-information {
+    text-align: center;
+}
+
+.gs-location-name {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: black;
+    line-height: 1.6;
+    letter-spacing: .8px;
+    text-transform: uppercase
+}
+
+.Payment--Loading--Message {
+    width: 100%;
+    height: calc(100% - 48px);
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: absolute;
+    background-color: rgb(255, 255, 255, 0.7);
+    z-index: 2;
+    font-size: 1.5rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/*.gafapay-form__group {*/
+/*    min-height: 35px;*/
+/*    border: 1px solid #000;*/
+/*    padding: 15px;*/
+/*    border-radius: 30px;*/
+/*}*/
+
+/*.react-calendar__year-view__months button.react-calendar__tile--hasActive, .react-calendar__year-view__decades button.react-calendar__tile--hasActive, .react-calendar__year-view__years button.react-calendar__tile--hasActive, .react-calendar__century-view__months button.react-calendar__tile--hasActive, .react-calendar__century-view__decades button.react-calendar__tile--hasActive, .react-calendar__century-view__years button.react-calendar__tile--hasActive, .react-calendar__decade-view__months button.react-calendar__tile--hasActive, .react-calendar__decade-view__decades button.react-calendar__tile--hasActive, .react-calendar__decade-view__years button.react-calendar__tile--hasActive, .react-calendar__month-view__days button.react-calendar__tile--active, .react-calendar__navigation > button.react-calendar__navigation__prev-button:active, .react-calendar__navigation > button.react-calendar__navigation__prev-button:focus, .react-calendar__navigation > button.react-calendar__navigation__prev-button, .react-calendar__navigation > button.react-calendar__navigation__next-button:active, .react-calendar__navigation > button.react-calendar__navigation__next-button:focus, .react-calendar__navigation > button.react-calendar__navigation__next-button {*/
+/*    background-color: #333;*/
+/*    color: white;*/
+/*    line-height: 0px;*/
+/*}*/
+
+/*button.react-calendar__tile {*/
+/*    padding: 5px;*/
+/*}*/
+
+/*.react-calendar__year-view .react-calendar__tile, .react-calendar__decade-view .react-calendar__tile, .react-calendar__century-view .react-calendar__tile {*/
+/*    padding: 25px;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.this-radio.checked {*/
+/*    background-color: #ccc !important;*/
+/*}*/

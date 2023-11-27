@@ -1,0 +1,60 @@
+.products-container .product-item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-items: center;
+    margin-bottom: 20px;
+    padding: 2.5px;
+}
+
+.products-container .product-item h3{
+	font-size: 1.4rem;
+}
+
+.products-container .product-item h3,
+.products-container .product-item p{
+	text-align: center;
+	margin: 0;
+}
+
+.products-container .product-item span{
+	display: block;
+	text-align: center;
+}
+
+.products-container .product-item .product{
+	border: 1px solid gray;
+	width: 100%;
+	width: 143px;
+    height: 144.65px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.products-container .product-item .amount{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin: 5px 0;
+}
+
+.products-container .product-item .amount button{
+	background-color: transparent;
+	border: 0;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.products-container .product-item .amount span{
+	margin: 0 5%;
+}
+
+.products-container .product-item button.add-to-card{
+	background-color: transparent;
+	border: 1px solid gray;
+	border-radius: 50px;
+	width: 70%;
+	padding: 5px 0;
+}

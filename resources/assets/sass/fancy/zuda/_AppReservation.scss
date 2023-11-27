@@ -1,0 +1,104 @@
+.AppReservation{
+    &--steps {
+        position: absolute;
+        bottom:0px;
+        left:0;
+        width:100%;
+        z-index: 1;
+        clear: both;
+        text-align: right;
+        &--prev {
+            display: inline-block;
+            position: relative;
+            margin-top: 4px;
+        }
+        @media screen and (max-width: 500px) {
+            position: relative;
+        }
+    }
+    &--prevTop {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        border: lightgrey solid 1px;
+        text-transform: uppercase;
+        color:lightgrey;
+        font-size:85%;
+        letter-spacing: 2px;
+        padding: 0 10px 0 15px;
+        cursor: pointer;
+        height: 32px;
+        transition: .3s ease-in-out;
+        transition-property: color, border-color;
+        img{
+            display:none;
+        }
+        &:hover {
+            color:grey;
+            border-color:grey;
+            &:before{
+                border-color:grey;
+            }
+        }
+        &:before{
+            content: "";
+            background: white;
+            height: 22px;
+            width: 22px;
+            left: -12px;
+            transform: rotate(45deg);
+            position: absolute;
+            border-bottom: lightgrey solid 1px;
+            border-left: lightgrey solid 1px;
+            transition: .3s ease-in-out;
+            transition-property:  border-color;
+        }
+        &--arrow {
+            display: inline-block;
+            vertical-align: middle;
+            height: 13px;
+            margin-right: 14px;
+        }
+    }
+    &--button {
+        display: inline-block;
+        background: transparent;
+        min-width: 108px;
+        padding: 15px 30px;
+        font-weight: bold;
+        white-space: nowrap;
+        color: white;
+        background-color: lightgrey;
+        border-radius: 1px;
+        border:0;
+        cursor: pointer;
+        line-height: normal;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: .3s ease-in-out;
+        transition-property:color, border-color, background-color;
+        &:hover {
+            border-color:grey;
+            background: grey;
+            color: white;
+        }
+        &[disabled] {
+            cursor: not-allowed;
+            color:grey;
+            background-color: darkgrey;
+            transition: .3s ease-in-out;
+            transition-property: color, background-color;
+        }
+        &--prev {
+            right: auto;
+            left: 0;
+            background: white;
+            color: var(--main-color);
+            &:hover {
+                background: var(--secondary-color);
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.MapMeeting--canvas{
+   display: grid;
+   grid-auto-flow: row;
+   grid-auto-rows: 1fr;
+   row-gap: 7px;
+}
+
+.MapDetails--position{
+   display: none;
+}
+
+.MapMeeting--canvas .CellRow{
+   display: grid;
+   grid-auto-flow: column;
+   grid-auto-columns: 1fr;
+   column-gap: 3px;
+}
+
+.MapMeeting--canvas .CellGrid{
+   display: grid;
+   place-items: center;
+}
+
+.CellGrid--position{
+   height: 24px!important;
+   width: 24px!important;
+   display: inline-grid;
+   place-items: center;
+   box-sizing: border-box;
+   border-radius: 50%;
+   border: 1px solid #1F1C3D;
+}
+
+.CellGrid--position[data-positiontype="private"]{
+   background-color: #1F1C3D;
+}
+
+.CellGrid--position[data-positiontype="public"]{
+   background-color: white;
+   cursor: pointer;
+}
+
+.CellGrid--position[data-positiontype="public"]:hover{
+   background-color: #EEEEEE;
+}
+
+.CellGrid--position[data-status="selected"],
+.CellGrid--position[data-status="selected"]:hover{
+   background-color: #1F1C3D;
+   color:white
+}
+
+.CellGrid--position--cellNumber{
+   display: grid;
+   place-items: center;
+}
+
+.CellGrid--position--cellNumber span{
+   font-size: 11px;
+   font-weight: bold;
+}

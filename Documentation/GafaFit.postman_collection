@@ -1,0 +1,2533 @@
+{
+	"variables": [],
+	"info": {
+		"name": "GafaFit",
+		"_postman_id": "50224440-7278-352a-cbcf-8ea0a3d8f995",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"Request Correcto\"] = !!jsonData.access_token;",
+									"",
+									"if(!!jsonData.access_token){",
+									" let token = jsonData.access_token;",
+									" postman.setEnvironmentVariable(\"token\", token);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/oauth/token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "{{user_email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "*",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "5074c644-9893-4413-87e1-dca6063803b4",
+							"name": "Credenciales incorrectas",
+							"originalRequest": {
+								"url": "{{url}}/oauth/token",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "client_id",
+											"value": "{{client_id}}",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "{{user_email}}",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "*",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"name": "Cache-Control",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 Feb 2017 22:19:40 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "nginx/1.11.5",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": ""
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": ""
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "54",
+									"name": "X-RateLimit-Remaining",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"ok\":false,\"mensaje\":\"Credenciales inv\\u00e1lidas\",\"data\":{\"error\":\"invalid_credentials\",\"message\":\"The user credentials were incorrect.\"},\"code\":401}"
+						},
+						{
+							"id": "9ce423d7-7e32-40b9-8358-0a507188a517",
+							"name": "Cliente invalido",
+							"originalRequest": {
+								"url": "{{url}}/oauth/token",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "client_id",
+											"value": "{{client_id}}",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "{{user_email}}",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "*",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"name": "Cache-Control",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 Feb 2017 22:19:25 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Server",
+									"value": "nginx/1.11.5",
+									"name": "Server",
+									"description": ""
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked",
+									"name": "Transfer-Encoding",
+									"description": ""
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": ""
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56",
+									"name": "X-RateLimit-Remaining",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"ok\":false,\"mensaje\":\"Cliente Inv\\u00e1lido\",\"data\":{\"error\":\"invalid_client\",\"message\":\"Client authentication failed\"},\"code\":401}"
+						},
+						{
+							"id": "9150bad2-bb22-46a5-bff0-930a72712078",
+							"name": "Respuesta correcta",
+							"originalRequest": {
+								"url": "{{url}}/oauth/token",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "grant_type",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "client_id",
+											"value": "{{client_id}}",
+											"type": "text"
+										},
+										{
+											"key": "client_secret",
+											"value": "6iiSBO8CLz3Y1PDHaKNtLX74HboIktnynvxuMysA",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "{{user_email}}",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "{{password}}",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "*",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "html",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-cache",
+									"name": "Cache-Control",
+									"description": ""
+								},
+								{
+									"key": "Connection",
+									"value": "close",
+									"name": "Connection",
+									"description": ""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": ""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 Feb 2017 18:23:47 GMT",
+									"name": "Date",
+									"description": ""
+								},
+								{
+									"key": "Host",
+									"value": "localhost:8000",
+									"name": "Host",
+									"description": ""
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.0.0",
+									"name": "X-Powered-By",
+									"description": ""
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60",
+									"name": "X-RateLimit-Limit",
+									"description": ""
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58",
+									"name": "X-RateLimit-Remaining",
+									"description": ""
+								}
+							],
+							"cookie": [],
+							"body": "{\"ok\":true,\"mensaje\":\"\",\"data\":{\"token_type\":\"Bearer\",\"expires_in\":31535998,\"access_token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJjNmFmYTY1YWM5NzBmYTc0MTM5NzVkYzE0YmJkZjVhNGMzNjg5OWUwYWYwOTdlZDgwNDRkZTg0ZmEzYjdlYjY3YTJjNzY0YWQ0ZTg4YWQ4In0.eyJhdWQiOiIxIiwianRpIjoiMmM2YWZhNjVhYzk3MGZhNzQxMzk3NWRjMTRiYmRmNWE0YzM2ODk5ZTBhZjA5N2VkODA0NGRlODRmYTNiN2ViNjdhMmM3NjRhZDRlODhhZDgiLCJpYXQiOjE0ODYwNTk4MjYsIm5iZiI6MTQ4NjA1OTgyNiwiZXhwIjoxNTE3NTk1ODI1LCJzdWIiOiIxIiwic2NvcGVzIjpbIioiXX0.L0Dm0SE3w8YVFfWp2pr2TRRv248tzY57rkIeyEKvoee6jDy4l6sVveP4GQ_lb4vdGn8sKCdhNJr5H-pQNVYC8vjgWV6SHab0jl1HfAp98ai6qeE7fcaq7Gnb_mBWyUIqbmedE7KODRot4e-piGVmJM4r7mz9ZF21Y1fO6M4KJOURoqQyDwAFyapl7xCgofMRmLzVZbfmFOwzvqovOgjrMQOt3F3ovJdIexjOnjjWE7Fqsh0b6ohUMTM98UPXdMmE6-0tdxYmd-6hwHYOUyL_0vilE-45CSeEV9B3O8eBhcFkKiG8hYL3UrEVRl8dJ8N3iPCe9MPpwadmk27BHcmNVrQcDlzToLIWtm0aQ-p0qOAgJ-dm2bglPUg0rqxp3WOZRHUJ3k6yM6mj0EIlzExhuip9PWZ_FEYhEv4AOHqk-1VrglnDFFA3dJMK764a2XS3nnumfIQkcfkr3hGgtW1SWkYTMrmAhvjHlejGBHk4WJQRIOIMW_xacoMZnzDQENXaPy8q9NsIzQGU0cQ3Y01lzEDQcLId9HnzoD4Z1m10D9F4RcHCE4MsoR-CyIR4Fl9DWs-AP-h6tN52mNtJ5tf4nhRLi-y2LnKniGKJf01pAepKUulk5zfRdNkpL_Us5n4sgEcGirrtFy0a5jZahkVxW04-eNG25JbIqeSZgTRUU9k\",\"refresh_token\":\"pPM6nukrnhYNtP6KSDM0ZdzlIE0FCMANm4m+\\/fCxORN4QRTGGqqCTJGQtNIytHYRhb+ckyAUcc3sh9zPCXcOe5iE4T\\/spxzVbwXVO1QHeX6OIXbNE98F4G5j41TGco5nMX73ELHAw6WLDiiayjRRreMGkJUDPVcAcrulTdamJ1bQ\\/mwnqo2F7Azv\\/U4igzcySlr6FSaMgv6NHA11mToJVzG1o+4HtHAwtVXDJVVdX1nMXs+1RFT4EWbuvlUsAf3lsgD6mB4MjNLJrcE8tllkeWOTBaEMPyfpFVmuwou1G7szFspLBVUHgACQZFu\\/E4BeYyiIl56mE7teBIMkX0WId2cr60JXl8NCmpSLJrhajYTJbA0j6qgLnv7g1unY8O89kkvB\\/5Vx1MLS+uMEbihiDfgli8zSE7TDNt9umm4QFQT\\/7XMyNYMaDybo02vdYVCL75\\/Ta7JzkIrU\\/1M7vvXXSMSQaViPZqGAhIQUVJoPgBMd+t4jY+AvzF5hVrPXNgTtLO+v4JitfQ+Ff87bXEFBIYbLl7GRkIyTko\\/3nNB\\/hWwRCcS0F+2jtz2lDKnGsI5ymv2MEokV2Xkc6ailAWqSo5mdWd7OB+8A6DiVVn4964Ln74C4cBAJtS28t7SVbV+\\/GamO2oeR4bmLn2CWIM6Z7Zpi5nGWTMdjDN+rbSJsIMs=\"},\"code\":200}"
+						}
+					]
+				},
+				{
+					"name": "RequestNewPassword",
+					"request": {
+						"url": "{{url}}/api/password/email",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{user_email}}",
+									"type": "text"
+								},
+								{
+									"key": "return_url",
+									"value": "https://github.com/laravel/passport/issues/339",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "NewPassword",
+					"request": {
+						"url": "{{url}}/api/password/reset",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "{{user_email}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "87f67b7719a5434a42a7fbbb547a33aaacabb8ec3c059e7b9375ee623568cce0",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post Register",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"Request Correcto\"] = jsonData.ok === true;"
+								]
+							}
+						}
+					],
+					"request": {
+						"url": "{{url}}/api/register",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "12123s123@email.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "*",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "{{password}}",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Nombre",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Apellido",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "2001-01-05",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "custom_fields[requerimientos-de-clase][0][shoe-size][0]",
+									"value": "12",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post Logout",
+					"request": {
+						"url": "{{url}}/api/logout",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "Purchases",
+					"description": "",
+					"item": [
+						{
+							"name": "Get User Purchases In Location",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/me/location/{{locationToSee}}/purchases/?page=1&per_page=5",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"location",
+										"{{locationToSee}}",
+										"purchases",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "5"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Purchases In Brand",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/me/brand/{{brand}}/purchases/?page=1&per_page=5",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"brand",
+										"{{brand}}",
+										"purchases",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "5"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Purchase",
+							"request": {
+								"url": "{{url}}/api/me/brand/{{brand}}/purchases/{{purchase}}",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": "Obtiene una compra del usuario para una cierta marca con los artículos de la compra y los giftcards."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Reservations",
+					"description": "",
+					"item": [
+						{
+							"name": "Get User Past Reservations in Brand",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/me/brand/{{brand}}/reservation-past/?page=1&per_page=5",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"brand",
+										"{{brand}}",
+										"reservation-past",
+										""
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "5"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Future Reservations in Brand",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/me/brand/{{brand}}/reservation-future?reducePopulation=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"brand",
+										"{{brand}}",
+										"reservation-future"
+									],
+									"query": [
+										{
+											"key": "reducePopulation",
+											"value": "true"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Reservation",
+							"request": {
+								"url": "{{url}}/api/me/brand/{{brand}}/reservations/{{reservation}}",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Post User Cancel Reservation",
+							"request": {
+								"url": "{{url}}/api/me/brand/{{brand}}/reservation-future/{{reservation}}/cancel",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Payments",
+					"description": "",
+					"item": [
+						{
+							"name": "Get User Payment Info",
+							"request": {
+								"url": "{{url}}/api/me/payments/brand/{{brand}}/payment-methods",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Add Payment option",
+							"request": {
+								"url": "{{url}}/api/me/payments/brand/{{brand}}/method/{{paymentMethod}}",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "option[token]",
+											"value": "tok_test_mastercard_4444",
+											"type": "text"
+										},
+										{
+											"key": "option[phone]",
+											"value": "5562439616",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Remove Payment option",
+							"request": {
+								"url": "{{url}}/api/me/payments/brand/{{brand}}/method/{{paymentMethod}}/remove",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "option",
+											"value": "src_2ipfsfaYLpo8U39AS",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Credits",
+					"description": "",
+					"item": [
+						{
+							"name": "Get User Credits",
+							"request": {
+								"url": "{{url}}/api/me/brand/{{brand}}/credits",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Memberships",
+					"description": "Información de membresías del usuario",
+					"item": [
+						{
+							"name": "Get User Memberships",
+							"request": {
+								"url": "{{url}}/api/me/brand/{{brand}}/memberships",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": "Obtiene los datos de membresías del usuario en una marca"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Waitlist",
+					"description": "",
+					"item": [
+						{
+							"name": "Get User Future Waitlist in Brand",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/me/brand/{{brand}}/waitlist/future?reducePopulation=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"brand",
+										"{{brand}}",
+										"waitlist",
+										"future"
+									],
+									"query": [
+										{
+											"key": "reducePopulation",
+											"value": "true"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get User Past Waitlist in Brand",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/me/brand/{{brand}}/waitlist/past?reducePopulation=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"brand",
+										"{{brand}}",
+										"waitlist",
+										"past"
+									],
+									"query": [
+										{
+											"key": "reducePopulation",
+											"value": "true"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Post User Cancel Waitlist in Brand",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/me/brand/{{brand}}/waitlist/remove/{{waitlist}}?reducePopulation=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"brand",
+										"{{brand}}",
+										"waitlist",
+										"remove",
+										"{{waitlist}}"
+									],
+									"query": [
+										{
+											"key": "reducePopulation",
+											"value": "true",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Me",
+					"request": {
+						"url": "{{url}}/api/me",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Put Me",
+					"request": {
+						"url": "{{url}}/api/me",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Nombre",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Apellido",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "{{password}}",
+									"description": "Cambio contraseña",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "{{password}}",
+									"description": "Cambio contraseña",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "2017-05-31 00:00:00",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Direccion",
+									"type": "text"
+								},
+								{
+									"key": "internal_number",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "external_number",
+									"value": "1r A",
+									"type": "text"
+								},
+								{
+									"key": "municipality",
+									"value": "Colima",
+									"type": "text"
+								},
+								{
+									"key": "postal_code",
+									"value": "20154",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Ciudad de México",
+									"type": "text"
+								},
+								{
+									"key": "countries_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "México",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "5542879532",
+									"type": "text"
+								},
+								{
+									"key": "cel_phone",
+									"value": "5542879532",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "picture",
+									"value": "",
+									"type": "file"
+								},
+								{
+									"key": "custom_fields[2][0][2][0]",
+									"value": "5",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "custom_fields[2][0][2][1]",
+									"value": "2",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Brand",
+			"description": "",
+			"item": [
+				{
+					"name": "Staff",
+					"description": "",
+					"item": [
+						{
+							"name": "Get Brand Staff List",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/brand/{{brand}}/staff?page=1&per_page=15&only_actives=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										"{{brand}}",
+										"staff"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "15"
+										},
+										{
+											"key": "only_actives",
+											"value": "true"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get Brand Staff",
+							"request": {
+								"url": "{{url}}/api/brand/{{brand}}/staff/{{staff}}",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get Brand Staff Next Meetings",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/brand/{{brand}}/staff/{{staff}}/next-meetings?start=2017-05-18 11:56:43&end=2019-05-18 11:56:43",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										"{{brand}}",
+										"staff",
+										"{{staff}}",
+										"next-meetings"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "2017-05-18 11:56:43"
+										},
+										{
+											"key": "end",
+											"value": "2019-05-18 11:56:43"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get Staff Special Texts",
+							"request": {
+								"url": "{{url}}/api/brand/{{brand}}/staff/{{staff}}/special-text",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Location",
+					"description": "",
+					"item": [
+						{
+							"name": "Meeting",
+							"description": "",
+							"item": [
+								{
+									"name": "Get Room Meeting List",
+									"request": {
+										"url": {
+											"raw": "{{url}}/api/brand/{{brand}}/location/{{locationToSee}}/rooms/{{room}}/meetings?start=2017-05-18 11:56:43&end=2019-05-18 11:56:43",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"brand",
+												"{{brand}}",
+												"location",
+												"{{locationToSee}}",
+												"rooms",
+												"{{room}}",
+												"meetings"
+											],
+											"query": [
+												{
+													"key": "start",
+													"value": "2017-05-18 11:56:43"
+												},
+												{
+													"key": "end",
+													"value": "2019-05-18 11:56:43"
+												}
+											],
+											"variable": []
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "GAFAFIT-COMPANY",
+												"value": "{{company}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								},
+								{
+									"name": "Get Location Meeting List",
+									"request": {
+										"url": {
+											"raw": "{{url}}/api/brand/{{brand}}/location/{{locationToSee}}/meetings?start=2017-05-18 11:56:43&end=2019-05-18 11:56:43?only_actives=true",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"brand",
+												"{{brand}}",
+												"location",
+												"{{locationToSee}}",
+												"meetings"
+											],
+											"query": [
+												{
+													"key": "start",
+													"value": "2017-05-18 11:56:43"
+												},
+												{
+													"key": "end",
+													"value": "2019-05-18 11:56:43?only_actives=true"
+												}
+											],
+											"variable": []
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "GAFAFIT-COMPANY",
+												"value": "{{company}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Reservation",
+							"description": "",
+							"item": [
+								{
+									"name": "Get Create Reservation Form",
+									"request": {
+										"url": {
+											"raw": "{{url}}/api/brand/{{brand}}/location/{{location}}/reservation/create-form?users_id=32",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"brand",
+												"{{brand}}",
+												"location",
+												"{{location}}",
+												"reservation",
+												"create-form"
+											],
+											"query": [
+												{
+													"key": "users_id",
+													"value": "32"
+												},
+												{
+													"key": "meetings_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "combos_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "memberships_id",
+													"value": "1",
+													"disabled": true
+												},
+												{
+													"key": "json",
+													"value": "true",
+													"disabled": true
+												}
+											],
+											"variable": []
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "GAFAFIT-COMPANY",
+												"value": "{{company}}"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer {{token}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"description": ""
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Get Brand Locations List",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/brand/{{brand}}/location?page=1&per_page=15&only_actives=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										"{{brand}}",
+										"location"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "15"
+										},
+										{
+											"key": "only_actives",
+											"value": "true"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get Brand Location",
+							"request": {
+								"url": "{{url}}/api/brand/{{brand}}/location/{{locationToSee}}",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Service",
+					"description": "",
+					"item": [
+						{
+							"name": "Get Brand Service List",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/brand/{{brand}}/service?page=1&per_page=15&only_actives=true&only_parents=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										"{{brand}}",
+										"service"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "15"
+										},
+										{
+											"key": "only_actives",
+											"value": "true"
+										},
+										{
+											"key": "only_parents",
+											"value": "true"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get Brand Service",
+							"request": {
+								"url": "{{url}}/api/brand/{{brand}}/service/{{serviceToSee}}",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get Brand Service Special Texts",
+							"request": {
+								"url": "{{url}}/api/brand/{{brand}}/service/{{serviceToSee}}/special-text",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get Brand Service Next meetings",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/brand/{{brand}}/service/{{serviceToSee}}/meetings?start=2017-05-18 11:56:43&end=2019-05-18 11:56:43",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										"{{brand}}",
+										"service",
+										"{{serviceToSee}}",
+										"meetings"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "2017-05-18 11:56:43"
+										},
+										{
+											"key": "end",
+											"value": "2019-05-18 11:56:43"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Combo",
+					"description": "",
+					"item": [
+						{
+							"name": "Get Brand Combo List",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/brand/{{brand}}/combos?page=1&per_page=15&only_actives=true&propagate=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										"{{brand}}",
+										"combos"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "15"
+										},
+										{
+											"key": "only_actives",
+											"value": "true"
+										},
+										{
+											"key": "propagate",
+											"value": "true"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get Brand Combo List For User",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/brand/{{brand}}/combos/userPosibilities?page=1&per_page=15&only_actives=true&propagate=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										"{{brand}}",
+										"combos",
+										"userPosibilities"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "15"
+										},
+										{
+											"key": "only_actives",
+											"value": "true"
+										},
+										{
+											"key": "propagate",
+											"value": "true"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Membership",
+					"description": "",
+					"item": [
+						{
+							"name": "Get Brand Membership List",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/brand/{{brand}}/membership?page=1&per_page=15&only_actives=true&propagate=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										"{{brand}}",
+										"membership"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "15"
+										},
+										{
+											"key": "only_actives",
+											"value": "true"
+										},
+										{
+											"key": "propagate",
+											"value": "true"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get Brand Membership List For User",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/brand/{{brand}}/membership/userPosibilities?page=1&per_page=15&only_actives=true&propagate=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"brand",
+										"{{brand}}",
+										"membership",
+										"userPosibilities"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "15"
+										},
+										{
+											"key": "only_actives",
+											"value": "true"
+										},
+										{
+											"key": "propagate",
+											"value": "true"
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "GiftCards",
+					"description": "Control de tarjetas de regalo.",
+					"item": [
+						{
+							"name": "Post Redeem GiftCard",
+							"request": {
+								"url": {
+									"raw": "{{url}}/api/me/giftcards/brand/{{brand}}/redeem?code=9C74C66B796D9B6894A103477BB585C7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"me",
+										"giftcards",
+										"brand",
+										"{{brand}}",
+										"redeem"
+									],
+									"query": [
+										{
+											"key": "code",
+											"value": "9C74C66B796D9B6894A103477BB585C7"
+										}
+									],
+									"variable": []
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "GAFAFIT-COMPANY",
+										"value": "{{company}}"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": "Redimir una tarjeta de regalo para el usuario."
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Brand List",
+					"request": {
+						"url": {
+							"raw": "{{url}}/api/brand/?page=1&per_page=15&only_actives=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"brand",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "15"
+								},
+								{
+									"key": "only_actives",
+									"value": "true"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brand",
+					"request": {
+						"url": "{{url}}/api/brand/{{brand}}",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SpecialText",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Special Text Form",
+					"request": {
+						"url": {
+							"raw": "{{url}}/api/special-text/form/{{catalog}}/{{brand}}?section={{section}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"special-text",
+								"form",
+								"{{catalog}}",
+								"{{brand}}"
+							],
+							"query": [
+								{
+									"key": "section",
+									"value": "{{section}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Special Text Values",
+					"request": {
+						"url": {
+							"raw": "{{url}}/api/special-text/values/{{catalog}}/{{model_id}}/{{brand}}?section={{section}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"special-text",
+								"values",
+								"{{catalog}}",
+								"{{model_id}}",
+								"{{brand}}"
+							],
+							"query": [
+								{
+									"key": "section",
+									"value": "{{section}}"
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Places",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Country List",
+					"request": {
+						"url": "{{url}}/api/places/countries/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Country City List",
+					"request": {
+						"url": "{{url}}/api/places/countries/{{country}}/cities",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Country State List",
+					"request": {
+						"url": "{{url}}/api/places/countries/{{country}}/states",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "GAFAFIT-COMPANY",
+								"value": "{{company}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Brand Staff Next Meetings2",
+			"request": {
+				"url": "{{url}}/api/brand/{{brand}}/location/{{location}}/user/{{client_id}}/meetings",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "GAFAFIT-COMPANY",
+						"value": "{{company}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

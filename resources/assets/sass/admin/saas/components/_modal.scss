@@ -1,0 +1,35 @@
+.modal {
+   border-radius: 10px;
+   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14);
+   background-color: #F5F6F8;
+   
+   .modal-footer {
+      border: 0 transparent none!important;
+      background-color: transparent !important;
+      padding-right: 20px;
+      padding-left: 20px;
+
+      .modal-action{
+         display: inline-grid;
+         align-items: center;
+         border-radius: 10px;
+         padding:9px 23px;
+         min-width:200px;
+         column-gap: 15px;
+         font-size:11px;
+         height:initial;
+         line-height: initial;
+         border: 1px solid #B7CCE0;
+         letter-spacing: 0.8px;
+         box-shadow: none;
+         transition: all .3s ease;
+         cursor:pointer;
+      }
+   }
+}
+
+.infocredits .modal-content,
+.infocredits .modal-footer{
+   width:100%!important;
+}
+

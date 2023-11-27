@@ -1,0 +1,22 @@
+.tabs{
+    padding-left: 20px!important;
+    .list &, .rooms &, .create &{
+        padding: 0px!important;
+    }
+    .tab{
+        display: inline-block;
+        width: initial!important;
+        line-height: initial;
+        height: initial;
+        a{
+            opacity:0.6;
+            padding: 10px 20px;
+            letter-spacing: .8px;
+            font-size:12px;
+            &:hover,
+            &.active{
+                opacity:1;
+            }
+        }
+    }
+}

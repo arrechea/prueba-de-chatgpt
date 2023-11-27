@@ -1,0 +1,52 @@
+.react-add-to-calendar{
+    display:inline-block;
+    line-height: normal;
+    text-shadow: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin:1rem 0;
+
+    &__button{
+        display: block;
+        width:100%;
+        border: 0 none transparent;
+        padding:10px 20px;
+        background-color: #e2e2e2;
+        color: grey;
+        transition: .3s ease-in-out;
+        transition-property: background-color, color;
+        &:hover, &--light{
+            background-color: grey;
+            color: white;
+        }
+    }
+
+    &__dropdown{
+        box-shadow: none;
+        top: initial;
+        left:0px;
+        width:100%;
+        border:0 none transparent;
+        padding:5px 10px;
+
+        ul li{
+            padding:10px 0;
+            border-bottom: solid 1px#e2e2e2;
+
+            a{
+                color: lightgrey;
+                font-weight: 200;
+                display:block;
+
+                &:hover{
+                    color: grey;
+                }
+            }
+
+            &:last-child{
+                border-bottom: 0 transparent none;
+            }
+        }
+    }
+}

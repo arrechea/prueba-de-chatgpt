@@ -1,0 +1,1500 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+body {
+   /* background: url("../../images/dev/widget/ubicacion.png"); */
+   background-repeat: no-repeat;
+   background-position: 8px 8px;
+   background-size: contain;
+   min-height: 100vh;
+}
+
+html {
+    min-height: 100vh;
+}
+
+.WidgetBUQ {
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.1px;
+    width: 413px;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: fixed;
+    bottom: 73px;
+    left: 8px;
+    overflow: visible;
+}
+
+.WidgetBUQ *{
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    z-index: 0;
+}
+
+.WidgetBUQ a{
+   text-decoration: none;
+}
+
+.WidgetBUQ a:focus, .WidgetBUQ button:focus {
+   outline: none;
+}
+
+.WidgetBUQ button {
+   /* background-color: transparent; */
+   border: 0 transparent none;
+}
+
+.WidgetBUQ hr {
+   border: 0 transparent none;
+   background-color: #DCDCDC;
+   height: 1px;
+}
+
+.WidgetBUQ *::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.WidgetBUQ *::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+
+.WidgetBUQ *::-webkit-scrollbar-thumb {
+   background: #A6A3A3;
+   border-radius: 10px;
+}
+
+.WidgetBUQ *::-webkit-scrollbar-thumb:hover {
+  background: #A6A3A3;
+}
+
+.WidgetBUQ--LowerBar--left {
+    grid-column: 1/2;
+    color: white;
+    font-size: 13px;
+    padding: 10px 5px;
+}
+
+.WidgetBUQ--LowerBar--welcome{
+   font-size: 12px;
+}
+
+.WidgetBUQ--LowerBar--right {
+    grid-column: 3/4;
+    display: grid;
+    align-items: center;
+    height: 100%;
+}
+
+.WidgetBUQ--LowerBar--right svg {
+    width: 26px;
+    color: white;
+}
+
+.WidgetBUQ--LowerBar {
+    height: 56px;
+    border-radius: 18px;
+    box-shadow: 1px 1px 2px silver;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 2fr 1fr auto;
+    column-gap: 14px;
+    justify-items: start;
+    align-items: center;
+    padding: 0 17px 0 23px;
+    z-index: 2;
+}
+
+.WidgetBUQ--button {
+   border: none;
+   font-size: 11px;
+   font-weight: 400;
+   line-height: 50px;
+   padding: 0 38px;
+   position: relative;
+   /*left: 12px;*/
+   border-radius: 19px;
+   outline: none !important;
+   cursor: pointer;
+   transition: .3s background ease;
+}
+
+button.WidgetBUQ--buttonAccent {
+   border: none;
+   font-size: 11px;
+   font-weight: 400;
+   line-height: 50px;
+   padding: 0 38px;
+   position: relative;
+   border-radius: 23px;
+   outline: none !important;
+   cursor: pointer;
+   color: white;
+   background-color: rgb(255, 62, 79);
+   transition: .3s background ease;
+}
+
+button.WidgetBUQ--buttonAccent:hover {
+   background-color: rgb(255, 163, 171);
+}
+
+.WidgetBUQ--button:hover {
+   background: #eff3f9 !important;
+}
+
+.WidgetBUQ--StepHolder {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    background: #eeeeee;
+    height: 0;
+    overflow: hidden;
+    border-radius: 0 0 23px 23px;
+    padding-top: 8px;
+    color: #434040;
+}
+
+.WidgetBUQ--StepHolder--top {
+    text-align: center;
+    padding-top: 34px;
+    font-size: 7px;
+    position: relative;
+}
+
+.WidgetBUQ--poweredBy {
+    display: inline-grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 4px;
+    color: rgba(1, 1, 1, .2);
+}
+
+.WidgetBUQ--poweredBy svg {
+    height: 17px;
+    width: 21px;
+}
+
+.WidgetBUQ--close {
+    position: absolute;
+    top: 16px;
+    right: 19px;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.WidgetBUQ--StepHolder--body {
+    margin-top: 11px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 62px);
+    bottom: 0;
+    padding-bottom: 55px;
+    overflow: hidden;
+    border-radius: 50px 50px 0 0;
+}
+
+.WidgetBUQ--StepHolder--body::-webkit-scrollbar {
+    display: none;
+}
+
+.WidgetBUQ--UpperBlock {
+    background: rgb(255, 62, 78);
+    color: white;
+    margin-right: 49px;
+    /* padding-bottom: 54px; */
+    font-size: 16px;
+    padding: 40px 0px;
+    padding-left: 49px;
+    border-radius: 0 0 50px 0;
+    /* margin-top: -37px; */
+    position: relative;
+    /* top: 37px; */
+    z-index: -1;
+}
+
+.WidgetBUQ--LocationList{
+    display: grid;
+    align-items: start;
+    border-radius: 50px 50px 0 0;
+    grid-template-rows: auto 1fr;
+    row-gap: 29px;
+    overflow: hidden;
+    height: 100%;
+    background-color: #F6F6F6;
+}
+
+.WidgetBUQ--LocationSingle, .MapMeeting {
+    border-radius: 50px 50px 0 0;
+    background-color: white;
+    height: calc(100% + 45px);
+    padding-bottom: 110px;
+    margin-top: -45px;
+}
+
+.WidgetBUQ--calendar {
+
+    height: calc(100% - 34px);
+
+    width: 100%;
+
+    display: flex;
+
+    flex-flow: column;
+
+    justify-content: flex-start;
+}
+
+.WidgetBUQ--UpperBlock .WidgetBUQ--IconText {
+    padding: 0 40px;
+}
+
+.WidgetBUQ--list {
+    padding: 0 37px;
+}
+
+.WidgetBUQ--Card {
+    /* border: 1px solid red; */
+    border-radius: 17px;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    column-gap: 14px;
+    align-items: center;
+    justify-content: space-evenly;
+    background: white;
+    margin-bottom: 27px;
+    cursor: pointer;
+}
+
+.WidgetBUQ--Card--left,
+.WidgetBUQ--Card--right > div {
+    display: grid;
+    row-gap: 8px;
+}
+
+.WidgetBUQ--Card--right {
+    font-size: 10px;
+}
+
+.WidgetBUQ--Card--title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+    /* white-space: nowrap; */
+    line-height: 22px;
+}
+
+.WidgetBUQ--Card--subtitle {
+    font-size: 10px;
+    text-align: center;
+}
+
+.WidgetBUQ--IconText {
+    display: flex;
+    align-items: start;
+}
+
+.WidgetBUQ--IconText--icon {
+    width: 23px;
+    min-height: 6px;
+    min-width: 23px;
+}
+
+.WidgetBUQ--BackHolder {
+    overflow: hidden;
+    height: 0;
+    text-align: center;
+    background: #ff3e4e;
+    /* margin-bottom: -49px; */
+    color: white;
+    /* text-transform: uppercase; */
+    /* font-size: 10px; */
+    letter-spacing: 1px;
+}
+
+.WidgetBUQ--StepHolder--body--cont {
+    border-radius: 50px 50px 0 0;
+    background: transparent;
+    min-height: 200px;
+    height: 100%;
+}
+
+.WidgetBUQ--StepHolder--body--cont > .AppReservation{
+   height: 100%;
+}
+
+.WidgetBUQ--BackHolder--title {
+    padding-top: 16px;
+    padding-bottom: 30px;
+    cursor: pointer;
+    display: grid;
+    row-gap: 5px;
+    justify-items: center;
+}
+
+.WidgetBUQ--BackHolder--title h3{
+   font-size: 10px;
+   text-transform: uppercase;
+   color: #AC0625;
+}
+
+.WidgetBUQ--BackHolder--title p{
+   font-size: 13px;
+   width:80%;
+   margin:0 auto;
+   color: white;
+}
+
+.WidgetBUQ--LocationSingle--title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    padding-top: 20px;
+    color: #a4a2a3;
+}
+
+.WidgetBUQ--calendar--week--menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 11px 17px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #bab6b7;
+    line-height: 26px;
+}
+
+.WidgetBUQ--calendar--week--title {
+    text-align: center;
+    margin-top: 35px;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+.WidgetBUQ--calendar--current {
+    color: black;
+}
+
+.WidgetBUQ--calendar--week--menu--day--number {
+    border-radius: 100%;
+    width: 27px;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+}
+
+.WidgetBUQ--calendar--current .WidgetBUQ--calendar--week--menu--day--number {
+    border: 1px solid;
+}
+
+.WidgetBUQ--calendar--week--menu--day {
+    cursor: pointer;
+    text-align: center;
+}
+
+.WidgetBUQ--calendar--week--menu--day:hover {
+    color: black;
+}
+
+.WidgetBUQ--calendar--slider--prev, .WidgetBUQ--calendar--slider--next {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 22px;
+    font-size: 25px;
+    font-weight: 100;
+    line-height: 11px;
+    cursor: pointer;
+}
+
+.WidgetBUQ--calendar--slider--prev:hover, .WidgetBUQ--calendar--slider--next:hover {
+    opacity: 0.8;
+}
+
+.WidgetBUQ--calendar--Meeting td {
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    border-top: 1px solid #e7e5e6;
+    padding: 11px 0;
+    padding-bottom: 11px;
+}
+
+.WidgetBUQ--calendar--Meeting--staff {
+    display: inline-block;
+    width: 47px;
+    background-position: center;
+    height: 47px;
+    background-size: cover;
+    border-radius: 100%;
+    /* margin-left: 37px; */
+}
+
+.WidgetBUQ--calendar--meetingList {
+    /* padding-top: 11px; */
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    border-top: .5px solid #E5E3E3;
+}
+
+.WidgetBUQ--calendar--Meeting {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    column-gap: 20px;
+    max-height: 75px;
+    align-items: center;
+    padding: 7px 36px;
+    border-bottom: .5px solid #E5E3E3;
+}
+
+.WidgetBUQ--calendar--Meeting:last-child {
+    margin-bottom: 25px;
+}
+
+.WidgetBUQ--calendar--Meeting--data {
+    font-size: 12px;
+    text-align: left;
+}
+
+.WidgetBUQ--calendar--Meeting--data2 {
+    font-weight: 800;
+    text-transform: capitalize;
+    font-size: 13px;
+}
+
+.WidgetBUQ--calendar--Meeting--data3 {
+    text-transform: capitalize;
+    color: #b7b7b7;
+    font-size: 10px;
+}
+
+.WidgetBUQ--button.WidgetBUQ--button--small {
+    line-height: 36px;
+    padding: 0 23px;
+}
+
+.WidgetBUQ--calendar--Meeting--button {
+    text-align: right;
+}
+
+/*Desde aca borrar*/
+.WidgetBUQ--ReservationProcess #CreateReservationFancyTemplate--Block {
+    position: static !important;
+    height: auto;
+}
+
+.WidgetBUQ--ReservationProcess #CreateReservationFancyTemplate--Close {
+    display: none;
+}
+
+.WidgetBUQ--ReservationProcess #CreateReservationFancyTemplate--Back {
+    display: none;
+}
+
+.WidgetBUQ--ReservationProcess #CreateReservationFancyTemplate {
+    position: relative;
+    z-index: 1;
+}
+
+.WidgetBUQ--ReservationProcess #CreateReservationFancyTemplate > div {
+    position: static !important;
+    height: auto !important;
+}
+
+.WidgetBUQ--BackHolder--Resume {
+    width: 80%;
+    padding: 0px 0px 20px;
+    border-bottom: 1px white solid;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+.WidgetBUQ--BackHolder--ResumeItem {
+    display: grid;
+    grid-template-columns: auto 1fr 1.5fr auto;
+    column-gap: 14px;
+    justify-items: start;
+}
+
+.WidgetBUQ--BackHolder--ResumeTitle {
+    font-weight: 600;
+}
+
+.WidgetBUQ--BackHolder--ResumeLocation {
+    font-weight: 300;
+}
+
+.WidgetBUQ--BackHolder--ResumeEdit {
+    cursor: pointer;
+}
+
+.WidgetBUQ--LowerBar--icon {
+    background: none;
+    border: none;
+    display: inline-grid;
+    font-size: 18px;
+    outline: none !important;
+    cursor: pointer;
+}
+
+.WidgetBUQ--LowerBar--left > div {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    justify-content: space-between;
+}
+
+.WidgetBUQ--LowerBar--icon:hover {
+    opacity: 0.8;
+}
+
+/*
+    ====== Notification Elements ======
+*/
+
+.WidgetBUQ--Notification{
+   position:absolute;
+   opacity: 0;
+   pointer-events: none;
+   width: 100%;
+   bottom: 0px;
+   min-height: 177px;
+   border-radius: 14px 14px 0 0;
+   padding:25px;
+   background-color: rgb(255, 255, 255, 0.9);
+   box-shadow: 0px -1px 5px 0px rgba(227,227,227,0.6);
+   transform: translateY(200px);
+   transition: all .5s ease;
+}
+
+.WidgetBUQ--Notification.is-active{
+   transform: translateY(0px);
+   opacity: 1;
+   pointer-events: all;
+}
+
+.WidgetBUQ--Notification h3{
+   text-align: center;
+   line-height: 1.8;
+   font-size: 18px;
+}
+.WidgetBUQ--Notification p{
+   font-size:11px;
+   line-height: 1.6;
+   width: 80%;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.WidgetBUQ--Notification .WidgetBUQ--buttonAccent{
+   margin-top:.75rem;
+   width:100%;
+}
+
+.WidgetBUQ--Notification-cancel{
+   position:absolute;
+   right: 15px;
+   top: 15px;
+   z-index: 1;
+   font-size:14px;
+   color:rgb(126, 125, 125);
+}
+
+.WidgetBUQ--Notification-cancel:hover{
+   color:rgb(255, 62, 78);
+}
+
+.WidgetBUQ--Notification-cancel i{
+   font-size:20px;
+}
+
+
+/*
+    ====== Form Elements ======
+*/
+
+.WidgetBUQ--form-group{
+   display: grid;
+}
+
+.WidgetBUQ--form-col2{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   column-gap: 15px;
+}
+
+.WidgetBUQ--form-col3{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1.5fr;
+   column-gap: 15px;
+}
+
+.WidgetBUQ input[type="text"], 
+.WidgetBUQ input[type="email"], 
+.WidgetBUQ input[type="tel"], 
+.WidgetBUQ input[type="number"], 
+.WidgetBUQ input[type="password"]{
+   font-family: 'DM Sans', sans-serif;
+   font-weight: 700;
+   border:0 transparent none;
+   border-bottom: 1px solid #D4D3D3;
+   color:rgb(0, 0, 0);
+   font-size:12px;
+   padding: 14px 10px;
+   width:100%;
+}
+
+.WidgetBUQ input[type="text"]::placeholder, 
+.WidgetBUQ input[type="email"]::placeholder, 
+.WidgetBUQ input[type="tel"]::placeholder, 
+.WidgetBUQ input[type="number"]::placeholder, 
+.WidgetBUQ input[type="password"]::placeholder{
+   color:rgb(172, 172, 172);
+   font-weight: 500;
+   
+}
+
+.WidgetBUQ label{
+   color:rgb(68, 68, 68, .46);
+   font-size:11px;
+}
+
+
+.WidgetBUQ input[type="text"]:focus,
+.WidgetBUQ input[type="email"]:focus,
+.WidgetBUQ input[type="number"]:focus, 
+.WidgetBUQ input[type="tel"]:focus, 
+.WidgetBUQ input[type="password"]:focus{
+    border: 0 transparent none;
+    outline: none;
+    border-bottom: 1px solid rgb(255, 62, 78);
+    color: rgb(255, 62, 78);
+}
+
+.WidgetBUQ--select [aria-live="polite"]{
+   display: none;
+}
+
+.WidgetBUQ--select__value-container{
+   padding: 2px 8px;
+}
+
+.WidgetBUQ--select__single-value, .WidgetBUQ--select__placeholder{
+   position: absolute;
+}
+
+.WidgetBUQ--select__indicator{
+   padding:8px;
+}
+
+.WidgetBUQ--select__option{
+   padding:8px 12px;
+}
+
+.WidgetBUQ input[type="checkbox"], 
+.WidgetBUQ input[type="radio"]{
+   -webkit-appearance: none;
+   border: 1px solid #5E5D5D;
+   height:18px;
+   width:18px;
+   border-radius: 6px;
+   display: inline-block;
+   position: relative;
+   cursor: pointer;
+}
+   
+.WidgetBUQ input[type="radio"]{
+   border-radius: 50%;
+   height: 18px;
+   width: 18px;
+}
+
+.WidgetBUQ input[type="checkbox"]:active, 
+.WidgetBUQ input[type="checkbox"]:checked:active,
+.WidgetBUQ input[type="radio"]:active, 
+.WidgetBUQ input[type="radio"]:checked:active
+{
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.WidgetBUQ input[type="checkbox"]:focus, 
+.WidgetBUQ input[type="radio"]:focus
+{
+   border: 1px solid #5E5D5D;
+   outline: none;
+   overflow: visible;
+}
+
+.WidgetBUQ input[type="checkbox"]:checked:after
+{
+	content: '';
+	font-family: "Font Awesome 5 Pro";
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #F31F50;
+}
+
+.WidgetBUQ input[type="radio"]:checked:after 
+{
+   content: "";
+   height: 12px;
+   width: 12px;
+   top:50%;
+   left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   border-radius: 50%;
+   position: absolute;
+   background-color: #F31F50;
+}
+
+.WidgetBUQ .react-date-picker{
+   border:0 transparent none;
+   font-weight: 700;
+   padding: 14px 0;
+   border-bottom: 1px solid #D4D3D3;
+} 
+.WidgetBUQ .react-date-picker .react-date-picker__wrapper{
+   border:0 transparent none;
+}
+.WidgetBUQ .react-date-picker input[type="number"]{
+   padding:0;
+   border:0;
+}
+
+.WidgetBUQ--checkbox-group{
+   margin:10px 0;
+}
+
+.WidgetBUQ--form-check{
+   display: inline-grid;
+   grid-template-columns: auto 1fr;
+   align-items: center;
+   column-gap: 10px;
+}
+
+.WidgetBUQ--form-check label{
+   margin:0;
+   margin-right: 20px;
+}
+
+.WidgetBUQ button{
+   font-family: 'DM Sans', sans-serif;
+   cursor: pointer;
+}
+
+.WidgetBUQ button[type="submit"],
+.react-add-to-calendar__button,
+.AppReservation--button{
+   display: block;
+   border-radius:  25px;
+   position: relative;
+   border: 0 transparent none;
+   background-color: #ff3e4e;
+   color: white;
+   padding: 16px 23px;
+   width: 100%;
+   font-size: 12px;
+   letter-spacing: .8px;
+}
+
+
+.WidgetBUQ button[type="submit"]:disabled,
+.react-add-to-calendar__button:disabled,
+.AppReservation--button:disabled{
+   opacity:0;
+   pointer-events: none;
+}
+
+.WidgetBUQ--FormBlock {
+    display: inline-grid;
+    row-gap: 23px;
+    width: 100%;
+}
+
+.WidgetBUQ--LinkButton {
+    background-color: transparent;
+    border: 0 transparent none;
+    text-decoration: underline;
+    color: #656363;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+.WidgetBUQ--SubmitButton{
+   opacity: 0;
+   pointer-events: none;
+   transform: translateY(10px);
+   transition: .3s ease all;
+}
+
+.WidgetBUQ--SubmitButton.is-active{
+   opacity: 1;
+   pointer-events: all;
+   transform: translateY(0px);
+}
+
+.WidgetBUQ--saveButton{
+   overflow:hidden;
+}
+
+@keyframes loading{
+
+   0%, 100%{
+      transform: scale(1);
+      opacity: 0;
+   }
+   
+   50%{
+      transform: scale(20);
+      opacity: 1;
+   }
+}
+
+.WidgetBUQ--saveButton.is-saving:after{
+   content: "";
+   height:20px;
+   position: absolute;
+   width: 20px;
+   display: block;
+   border-radius: 50%;
+   animation: loading 4s ease infinite;
+   background-color: #ff3e4e;
+}
+
+.WidgetBUQ--saveButton.is-saving{
+   background-color: rgb(255 62 78 / 29%)!important;
+   pointer-events: none;
+   transform: translateY(0px);
+   display: grid;
+   align-items: center;
+   justify-items: center;
+}
+
+.WidgetBUQ--linkGo{
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+}
+
+.WidgetBUQ--linkGo i{
+   font-size: 14px;
+}
+
+.WidgetBUQ--linkGo span{
+   font-weight: 700;
+   font-size:14px;
+   line-height: 1;
+}
+
+/*
+    ====== LOGIN BLOCK ======
+*/
+
+.WidgetBUQ--LoginBlockContainer,
+.WidgetBUQ--PasswordBlockContainer,
+.WidgetBUQ--RegisterBlockContainer {
+    background-color: white;
+    height: 100%;
+    padding: 54px 27px 0px;
+    display: inline-grid;
+    width: 100%;
+    align-items: start;
+}
+
+.WidgetBUQ--RegisterBlockContainer {
+    padding-bottom: 20px;
+}
+
+.WidgetBUQ--LoginBlockHeader,
+.WidgetBUQ--PasswordBlockHeader {
+    padding: 0px 120px 0 40px;
+    display: inline-grid;
+    row-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.WidgetBUQ--TermsBlock {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    font-size: 12px;
+    column-gap: 10px;
+}
+
+.WidgetBUQ--LoginBlockHeader p,
+.WidgetBUQ--PasswordBlockHeader p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #A3A2AC;
+}
+
+.WidgetBUQ--LoginBlockContainer > div,
+.WidgetBUQ--PasswordBlockContainer > div,
+.WidgetBUQ--RegisterBlockContainer > div {
+    display: grid;
+    row-gap: 10px;
+}
+
+.WidgetBUQ--RegisterBlockContainer > div {
+    height: 100%;
+    overflow: auto;
+    padding-right: 20px;
+    width: calc(100% + 20px);
+}
+
+.WidgetBUQ--LoginBlock {
+    display: inline-grid;
+    row-gap:23px;
+}
+
+.WidgetBUQ--PasswordBlock, 
+.WidgetBUQ--RegisterBlock
+{
+   text-align:center;
+   color: #656363;
+}
+
+/* ====== Tabs Styles ======= */
+.WidgetBUQ--tabs{
+   display:grid;
+   grid-auto-flow: column;
+}
+
+/* .WidgetBUQ--tabs-item{
+   width:130px;
+} */
+
+.WidgetBUQ--tabs-item a .WidgetBUQ--IconText{
+   color:#AEAEB3;
+   padding: 10px 0;
+}
+
+.WidgetBUQ--tabs-item a:hover .WidgetBUQ--IconText,
+.WidgetBUQ--tabs-item a.active .WidgetBUQ--IconText{
+   color: #000000;
+   opacity: 1;
+   border-bottom: 2px solid #FF3E4F;
+}
+
+.WidgetBUQ--tabs-item a .WidgetBUQ--IconText{
+   display: grid;
+   justify-items: center;
+   row-gap: 4px;
+   font-size: 11px;
+}
+
+.WidgetBUQ--tabs-item a .WidgetBUQ--IconText--icon{
+   font-size: 18px;
+   width:initial;
+   min-width: initial;
+}
+
+.WidgetBUQ--tabs-item a .WidgetBUQ--IconText--text{
+   font-size: 11px;
+   font-weight: 700;
+}
+
+.WidgetBUQ--tab{
+   position: relative;
+   height:100%;
+   width: 100%;
+   overflow-y: auto;
+   padding: 0 15px;
+   display: none;
+}
+
+.WidgetBUQ--tab.is-user{
+   border-top: rgb(220, 220, 220) solid 1px;
+   background-color: white;
+   overflow-y: hidden;
+   overflow-x: visible;
+}
+
+.WidgetBUQ--tab.active{
+   display: block;
+}
+
+/* ====== Profile Styles ======= */
+.WidgetBUQ--Profile{
+   height:100%;
+   display: grid;
+   grid-template-rows: 260px 1fr;
+   row-gap: 1rem;
+   background-color: #F6F6F6;
+}
+
+.WidgetBUQ--Profile .WidgetBUQ--UpperBlock{
+   margin-bottom: 118px;
+   padding-bottom: 85px;
+}
+
+.WidgetBUQ--Profile-container{
+   height: 100%;
+   display: grid;
+   grid-template-rows: auto 1fr;
+   align-items: start;
+   /* padding: 0 0px 15px; */
+   row-gap: 1rem;
+   overflow: hidden;
+}
+
+.WidgetBUQ--Profile-container .WidgetBUQ--tabs{
+   width:80%;
+   margin: 0 auto;
+}
+
+.WidgetBUQ--Profile-content{
+   height:100%;
+   overflow-y: hidden;
+   position: relative;
+}
+/* ====== User Data Styles ======= */
+
+.WidgetBUQ--UserData{
+   position:absolute;
+   left: 0;
+   top: 90px;
+   display: grid;
+   width: 320px;
+   row-gap: 1.3rem;
+   padding: 20px;
+   border-radius: 0 23px 23px 0;
+   color: #000000;
+   background-color: rgb(255 255 255 / 0.95);
+}
+
+.WidgetBUQ--UserData-title{
+   display: grid;
+   grid-template-columns: auto 1fr;
+   align-items: center;
+   column-gap: 1rem;
+}
+
+.WidgetBUQ--UserData-title img{
+   display:block;
+   height: 64px;
+   width:64px;
+   border-radius: 50%;
+   background-color: grey;
+}
+
+.WidgetBUQ--UserData-wallet{
+   display: grid;
+   grid-template-columns: auto 1fr auto;
+   column-gap: 0.9rem;
+   align-items: start;
+   padding-left: 25px;
+}
+
+.WidgetBUQ--UserData-credits p{
+   display: block;
+   height:22px;
+   width:22px;
+   background-color: #000000;
+   color:white;
+   border-radius: 50%;
+   font-size: 11px;
+   line-height: 22px;
+   text-align: center;
+}
+
+.WidgetBUQ--UserData-expire h5{
+   font-size:11px;
+   display: block;
+   width: 50%;
+   line-height: 1;
+   margin-bottom: 0.3rem;
+}
+
+.WidgetBUQ--UserData-expire p{
+   font-size: 11px;
+   color: #1F1C3D;
+}
+
+.WidgetBUQ--UserData-goLink .WidgetBUQ--IconText{
+   padding:0;
+}
+
+/*====== Shopping list Styles ======= */
+.WidgetBUQ--ShoppingList{
+   display: inline-grid;
+   grid-template-rows: 1fr auto 1fr;
+   row-gap: 1rem;
+   width:100%;
+   /* height: 100%; */
+   padding-right: 10px;
+}
+
+.WidgetBUQ--ShoppingList-section{
+   display: grid;
+   grid-template-columns: auto 1fr;
+   align-items: center;
+   justify-items: start;
+   column-gap: 1rem;
+   padding: 20px 0;
+}
+
+.WidgetBUQ--ShoppingList-title{
+   display: block;
+   width: 20px;
+   height: 100%;
+   font-weight: 400;
+   margin: 0;
+   letter-spacing: 0.8px;
+   text-transform: uppercase;
+   color: #A6A3A3;
+   font-size: 10px;
+   text-align: center;
+   writing-mode: vertical-lr;
+   transform: rotate(180deg);
+}
+
+.WidgetBUQ--ShoppingList-list{
+   display: inline-grid;
+   grid-auto-flow: column;
+   column-gap: 15px;
+   width: 100%;
+   justify-items: baseline;
+   overflow-x: auto;
+   padding-bottom: 10px;
+}
+/*====== Credit Card Styles ======= */
+
+.WidgetBUQ--PaymentMethods{
+   display: grid;
+   grid-template-columns: auto 1fr;
+   align-items: center;
+   justify-items: start;
+   column-gap: 1rem;
+   padding: 20px 0;
+}
+
+.WidgetBUQ--PaymentMethods-title{
+   display: block;
+   width: 20px;
+   height: 100%;
+   font-weight: 400;
+   margin: 0;
+   letter-spacing: 0.8px;
+   text-transform: uppercase;
+   color: #A6A3A3;
+   font-size: 10px;
+   text-align: right;
+   writing-mode: vertical-lr;
+   transform: rotate(180deg);
+}
+
+.WidgetBUQ--PaymentMethods-section{
+   width:100%;
+   display: grid;
+   grid-auto-flow: row;
+   row-gap: 30px;
+}
+
+.WidgetBUQ--PaymentMethods-cardList {
+   
+display: grid;
+   
+grid-auto-flow: row;
+   
+row-gap: 20px;
+}
+
+
+
+
+.WidgetBUQ--CreditCard{
+   
+display: grid;
+   
+grid-template-columns: 1fr auto;
+   
+align-items: center;
+   
+column-gap: .75rem;
+}
+
+.WidgetBUQ--CreditCard-addNew{
+   display: grid;
+   grid-template-columns: 1fr auto;
+   align-items: center;
+   column-gap: 20px;
+   background-color: rgb(231, 231, 231);
+   font-size: 11px;
+   padding: 9px 10px 9px 23px;
+   border-radius: 40px;
+   color: rgb(31, 28, 61);
+   font-weight: 600;
+}
+
+.WidgetBUQ--CreditCard-data{
+
+background-color: white;
+
+display: grid;
+
+grid-template-columns: 1fr auto;
+
+padding: 12px 23px;
+
+border-radius: 40px;
+
+align-items: center;
+
+font-size: 11px;
+
+border: solid 1px rgb(233, 232, 232);
+}
+
+button.WidgetBUQ--CreditCard-cancelbtn, button.WidgetBUQ--CreditCard-addbtn{
+
+background-color: rgb(231, 231, 231)!important;
+
+height: 36px;
+
+width: 36px;
+
+border-radius: 50%;
+}
+
+button.WidgetBUQ--CreditCard-addbtn{
+   background-color: rgb(0, 0, 0)!important;
+   color: white;
+
+}
+
+.WidgetBUQ--PaymentMethods-addNew form{
+   display: grid;
+   grid-auto-flow: row;
+   row-gap:.75rem;
+}
+
+.WidgetBUQ--PaymentMethods-addNew form input[type="text"], 
+.WidgetBUQ--PaymentMethods-addNew form input[type="email"], 
+.WidgetBUQ--PaymentMethods-addNew form input[type="tel"], 
+.WidgetBUQ--PaymentMethods-addNew form input[type="number"], 
+.WidgetBUQ--PaymentMethods-addNew form input[type="password"]{
+   background-color: transparent!important;
+}
+
+.WidgetBUQ--CreditCard-brand{
+   font-size: 20px;
+}
+
+.WidgetBUQ--CreditCard-cancelbtn .WidgetBUQ--IconText,
+.WidgetBUQ--CreditCard-addbtn .WidgetBUQ--IconText{
+   display: inline-block;
+}
+
+/*====== UserData Styles ======= */
+
+.WidgetBUQ--UserChangeData{
+   /* background-color:white; */
+   height: 100%;
+   display: grid;
+   grid-template-rows: auto 1fr;
+   row-gap: 15px;
+   justify-items: start;
+}
+.WidgetBUQ--UserChangeData-content{
+   width:100%;
+   position: relative;
+   height: 100%;
+   overflow: hidden;
+}
+
+.WidgetBUQ--UserChangeData-content form{
+   position:initial;
+   height: 100%;
+   overflow-y: auto;
+   overflow-x: hidden;
+   margin-right: -5px;
+}
+
+.WidgetBUQ--UserChangeData-content button[type="submit"]{
+   position:absolute;
+   bottom:15px;
+}
+
+.WidgetBUQ--UserChangeData .WidgetBUQ--tabs{
+   width: initial;
+   display: inline-grid;
+   margin: 0;
+   column-gap: 15px;
+}
+.WidgetBUQ--UserChangeData .WidgetBUQ--tabs-item a .WidgetBUQ--IconText--icon{
+   display: none;
+}
+.WidgetBUQ--UserChangeData .WidgetBUQ--tabs-item a .WidgetBUQ--IconText--text{
+   text-transform: uppercase;
+   letter-spacing: .8px;
+}
+.WidgetBUQ--UserChangeData .WidgetBUQ--tabs .WidgetBUQ--IconText{
+   display: block;
+   padding: 20px 0 8px;
+}
+
+.WidgetBUQ--UserChangeData .WidgetBUQ--tabs-item a:hover .WidgetBUQ--IconText,
+.WidgetBUQ--UserChangeData .WidgetBUQ--tabs-item a.active .WidgetBUQ--IconText{
+   border:0 transparent none;
+}
+
+.WidgetBUQ--UserChangeData .WidgetBUQ--tab{
+   padding:0;
+}
+
+.WidgetBUQ--UserFormData, .WidgetBUQ--UserContactData{
+   display: grid;
+   row-gap: .75rem;
+}
+
+.WidgetBUQ--UserAddressData{
+   display: grid;
+   row-gap: .75rem;
+   padding-bottom: 90px;
+}
+
+/*====== NextClass / PastClass / Purchase Items Styles ======= */
+.WidgetBUQ--NextClass, .WidgetBUQ--PastClass, .WidgetBUQ--Purchase{
+   height:130px;
+   width:135px;
+   position:relative;
+   justify-items: start;
+   border-radius: 8px;
+   border:1px solid #E4E4E4;
+   background-color: white;
+   padding:20px;
+   line-height: 1.6;
+}
+
+.WidgetBUQ--EmptyData{
+   display: grid;
+   align-items: center;
+   column-gap: .75rem;
+   grid-template-columns: 1fr auto;
+}
+
+.WidgetBUQ--EmptyClass{
+   height:130px;
+   width:135px;
+   position:relative;
+   justify-items: center;
+   align-items: center;
+   border-radius: 8px;
+   font-size:11px;
+   display: grid;
+   text-align: center;
+   border:1px solid #E4E4E4;
+   padding:20px;
+}
+
+.WidgetBUQ--NextClass-cancel{
+   appearance: none;
+   position:absolute;
+   top: 3px;
+   right:3px;
+   color:#E4E4E4;
+}
+
+.WidgetBUQ--NextClass-cancel:disabled{
+   opacity:0;
+   pointer-events: none;
+}
+
+.WidgetBUQ--NextClass-cancelled{
+   font-size: 11px;
+   color: #FF3E4F;
+}
+
+.WidgetBUQ--NextClass-cancel:hover{
+   color: #FF3E4F;
+}
+.WidgetBUQ--NextClass-cancel .WidgetBUQ--IconText--icon i{
+   font-size:12px;
+}
+
+.WidgetBUQ--NextClass-time, .WidgetBUQ--PastClass-time, .WidgetBUQ--Purchase-time{
+   font-weight: 400;
+   font-size:12px;
+   color:#232121;
+}
+
+.WidgetBUQ--NextClass-staff, .WidgetBUQ--PastClass-staff, .WidgetBUQ--Purchase-price{
+   font-weight: 700;
+   font-size:14px;
+   color:#232121;
+}
+
+.WidgetBUQ--NextClass-service, .WidgetBUQ--PastClass-service, .WidgetBUQ--Purchase-name{
+   font-weight: 500;
+   font-size: 12px;
+   color:#A6A3A3;
+}
+
+/* Mapa de Salón*/
+
+
+.MapMeeting__header{
+   text-align: center;
+}
+
+.MapMeeting__header .gs-title{
+   text-transform: uppercase;
+   font-size: 11px;
+   padding-top: 20px;
+   color: #a4a2a3;
+}
+
+.MapMeeting__header .gs-subtitle{
+   font-size: 12px;
+   padding-top: 20px;
+   color: #a4a2a3;
+}
+
+.MapMeeting__body{
+   display: grid;
+   padding: 50px 40px 0;
+}
+
+.MapMeeting__summary{
+   display: grid;
+   padding-top:30px;
+   row-gap: 2rem;
+}
+
+.MapMeeting__summary > div{
+   display: grid;
+   justify-items: center;
+   row-gap: 2rem;
+}
+
+.MapMeeting__summary .gs-table tbody{
+   display: inline-grid;
+   row-gap: 7px;
+   background-color: #EEEEEE;
+   border-radius: 10px;
+   padding: 21px;
+   justify-items: start;
+}
+
+.MapMeeting__summary .gs-table tbody tr{
+   display: grid;
+   width: 100%;
+   grid-template-columns: .7fr 1fr;
+}
+
+.MapMeeting__summary .gs-table tbody tr th,
+.MapMeeting__summary .gs-table tbody tr td{
+   font-size:12px;
+   text-align: left;
+}

@@ -1,0 +1,115 @@
+@import "../base/saas_variables";
+
+
+.datatable_custom_filters{
+   display: grid;
+   justify-items: end;
+}
+
+
+.#{$prefix}-c-filters{
+   display:grid;
+   column-gap: 20px;
+   grid-auto-flow: column;
+   justify-items: end;
+   margin-left: auto;
+   //  width:65%;
+
+   //  @media only screen and (min-width:1200px) {
+   //      width: 730px;
+   //  }
+
+   .input-field{
+      position:relative;
+      width:300px;
+      margin:0;
+
+      i{
+         position: absolute;
+         display: inline-block;
+         z-index:1;
+         width:14px;
+         top: 50%;
+         transform: translateY(-50%);
+         right: 15px;
+      }
+
+      .select-wrapper{
+         margin:0;
+
+         ul.dropdown-content.select-dropdown{
+               top: 50px !important;
+               box-shadow: none;
+               border-radius: 10px;
+               border: 1px #DFE3E6 solid;
+
+               li{
+                  line-height: normal;
+                  min-height: initial;
+                  &:hover, &.selected, &.active{
+                     background-color: #FF3E4F;
+
+                     span{
+                           color:white;
+                     }
+                  }
+
+                  span{
+                     font-size:12px;
+                     // font-weight: 500;
+                     letter-spacing: .8px;
+                     padding: 12px 30px;
+                     line-height: normal;
+                  }
+               }
+         }
+      }
+
+      input{
+         position: relative;
+         background-color: white!important;
+         border: 1px white solid !important;
+         font-size:12px;
+         height: initial;
+         color:#707073;
+         padding: 9px 40px 9px 16px;
+         margin:0px!important;
+         box-sizing: border-box;
+         border-radius: 100px!important;
+         line-height: 16px!important;
+         font-weight:500!important;
+         
+         &:focus{
+            border: 1px #99AFC4 solid !important;
+            border-bottom: 1px #99AFC4 solid !important;
+            color:#707073!important;
+            box-shadow: none;;
+         }
+         
+         &::placeholder{
+            color:lighten(#707073, 10%);
+            font-weight:500;
+            line-height: 16px!important;
+         }
+      }
+
+      &.is-search{
+         margin-top:0;
+         padding:0;
+         width:300px;
+
+         i{
+            left: 15px;
+         }
+
+         input{
+            padding: 9px 16px 9px 40px!important;
+
+         }
+
+         &:focus{
+            border: 1px #99AFC4 solid !important;
+         }
+      }
+   }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="http://gafafit.test/sdk/dist/main.js?v=1"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div id="fancy"></div>
+<script>
+    (function () {
+         let sdk = window.GafaFitSDK;
+         let brand = 'zuda';
+         let location = 'zuda-plaza-lilas';
+         sdk.setUrl('http://gafafit.test/');
+         sdk.setCompany(3);
+         // sdk.setAutorization('eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImJjNzBmNzFiNTAwYzAxNWQ0MTZhZGI0ZDkxYTg3NjVjNGU5M2QyYzE2OWQ5ZWU4OThlNGNkMzYxMzExZjc4YWFjZWI4Y2ZjOGVhMzJkYzAzIn0.eyJhdWQiOiIzIiwianRpIjoiYmM3MGY3MWI1MDBjMDE1ZDQxNmFkYjRkOTFhODc2NWM0ZTkzZDJjMTY5ZDllZTg5OGU0Y2QzNjEzMTFmNzhhYWNlYjhjZmM4ZWEzMmRjMDMiLCJpYXQiOjE1OTA3NzU0NzIsIm5iZiI6MTU5MDc3NTQ3MiwiZXhwIjoxNjIyMzExNDcyLCJzdWIiOiIxMTcwOCIsInNjb3BlcyI6WyIqIl19.WemUaym1sTpTRmizxR3iPQaHigFZ8JILCxypsn9pZKgtU__UUfPvqhimB_ykBsqOfXVFig4gb7V6Gico0yii48LEQQPhf6YpgHm6ag_y6-DQfDCAvhNUM0SdBkGXbEQbu3wD2w1xt27PdwMwwhvpoEFvYB6bO4WCsfoARfRe-7szDETXSgIlNe_U541l1VByK9dPhuDP-eSXjweSKuxkWNOaFZveuZxRte2vvQ1CPXopeHpPHgwxVeWa0ZV2o8_JolT_dCspwrGcZJ4UIGb6OP60C2YpCovHZe7suIEYCiGfye3FV0YKlRH9dOq3ZkosBGOZnJ0b8bEtv8A2ywFXyQHzMd09M1waLYMW6F7HYvqwMQjmA3xuRNqv5WbmFDTsa5ERiY_1hOaaTMtQsvBOB1X4jjicIvdbLAQEyBDQ0yf03R5sTyp1tDEVkLZ_MzYpe0uhJVfPHmBmr_fuLrd7rLE8ktvT2A81GZaWqNFkAgRQNL3epV7FWIpO-N6f-AwxyTsTigvqlT2hoRaDTyLGbrYJ0RlgiKZEoY8YXLnGnVq5a_qF5wIf_VzCB_a_l8wFL78dBpsf8Sh_UoLbhG0M1h9wpnIfluLBNRpWDFU7lPzhrnI7JR1MOML4Y6pQY5_G2_pIuoqZOvjW9gC0so4D1Tzc7s6Cr5dvL5COOwMXraU');
+         sdk.GetCreateWidget(brand, '#fancy', {
+//            meetings_id: 18226
+         }, function (err, data) {
+               if (err) {
+                  console.log(err);
+               }
+         });
+//        sdk.GetCreateReservationForm(brand, location, null, '#fancy', {
+////            meetings_id: 18222
+//        }, function (err, data) {
+//            if (err) {
+//                console.log(err);
+//            }
+//        });
+    })()
+</script>
+</body>
+</html>

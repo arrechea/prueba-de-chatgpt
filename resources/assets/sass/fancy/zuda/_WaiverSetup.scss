@@ -1,0 +1,21 @@
+.WaiverStep{
+   @media only screen and (max-width:768px){
+      padding:15px;
+   }
+
+   &--content {
+      overflow: auto;
+      height: 200px;
+      padding: 20px;
+      text-align: justify;
+      margin-bottom: 30px;
+      
+      @media only screen and (max-width:768px){
+         padding: 0px;
+      }
+   }
+   &--signature .ReactSignature {
+      border: 1px solid;
+      margin-top: 10px;
+   }
+}

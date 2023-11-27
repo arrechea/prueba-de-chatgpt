@@ -1,0 +1,100 @@
+.signin{
+    background-image: url("/images/login_back.png")!important;
+    background-color:lightgrey;
+    background-size:cover;
+    &__container{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        min-height:100%;
+        height:100vh;
+        width:100%;
+    }
+
+    &__row{
+        display:flex;
+        flex-flow: row-reverse;
+        align-items: center;
+        &-col{
+            display: flex;
+            align-items: center;
+            padding:20px;
+            &:first-child{
+                background-color: rgba(208, 208, 208, 0.9);
+                justify-content: center;
+                height:350px;
+                width: 350px;
+            }
+            &:last-child{
+                background-color: rgba(255, 255, 255, 0.9);
+                height:450px;
+                width:450px;
+                box-shadow: 80px 0px 35px -55px darkgrey;
+            }
+        }
+    }
+
+    &__title{
+        text-align:center;
+        font-weight:100;
+        font-size:250%;
+        color:darkgrey;
+    }
+
+    &__wrapper{
+        position:relative;
+        height:initial;
+        width:100%;
+    }
+
+    &__logo{
+        display:flex;
+        align-items: center;
+        padding:20px;
+        height:50%;
+        width:50%;
+
+        img{
+            width:100%;
+        }
+    }
+
+    &__divider{
+        border: 0 transparent none;
+        height:1px;
+        background:#eeeeee;
+        margin: 2rem 0;
+    }
+
+    &__footer{
+        display:flex;
+        align-items: center;
+        font-size:100%;
+        margin-bottom:20px;
+        &-col{
+            width:50%;
+            label, a{
+                font-size:105%;
+                font-weight: 300!important;
+                letter-spacing: .5px;
+            }
+            a{
+                color:darkgrey;
+                transition: .3s ease-in-out;
+                transition-property: color;
+
+                &:hover{
+                    color:grey;
+                }
+            }
+            &:first-child{
+                display:flex;
+                align-items: center;
+            }
+
+            &:last-child{
+                text-align:right;
+            }
+        }
+    }
+}

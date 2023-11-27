@@ -1,0 +1,37 @@
+@import "../base/saas_variables";
+
+.#{$prefix}-c-nav{
+    display:grid;
+    &.is-list{
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        justify-items: start;
+        column-gap: 15px;
+    }
+
+    &__add{
+        display: grid;
+        justify-items: end;
+    }
+
+    &__filter{
+        display: inline-grid;
+        justify-items: start;
+
+        &.is-filter{
+            ul{
+                column-gap: 15px;
+            }
+        }
+        
+        ul{
+            display: inline-grid;
+            justify-items: start;
+            grid-auto-flow: column;
+            margin:0px;
+            grid-auto-columns: auto;
+            // column-gap: 15px;
+            width:100%;
+        }
+    }
+}

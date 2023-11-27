@@ -1,0 +1,55 @@
+.btn{
+
+    &[type="submit"]{
+        width:160px;
+    }
+}
+
+#close-sidebar{
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gafa-e-btn{
+    cursor: pointer;
+
+    &.is-tool{
+        display: inline-flex;
+        align-items: center;
+        padding:5px 15px;
+        border-radius: 100px;
+        transition: .2s ease;
+        transition-property: background-color;
+        margin:0 .2rem;
+
+        i{
+            font-size:18px;
+            line-height: 1;
+        }
+    }
+
+    &.is-menu{
+        position: relative;
+        display:flex;
+        flex-flow:column nowrap;
+        align-items: center;
+        height:30px;
+        width:30px;
+        span{
+            position: absolute;
+            display:block;
+            height: 2px;
+            width:80%;
+            &:first-child{
+                top:7px;
+            }
+            &:nth-child(2){
+                top:calc((100% / 2) - 1px);
+            }
+            &:last-child{
+                bottom:7px;
+            }
+        }
+    }
+}

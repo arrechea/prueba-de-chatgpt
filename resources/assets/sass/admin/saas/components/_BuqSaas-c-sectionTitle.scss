@@ -1,0 +1,18 @@
+@import "../base/saas_variables";
+
+.#{$prefix}-c-sectionTitle{
+    color: #28282C;
+
+    h2{
+         display: inline-grid ;
+         grid-auto-flow: column;
+         align-items: center;
+         
+         font-size:18px;
+         margin:0px;
+
+        strong{
+            font-weight: bold;
+        }
+    }
+}

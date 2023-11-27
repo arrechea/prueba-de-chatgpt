@@ -1,0 +1,122 @@
+.CombosSelector {
+    margin-bottom: 30px;
+    &--container {
+        margin-top: 5px;
+        white-space: nowrap;
+        border-top: none;
+        border-bottom: none;
+        @media screen and (max-width: 500px) {
+            width:90%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+    &--combo{
+        display: inline-block;
+        background-color:white;
+        border: 1px solid #f0f0f0;
+        color:grey;
+        text-align: center;
+        padding: 15px;
+        min-height: 200px;
+        cursor: pointer;
+        width: 120px;
+        position: relative;
+        transition: .3s ease-in-out;
+        transition-property:border-color, background-color;
+        font-size:100%;
+        @media screen and (max-width: 769px) {
+            font-size: 80%;
+        }
+        @media screen and (max-width: 500px) {
+            font-size: 70%;
+        }
+        &--box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 15px);
+            white-space: normal;
+        }
+        &--pic {
+            max-height: 50px;
+            vertical-align: middle;
+            display: block;
+            margin: 6px auto;
+        }
+        &--name {
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+            word-break: break-word;
+        }
+        &--short_description {
+            padding-top: 3px;
+            letter-spacing: 1px;
+        }
+        &--credit {
+            text-transform: uppercase;
+            padding-bottom: 14px;
+        }
+        &--credits {
+            vertical-align: middle;
+        }
+        &--price {
+            margin-bottom: 17px;
+            // @media screen and (min-width:767px){
+            //     font-size:160%;
+            // }
+            @media screen and (min-width:992px){
+                font-size:100%;
+            }
+            &--prefix {
+                vertical-align: middle;
+            }
+            &__withDiscount {
+                text-decoration: line-through;
+                color: lightgrey;
+                margin-bottom: 0;
+            }
+            &--free {
+                text-transform: uppercase;
+                color: #47505c;
+            }
+            &--number {
+                vertical-align: middle;
+                padding-left: 5px;
+            }
+       
+        }
+        &--expiration_days {
+            text-transform: uppercase;
+        }
+        &--budget {
+            position: absolute;
+            display: inline-block;
+            background-color: black;
+            color:white;
+            padding: 5px;
+            width: 100px;
+            text-align: center;
+            top: 13px;
+            right: -37px;
+            transform: rotate(45deg);
+            transform-origin: top center;
+        }
+        &--add {
+            color: white;
+            background: #47515d;
+            border-radius: 3px;
+            display: inline-block;
+            margin: 25px 0 0;
+            padding: 3px 17px;
+            font-size: 0.8em;
+            line-height: 14px;
+            display: none;
+        }
+        &:hover, &_selected {
+            background-color: #f0f0f0;
+            border-color: grey;
+        }
+    }
+}

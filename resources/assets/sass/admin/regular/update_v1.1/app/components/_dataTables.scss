@@ -1,0 +1,105 @@
+.dataTables{
+    &_wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        width:100%;
+        padding:0;
+        margin-top: 2rem;
+
+        .dataTable{
+            thead{
+                font-weight: 800;
+                border-bottom: 0px none transparent;
+                tr{
+                    height: 45px;
+                    th.sorting_desc{
+                        padding:1rem 0;
+                    }
+                }
+            }
+            tbody{
+                font-size: 12px;
+                letter-spacing: .8px;
+                font-weight: 400;
+
+                tr{
+                    &:hover{
+                        border: 0 transparent none;
+                    }
+                }
+                td{
+                    &:nth-child(3){
+                        .is-threeColumns &{
+                            display:flex;
+                            flex-flow:row nowrap;
+                            align-items: center;
+                            justify-content: center;
+                            padding:0;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                        }
+                    }
+                    &:last-child{
+                        display:flex;
+                        flex-flow:row nowrap;
+                        align-items: center;
+                        justify-content: center;
+                        padding:0;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    &_info{
+        font-size:12px;
+        display:flex;
+        width:50%;
+        align-items: center;
+        padding-top: 2rem;
+    }
+    &_paginate{
+        display: flex;
+        width:50%;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 2rem;
+        .paginate_button{
+            position:relative;
+            font-size:14px;
+            height:40px;
+            width:40px;
+            line-height: 1;
+            padding:0px!important;
+            min-width:initial!important;
+            display:inline-flex!important;
+            align-items: center;
+            cursor:pointer;
+            justify-content: center;
+            pointer-events: all;
+            &:before{
+                display: block;
+                position: absolute;
+                top:7px;
+                font-size: 20px;
+            }
+            &.disabled{
+                opacity:.5;
+                pointer-events: none;
+            }
+        }
+        .next{
+            &:before{
+                content: "›";
+            }
+            border-radius: 0 10px 10px 0!important;
+        }
+        .previous{
+            &:before{
+                content: "‹";
+            }
+            border-radius: 10px 0 0 10px!important;
+        }
+    }
+}

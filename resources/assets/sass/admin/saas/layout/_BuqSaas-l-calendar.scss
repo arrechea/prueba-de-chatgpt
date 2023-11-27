@@ -1,0 +1,73 @@
+@import "../base/saas_variables";
+
+.#{$prefix}-l-calendar{
+   display:grid;
+   grid-template-rows: auto 1fr;
+   row-gap: 28px;
+   
+   &__header{
+      display:grid;
+      grid-template-rows: repeat(2, auto);
+      row-gap: 35px;
+      
+      &.is-reservationCreate{
+         grid-template-rows: auto;
+      }
+   }
+
+   &__body{
+      position:relative;
+
+      & > .card-panel{
+         margin-bottom: 20px;
+      }
+
+      & > .is-calendarTool{
+         position:absolute;
+         top:0;
+         left:0;
+      }
+
+      hr.fc-divider.fc-widget-header{
+         padding:0;
+      }
+
+      .fc-event{
+         background-color: lighten(#99AFC4, 10%);
+
+         &.past-meeting{
+            pointer-events: none;
+         }
+
+         .fc-content{
+            display: grid;
+            row-gap: 10px;
+            padding:10px;
+            text-align: left;
+
+            .fc-time{
+               font-size: 12px;
+               font-weight: 500;
+            }
+
+            .fc-title{
+               font-size: 12px;
+            }
+         }
+
+         &:hover{
+            background-color: #FF3E4F;
+            opacity:1;
+         }
+      }
+
+      td.fc-day{
+         &.fc-today{
+            background-color:lighten(#F5F6F8, 10%);
+         }
+         &.fc-past{
+            background-color:darken(#F5F6F8, 10%);
+         }
+      }
+   }
+}

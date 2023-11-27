@@ -1,0 +1,273 @@
+@import "../base/saas_variables";
+
+.#{$prefix}-l-list{
+    display:grid;
+    grid-template-rows: auto 1fr;
+    row-gap: 28px;
+    
+    &__header{
+        display:grid;
+        grid-template-rows: repeat(2, auto);
+        row-gap: 35px;
+    }
+
+    &__body{
+      .datatable{
+         & > thead > th{
+            color: #99AFC4;
+            padding:12px;
+            text-align:left;
+            font-weight: 400;
+         }
+
+
+         & > tbody  > tr{
+            border-radius: 10px;
+            height: initial;
+
+            & > td {
+               color: #707073;
+               font-weight: 400;
+               font-size: 12px;
+               height:60px;
+               padding:6px 12px;
+               text-align:left;
+            }
+         }
+      }
+
+      #calendarRoom{
+
+         .fc-body{
+            td.fc-widget-content{
+               padding:0;
+            }
+         }
+
+         .fc-content-skeleton{
+
+            table tbody{
+               background-color:transparent!important;
+               border:0 transparent none;
+
+               tr{
+
+
+                  &:hover{
+                     background-color: transparent;
+                  }
+               }
+
+               td{
+                  border: 0 transparent none;
+
+                  &:last-child{
+                     padding:0;
+                  }
+               }
+            }
+         }
+      }
+
+      .dataTables_paginate{
+         & > span{
+               display: none;
+         }
+
+         .paginate_button{
+               background-color:white!important;
+               border: 1px #DFE3E6 solid;
+
+               &:hover{
+                  background-color:#EEF3F9!important;
+                  color: #1F1C3D!important;
+               }
+
+               &:before{
+                  font-weight: 700;
+                  font-size:24px;
+               }
+         }
+      }
+      &.is-users{
+         .datatable{
+               th, tbody tr td{
+                  &:nth-child(1),
+                  &:nth-child(2),
+                  &:nth-child(3),
+                  &:nth-child(6){
+                     text-align:center;
+                  }
+               }
+         }
+      }
+
+      &.is-usersReservation{
+         .datatable{
+               th, tbody tr td{
+                  &:nth-child(1),
+                  &:nth-child(4)
+                  {
+                     text-align:center;
+                  }
+               }
+         }
+      }
+
+      &.is-staffReservation,
+      &.is-configStaff
+      {
+         tbody{
+               img{
+                  display: inline-block;
+                  overflow: hidden;
+                  border-radius: 50%;
+                  height:40px;
+                  width:40px;
+               }
+         }
+      }
+
+      &.is-staffReservation{
+         .datatable{
+               th, tbody tr td{
+                  &:nth-child(1),
+                  &:nth-child(4),
+                  &:nth-child(6),
+                  &:nth-child(7),
+                  &:nth-child(8)
+                  {
+                     text-align:center;
+                  }
+               }
+         }
+      }
+
+      &.is-roomReservation{
+         .datatable{
+               th, tbody tr td{
+                  &:nth-child(1),
+                  &:nth-child(3),
+                  &:nth-child(4)
+                  {
+                     text-align:center;
+                  }
+               }
+         }
+      }
+
+      &.is-marketingCombos, &.is-marketingMembership{
+         .datatable{
+               th, tbody tr td{
+                  text-align:center;
+               }
+               th, tbody tr td{
+                  &:nth-child(2)
+                  {
+                     text-align:left;
+                  }
+               }
+         }
+      }
+
+      &.is-configServices{
+         .datatable{
+               th, tbody tr td{
+                  text-align:center;
+               }
+               th, tbody tr td{
+                  &:nth-child(2)
+                  {
+                     text-align:left;
+                  }
+               }
+         }
+      }
+
+      &.is-configStaff{
+         .datatable{
+               th, tbody tr td{
+                  text-align:center;
+               }
+               th, tbody tr td{
+                  &:nth-child(2),
+                  &:nth-child(3),
+                  &:nth-child(4)
+                  {
+                     text-align:left;
+                  }
+               }
+         }
+      }
+
+      &.is-locationRooms, &.is-locationRoomsPositions{
+         .datatable{
+            th, tbody tr td{
+               text-align:center;
+            }
+            th, tbody tr td{
+               &:nth-child(2)
+               {
+                  text-align:left;
+               }
+            }
+
+            td{
+               img{
+                  height:30px;
+               }
+            }
+         }
+      }
+
+      &.is-locationRoomsMaps{
+         .datatable{
+               th, tbody tr td{
+                  text-align:center;
+               }
+               th, tbody tr td{
+                  &:nth-child(3)
+                  {
+                     text-align:left;
+                  }
+               }
+         }
+      }
+
+      &.is-marketingGiftCards{
+
+         .#{$prefix}-c-filters{
+               width: 35%;
+               grid-template-columns: 1fr;
+         }
+
+         .datatable{
+               th, tbody tr td{
+                  text-align:center;
+               }
+               th, tbody tr td{
+                  &:nth-child(3),
+                  &:nth-child(4)
+                  {
+                     text-align:left;
+                  }
+               }
+         }
+      }
+
+      &.is-marketingDiscounts{
+         .datatable{
+               th, tbody tr td{
+                  text-align:center;
+               }
+               th, tbody tr td{
+                  &:nth-child(2),
+                  &:nth-child(6)
+                  {
+                     text-align:left;
+                  }
+               }
+         }
+      }
+   }
+}

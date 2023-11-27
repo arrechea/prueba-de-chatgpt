@@ -1,0 +1,186 @@
+.grafica_metrica {
+    max-width: 100%;
+    display: block;
+    /*overflow-x: auto;*/
+    /*overflow-y: hidden;*/
+    position: relative;
+}
+
+div.grafica_metrica .google-visualization-table-table{
+    width: 100% !important;
+}
+
+#Chart_Actividad_General_Totales, #Chart_Actividad_General_Cerradas, #Chart_Actividad_General_NoResuelta {
+    /* float: left; */
+    /* width: 33%; */
+}
+
+.Metricas--Sparks .sparks-info {
+    margin: 10px 0 !important;
+}
+
+.Metrica--Modulo--porArea li:nth-child(2) [class*="txt-color"] {
+    color: red !important;
+}
+
+.Metrica--Modulo--porArea li:nth-child(3) [class*="txt-color"] {
+    color: green !important;
+}
+
+.Metrica--Modulo--porArea li:nth-child(4) [class*="txt-color"] {
+    color: blue !important;
+}
+
+.Metrica--Modulo--porArea li:nth-child(5) [class*="txt-color"] {
+    color: silver !important;
+}
+
+.Metrica--Modulo--porProveedor li:nth-child(2) [class*="txt-color"] {
+    color: green !important;
+}
+
+.Metrica--Modulo--porProveedor li:nth-child(3) [class*="txt-color"] {
+    color: orange !important;
+}
+
+.Metrica--Modulo--porProveedor li:nth-child(4) [class*="txt-color"] {
+    color: red !important;
+}
+
+.google-visualization-table {
+    width: 100%;
+    height: auto !important;
+}
+
+.google-visualization-table-table {
+    width: 100%;
+}
+
+.google-visualization-table > div:first-child {
+    height: auto !important;
+}
+
+.Metrica--Modulo--poractividadgeneral li:nth-child(1) [class*="txt-color"] {
+    color: #3366cc !important;
+}
+
+.progress .progress-bar[data-indice="0"] {
+    background-color: #3366cc !important;
+}
+
+.Metrica--Modulo--poractividadgeneral li:nth-child(2) [class*="txt-color"] {
+    color: #dc3912 !important;
+}
+
+.progress .progress-bar[data-indice="1"] {
+    background-color: #dc3912 !important;
+}
+
+.Metrica--Modulo--poractividadgeneral li:nth-child(3) [class*="txt-color"] {
+    color: #ff9900 !important;
+}
+
+.progress .progress-bar[data-indice="2"] {
+    background-color: #ff9900 !important;
+}
+
+.Metrica--Modulo--poractividadgeneral li:nth-child(4) [class*="txt-color"] {
+    color: #109618 !important;
+}
+
+.progress .progress-bar[data-indice="3"] {
+    background-color: #109618 !important;
+}
+
+.Metrica--Modulo--poractividadgeneral li:nth-child(5) [class*="txt-color"] {
+    color: #990099 !important;
+}
+
+.progress .progress-bar[data-indice="4"] {
+    background-color: #990099 !important;
+}
+
+.Metrica--Modulo--poractividadgeneral li:nth-child(6) [class*="txt-color"] {
+    color: #0099c6 !important;
+}
+
+.progress .progress-bar[data-indice="5"] {
+    background-color: #0099c6 !important;
+}
+
+.Metrica--Modulo--poractividadgeneral li:nth-child(7) [class*="txt-color"] {
+    color: #dd4477 !important;
+}
+
+.progress .progress-bar[data-indice="6"] {
+    background-color: #dd4477 !important;
+}
+
+.Chart--Botonera {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.2;
+}
+
+.Chart--Botonera > span {
+    display: inline-block;
+    /* border: 1px solid silver; */
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 30px;
+    height: 30px;
+    padding: 17px;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.Chart--Botonera > span:hover, span.Chart--Botonera__activo {
+    background-color: silver;
+    color: white;
+}
+
+.Chart--icon--LineChart {
+    background-image: url('/images/charts/line-chart.png');
+}
+
+.Chart--icon--PieChart {
+    background-image: url(/images/charts/pie-chart.png);
+}
+
+.Chart--icon--SteppedAreaChart {
+    background-image: url(/images/charts/graphic.png);
+}
+
+.Chart--icon--AreaChart {
+    background-image: url(/images/charts/business.png);
+}
+
+.Chart--icon--ColumnChart {
+    background-image: url(/images/charts/business-1.png);
+}
+
+.Chart--icon--BarChart {
+    background-image: url(/images/charts/graphic-2.png);
+}
+
+.Chart--icon--Histogram {
+    background-image: url(/images/charts/graphic-1.png);
+}
+
+.Chart--icon--Table {
+    background-image: url(/images/charts/squares.png);
+}
+
+.Chart--icon--GeoChart {
+    background-image: url(/images/charts/planet.png);
+}
+
+.Chart--Botonera:hover {
+    opacity: 1;
+}

@@ -1,0 +1,211 @@
+$colors: (
+    menu-background:var(--menu-background-color),
+    menu-color:var(--menu-text-color),
+    primary-color:var(--primary-color),
+    primary-color-back:var(--primary-color-back),
+    primary-color-link:var(--primary-color-link),
+    secundary-color:var(--secundary-color),
+        secondary-color:var(--secundary-color),
+);
+
+$baseThemeColor: #f5f5f5;
+$baseThemeColorDark: darken($baseThemeColor, 20%);
+$baseThemeColorDarker: darken($baseThemeColor, 40%);
+
+.sidebar{
+    color: map-get($colors, menu-color);
+    background: map-get($colors, menu-background);
+
+    &__nav{
+        & > li{
+            a{
+                &.is-here, &:hover{
+                    background-color: map-get($colors, primary-color);
+                    color: map-get($colors, menu-background);
+                }
+            }
+        }
+    }
+    &__nom{
+        color:map-get($colors, menu-background);
+        background-color:rgba(0, 0, 0, 0.4);
+    }
+    &__section{
+        &.is-here{
+            .sidebar__nom{
+                color:map-get($colors, menu-background);
+                background-color:map-get($colors, primary-color);
+            }
+        }
+    }
+}
+
+.dataTables{
+
+    &_wrapper{
+        background-color: $baseThemeColor;
+        thead{
+            tr{
+                background-color: $baseThemeColorDark!important;
+                color: $baseThemeColorDarker!important;
+            }
+        }
+        tbody{
+            tr{
+                &:hover{
+                    background-color: $baseThemeColor;
+                }
+            }
+        }
+    }
+    .rooms__status{
+        &.is-success{
+            border-color: #B8D973;
+            color: #B8D973;
+        }
+        &.is-error{
+            border-color: #D10700;
+            color: #D10700;
+        }
+    }
+    &_info{
+        background: white;
+    }
+    &_paginate{
+        background: white;
+
+        .paginate_button{
+            background-color: $baseThemeColorDark!important;
+            color: $baseThemeColorDarker!important;
+            &.current{
+                background-color: $baseThemeColor!important;
+                color: $baseThemeColorDarker!important;
+            }
+        }
+    }
+
+}
+
+.gafa-e-btn{
+    &.is-tool{
+        background-color:map-get($colors, primary-color);
+
+        i{
+            color:$baseThemeColor;
+        }
+
+        &:hover{
+            background-color: $baseThemeColorDarker;
+            color:$baseThemeColor;
+        }
+    }
+}
+
+.rooms{
+    border-color: $baseThemeColorDark!important;
+
+    .dataTables_info{
+        color: $baseThemeColorDarker!important;
+    }
+
+    &__status{
+        &.is-success{
+            border-color: #B8D973;
+            color: #B8D973;
+        }
+        &.is-error{
+            border-color: #D10700;
+            color: #D10700;
+        }
+    }
+    .dataTables_paginate{
+
+        .paginate_button{
+            background-color: $baseThemeColorDark!important;
+            color: $baseThemeColorDarker!important;
+        }
+    }
+
+    .datatable{
+
+
+        tbody tr{
+            .is-fullWidth &{
+                border-color: $baseThemeColorDark!important;
+            }
+            &:before{
+                background-color: map-get($colors, primary-color);
+            }
+
+            background-color: $baseThemeColor;
+
+            td{
+                color: $baseThemeColorDarker;
+            }
+
+            &:hover{
+                background-color: $baseThemeColor;
+            }
+        }
+    }
+}
+
+.template__title{
+    color: $baseThemeColorDarker;
+
+    &.is-dashboard{
+        color: $baseThemeColorDark;
+    }
+}
+
+.widget{
+    color: $baseThemeColorDark;
+    border-color: $baseThemeColorDark !important;
+
+    &__add{
+        background-color:map-get($colors, primary-color);
+        color:white;
+
+        &:hover{
+            background-color: $baseThemeColorDark;
+        }
+    }
+
+    &:hover{
+        color: $baseThemeColorDarker;
+    }
+}
+
+.sidebar__brand{
+
+    #close-sidebar{
+        color: map-get($colors, primary-color);
+    }
+
+    &-close{
+        span{
+            background-color: map-get($colors, primary-color);
+        }
+    }
+}
+
+
+.navbar{
+    &__title{
+        color:$baseThemeColorDarker;
+
+        &:hover{
+            color:$baseThemeColorDark;
+        }
+    }
+    &__menu{
+        .gf-button{
+            color: map-get($colors, menu-color);
+            background-color: $baseThemeColor;
+
+            &:hover{
+                background-color: $baseThemeColorDark;
+            }
+        }
+    }
+}
